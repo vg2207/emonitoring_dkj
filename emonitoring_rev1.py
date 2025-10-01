@@ -84,7 +84,7 @@ if st.session_state["page"] == 0 :
 
 if st.session_state["page"] == 1:
 
-    st.markdown(f"<h3 style='text-align: left;'><br>HALAMAN 1</h3>", unsafe_allow_html=True)
+    st.markdown(f"<h3 style='text-align: left;'><br>HALAMAN 1/6 : DATA UMUM</h3>", unsafe_allow_html=True)
 
     with st.form(key='form_page_1', clear_on_submit=False):
         nama_operator = st.text_input("Nama Operator", key="nama_operator")
@@ -177,7 +177,7 @@ if st.session_state["page"] == 1:
 
 # Halaman 1.5 - Pilih Feeder
 if st.session_state["page"] == 1.5:
-    st.markdown("<h3 style='text-align: left;'><br>PILIH FEEDER YANG DIGUNAKAN</h3>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: left;'><br>HALAMAN 2/6 : PILIH FEEDER YANG DIGUNAKAN</h3>", unsafe_allow_html=True)
 
     feeder_options = [
         "Feeder 1 - F1",
@@ -214,7 +214,7 @@ if st.session_state["page"] == 1.5:
 if st.session_state["page"] == 2:
     df_data_page_1 = st.session_state.df_data_page_1
     # st.write(df_data_page_1["Mesin"][0])
-    st.markdown(f"<h3 style='text-align: left;'><br>HALAMAN 2 : MESIN FEEDER</h3>", unsafe_allow_html=True)
+    st.markdown(f"<h3 style='text-align: left;'><br>HALAMAN 3/6 : MESIN FEEDER</h3>", unsafe_allow_html=True)
     # st.markdown(f"<h3 style='text-align: center;'>MESIN FEEDER<br></h3>", unsafe_allow_html=True)
     # st.write(df_all_data)
 
@@ -551,7 +551,7 @@ if st.session_state["page"] == 2:
 #Halaman 3
 if st.session_state["page"] == 3:
     df_data_page_1 = st.session_state.df_data_page_1
-    st.markdown(f"<h3 style='text-align: left;'><br>HALAMAN 3 : EXTRUDER</h3>", unsafe_allow_html=True)
+    st.markdown(f"<h3 style='text-align: left;'><br>HALAMAN 4/6 : EXTRUDER</h3>", unsafe_allow_html=True)
     # st.markdown(f"<h3 style='text-align: center;'>EXTRUDER<br></h3>", unsafe_allow_html=True)
     # st.write(df_all_data)
 
@@ -1223,7 +1223,7 @@ if st.session_state["page"] == 3:
 #Halaman 4
 if st.session_state["page"] == 4:
     df_data_page_1 = st.session_state.df_data_page_1
-    st.markdown(f"<h3 style='text-align: left;'><br>HALAMAN 4 : UWP-PELLETIZER</h3>", unsafe_allow_html=True)
+    st.markdown(f"<h3 style='text-align: left;'><br>HALAMAN 5/6 : UWP-PELLETIZER</h3>", unsafe_allow_html=True)
     # st.markdown(f"<h3 style='text-align: center;'>EXTRUDER<br></h3>", unsafe_allow_html=True)
     # st.write(df_all_data)
 
@@ -1753,7 +1753,7 @@ if st.session_state["page"] == 5:
         
 
 
-    st.markdown(f"<h3 style='text-align: left;'><br>HALAMAN 5 : QUANTITY REWORK</h3>", unsafe_allow_html=True)
+    st.markdown(f"<h3 style='text-align: left;'><br>HALAMAN 6/6 : QUANTITY REWORK</h3>", unsafe_allow_html=True)
     # st.markdown(f"<h3 style='text-align: center;'>EXTRUDER<br></h3>", unsafe_allow_html=True)
     # st.write(df_all_data)
 
