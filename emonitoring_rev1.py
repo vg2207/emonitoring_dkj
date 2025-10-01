@@ -66,7 +66,7 @@ col_00, col_01, col_02 = st.columns([1, 3, 1])
 with col_01:
     st.image(logo)
 
-st.markdown(f"<h1 style='text-align: center;'>WELCOME TO E-MONITORING PRODUKSI<br>DUNIA KIMIA JAYA</h1>", unsafe_allow_html=True)
+st.markdown(f"<h2 style='text-align: center;'>WELCOME TO E-MONITORING PRODUKSI<br>DUNIA KIMIA JAYA</h2>", unsafe_allow_html=True)
 
 # Halaman Awal
 
