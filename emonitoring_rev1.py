@@ -133,7 +133,7 @@ if st.session_state["page"] == 1:
             st.warning('Isi bagian "Kondisi Mesin"!')
             can_submit = False
 
-        submit_button_1_1 = st.form_submit_button(label='Submit', width = "stretch")
+        submit_button_1_1 = st.form_submit_button(label='Submit', width = "stretch", type = "primary")
         if submit_button_1_1:
             if can_submit == False:
                 st.error(f"Lengkapi seluruh kolom sebelum menekan tombol Submit!")                
@@ -473,7 +473,7 @@ if st.session_state["page"] == 2:
         else :
             pass
 
-        submit_button_2_1 = st.form_submit_button(label='Submit', width = "stretch")
+        submit_button_2_1 = st.form_submit_button(label='Submit', width = "stretch", type = "primary")
 
         if submit_button_2_1:
             if can_submit == False:
@@ -1092,7 +1092,7 @@ if st.session_state["page"] == 3:
         else :
             pass
 
-        submit_button_3_1 = st.form_submit_button(label='Submit', width = "stretch")
+        submit_button_3_1 = st.form_submit_button(label='Submit', width = "stretch", type = "primary")
 
         if submit_button_3_1:
             if can_submit == False:
@@ -1553,7 +1553,7 @@ if st.session_state["page"] == 4:
         else:
             pass
 
-        submit_button_4_1 = st.form_submit_button(label='Submit', width = "stretch")
+        submit_button_4_1 = st.form_submit_button(label='Submit', width = "stretch", type = "primary")
 
         if submit_button_4_1:
 
@@ -1832,7 +1832,7 @@ if st.session_state["page"] == 5:
             st.warning('Isi bagian "Quantity Rework Rekondisi"!')
             can_submit = False
 
-        submit_button_5_1 = st.form_submit_button(label='Submit', width = "stretch")
+        submit_button_5_1 = st.form_submit_button(label='Submit', width = "stretch", type = "primary")
 
         if submit_button_5_1:
 
