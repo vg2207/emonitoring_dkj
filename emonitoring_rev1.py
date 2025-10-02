@@ -210,6 +210,7 @@ if st.session_state["page"] == 1.5:
             if not selected_feeders:
                 st.warning("Pilih minimal 1 feeder sebelum lanjut!")
             else:
+                st.session_state.selected_feeders = selected_feeders
                 st.session_state.page = 2
                 st.rerun()
     
