@@ -204,7 +204,7 @@ if st.session_state["page"] == 1.5:
         key="selected_feeders"
     )
 
-    left_1_5, middle_1_5, right_1_5 = st.columns([1,3,1])
+    left_1_5, middle_1_5, right_1_5 = st.columns([0.2,0.6,0.2])
     with right_1_5:
         if st.button("Next Page ►", width="stretch"):
             if not selected_feeders:
