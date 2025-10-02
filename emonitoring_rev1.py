@@ -75,7 +75,9 @@ if "page" not in st.session_state:
     st.session_state["page"] = 0
 
 if st.session_state["page"] == 0 :
-    tombol_mulai = st.button(type="primary", label='Mulai')
+    left_0, middle_0, right_0 = st.columns(3)
+    with middle_0:
+        tombol_mulai = st.button(type="primary", label='Mulai', width="stretch")
     if tombol_mulai:
         st.session_state.page = 1
         st.rerun()
