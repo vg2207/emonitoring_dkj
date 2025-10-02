@@ -206,7 +206,7 @@ if st.session_state["page"] == 1.5:
 
     left_1_5, middle_1_5, right_1_5 = st.columns([1,3,1])
     with right_1_5:
-        if st.button("Next Page ►"):
+        if st.button("Next Page ►", width="stretch"):
             if not selected_feeders:
                 st.warning("Pilih minimal 1 feeder sebelum lanjut!")
             else:
@@ -214,7 +214,7 @@ if st.session_state["page"] == 1.5:
                 st.rerun()
     
     with left_1_5:
-        if st.button("◄ Back"):
+        if st.button("◄ Back", width="stretch"):
             st.session_state.page = 1
             st.rerun()
 
