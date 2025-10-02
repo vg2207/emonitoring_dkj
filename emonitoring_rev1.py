@@ -1209,7 +1209,7 @@ if st.session_state["page"] == 3:
         submit_button_3_2 = st.button(type="secondary", label='Next Page')
         if submit_button_3_2:
             if "df_data_page_3" not in st.session_state:
-                st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit"sebelum menekan tombol "Next Page"!')
+                st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit" sebelum menekan tombol "Next Page"!')
             else:
                 foto_mesin, path_to_save_extruder, file_name_extruder = save_image(image = foto_mesin, path_to_save = path_to_save_extruder, file_name = file_name_extruder)
                 st.session_state.page = 4
