@@ -164,8 +164,11 @@ if st.session_state["page"] == 1:
                 st.success(f'Cek apakah data berikut sudah benar? Apabila sudah maka tekan tombol "Next Page"')
                 st.write(df_data_page_1)
                 st.session_state.df_data_page_1 = df_data_page_1
-                
-    submit_button_1_2 = st.button(type="secondary", label='Next Page')
+
+
+    left_1, middle_1, right_1 = st.columns([1,3,1])
+    with right_1:
+        submit_button_1_2 = st.button(type="secondary", label='Next Page', width="stretch")
     if submit_button_1_2:
         if "df_data_page_1" not in st.session_state:
             st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit"sebelum menekan tombol "Next Page"!')
