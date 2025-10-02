@@ -168,7 +168,7 @@ if st.session_state["page"] == 1:
 
     left_1, middle_1, right_1 = st.columns([1,3,1])
     with right_1:
-        submit_button_1_2 = st.button(type="secondary", label='Next Page ➡️', width="stretch")
+        submit_button_1_2 = st.button(type="primary", label='Next Page ➡️', width="stretch")
     if submit_button_1_2:
         if "df_data_page_1" not in st.session_state:
             st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit"sebelum menekan tombol "Next Page"!')
