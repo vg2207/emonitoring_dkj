@@ -1214,7 +1214,7 @@ if st.session_state["page"] == 3:
                 st.write(df_data_page_3)
                 st.session_state.df_data_page_3 = df_data_page_3
             
-    submit_button_3_2 = st.button(type="primary", label='Next Page ➔', width=""stretch)
+    submit_button_3_2 = st.button(type="primary", label='Next Page ➔', width="stretch")
     if submit_button_3_2:
         if "df_data_page_3" not in st.session_state:
             st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit" sebelum menekan tombol "Next Page"!')
