@@ -542,16 +542,19 @@ if st.session_state["page"] == 2:
                 st.success(f'Cek apakah data berikut sudah benar? Apabila sudah maka tekan tombol "Next Page"')
                 st.write(df_data_page_2)
                 st.session_state.df_data_page_2 = df_data_page_2
-    
-    submit_button_2_2 = st.button(type="primary", label='Next Page ➔', width="stretch")
+
+    left_2, middle_2, right_2 = st.columns([1,3,1])
+    with right_2:
+        submit_button_2_2 = st.button(type="primary", label='Next Page ➔', width="stretch")
     if submit_button_2_2:
         if "df_data_page_2" not in st.session_state:
             st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit"sebelum menekan tombol "Next Page"!')
         else:
             st.session_state.page = 3
             st.rerun()
-    
-    back_button_2 = st.button("🡐 Back")
+
+    with left_2:
+        back_button_2 = st.button("🡐 Back")
     if back_button_2:
         st.session_state.page = 1.5  # kembali ke halaman 1.5
         st.rerun()
@@ -1213,8 +1216,11 @@ if st.session_state["page"] == 3:
                 st.success(f'Cek apakah data berikut sudah benar? Apabila sudah maka tekan tombol "Next Page"')
                 st.write(df_data_page_3)
                 st.session_state.df_data_page_3 = df_data_page_3
+                
             
-    submit_button_3_2 = st.button(type="primary", label='Next Page ➔', width="stretch")
+    left_3, middle_3, right_3 = st.columns([1,3,1])
+    with right_3 :
+        submit_button_3_2 = st.button(type="primary", label='Next Page ➔', width="stretch")
     if submit_button_3_2:
         if "df_data_page_3" not in st.session_state:
             st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit" sebelum menekan tombol "Next Page"!')
@@ -1223,7 +1229,8 @@ if st.session_state["page"] == 3:
             st.session_state.page = 4
             st.rerun()
 
-    back_button_3 = st.button("🡐 Back")
+    with left_3:
+        back_button_3 = st.button("🡐 Back")
     if back_button_3:
         st.session_state.page = 2  # kembali ke halaman 1
         st.rerun()
@@ -1630,7 +1637,9 @@ if st.session_state["page"] == 4:
                 st.write(df_data_page_4)
                 st.session_state.df_data_page_4 = df_data_page_4
     
-    submit_button_2_4 = st.button(type="primary", label='Next Page ➔', width="stretch")
+    left_4, middle_4, right_4 = st.columns([1,3,1])
+    with right_4:
+        submit_button_2_4 = st.button(type="primary", label='Next Page ➔', width="stretch")
     if submit_button_2_4:
         if "df_data_page_4" not in st.session_state:
             st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit"sebelum menekan tombol "Next Page"!')
@@ -1642,7 +1651,8 @@ if st.session_state["page"] == 4:
             st.session_state.page = 5
             st.rerun()
 
-    back_button_4 = st.button("🡐 Back")
+    with left_4:
+        back_button_4 = st.button("🡐 Back")
     if back_button_4:
         st.session_state.page = 3
         st.rerun()
@@ -1876,7 +1886,9 @@ if st.session_state["page"] == 5:
                 st.write(df_data_page_5)
                 st.session_state.df_data_page_5 = df_data_page_5
     
-    submit_button_2_5 = st.button(type="primary", label='Next Page ➔', width="stretch")
+    left_5, middle_5, right_5 = st.columns([1,3,1])
+    with right_5:
+        submit_button_2_5 = st.button(type="primary", label='Next Page ➔', width="stretch")
     if submit_button_2_5:
         if "df_data_page_5" not in st.session_state:
             st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit"sebelum menekan tombol "Next Page"!')
@@ -1884,7 +1896,8 @@ if st.session_state["page"] == 5:
             st.session_state.page = 6
             st.rerun()
 
-    back_button_5 = st.button("🡐 Back")
+    with left_5:
+        back_button_5 = st.button("🡐 Back")
     if back_button_5:
         st.session_state.page = 4 
         st.rerun()
