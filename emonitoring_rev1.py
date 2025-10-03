@@ -184,6 +184,8 @@ if st.session_state["page"] == 1:
 if st.session_state["page"] == 1.5:
     st.markdown("<h3 style='text-align: left;'><br>HALAMAN 2/6 : PILIH FEEDER YANG DIGUNAKAN</h3>", unsafe_allow_html=True)
 
+    # with st.form(key='form_page_1_5', clear_on_submit=False):
+
     feeder_options = [
         "Feeder 1 - F1",
         "Feeder 2 - F2",
