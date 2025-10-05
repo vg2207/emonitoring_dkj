@@ -255,11 +255,14 @@ if st.session_state["page"] == 1.5:
 #Halaman 2
 if st.session_state["page"] == 2:
     df_data_page_1 = st.session_state.df_data_page_1
-    # df_data_page_1_5 = st.session_state.df_data_page_1_5
+    df_data_page_1_5 = st.session_state.df_data_page_1_5
     # st.write(df_data_page_1["Mesin"][0])
     st.markdown(f"<h3 style='text-align: left;'><br>HALAMAN 3/6 : MESIN FEEDER</h3>", unsafe_allow_html=True)
     # st.markdown(f"<h3 style='text-align: center;'>MESIN FEEDER<br></h3>", unsafe_allow_html=True)
     # st.write(df_all_data)
+
+    if "selected_feeders" not in st.session_state:
+        st.session_state.selected_feeders = df_data_page_1_5
 
     with st.form(key='form_page_2', clear_on_submit=False):
     #Inisialisasi semua parameter sebelum proses pengondisian menggunakan fungsi IF
@@ -590,7 +593,7 @@ if st.session_state["page"] == 2:
                 st.success(f'Cek apakah data berikut sudah benar? Apabila sudah maka tekan tombol "Next Page"')
                 st.write(df_data_page_2)
                 st.session_state.df_data_page_2 = df_data_page_2
-                st.session_state.selected_feeders = st.session_state.selected_feeders
+                
 
     left_2, middle_2, right_2 = st.columns([1,3,1])
     with right_2:
