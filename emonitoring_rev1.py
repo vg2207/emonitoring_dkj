@@ -288,7 +288,7 @@ if st.session_state["page"] == 2:
 
         st.write(df_data_page_1_5["Feeder yang digunakan"])
         st.write(df_data_page_1_5["Feeder yang digunakan"].isin([["Feeder 1 - F1"]]).any())
-        if df_data_page_1_5["Feeder yang digunakan"].isin(["Feeder 1 - F1"]).any() == True:
+        if df_data_page_1_5["Feeder yang digunakan"].isin(["Feeder 1 - F1"]).any():
             with st.container(border=True):
                 st.markdown(f"<h5 style='text-align: left;'>Output Feeder 1 - F1 (kg/jam)</h5>", unsafe_allow_html=True)
                 col_2_1, col_2_2 = st.columns([1, 1])
