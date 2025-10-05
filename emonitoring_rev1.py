@@ -542,7 +542,7 @@ if st.session_state["page"] == 2:
                 })
                 df_data_page_2 = pd.concat([df_data_page_2, new_row_page_2]).reset_index(drop=True)
                 st.success(f'Cek apakah data berikut sudah benar? Apabila sudah maka tekan tombol "Next Page"')
-                st.write(df_data_page_2.dropna(axis=1, inplace=False))
+                st.write(df_data_page_2.dropna(axis='columns'))
                 st.session_state.df_data_page_2 = df_data_page_2
 
     left_2, middle_2, right_2 = st.columns([1,3,1])
