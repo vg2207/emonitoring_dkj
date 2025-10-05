@@ -228,7 +228,7 @@ if st.session_state["page"] == 2:
     # st.markdown(f"<h3 style='text-align: center;'>MESIN FEEDER<br></h3>", unsafe_allow_html=True)
     # st.write(df_all_data)
 
-    with st.form(key='form_page_2'):
+    with st.form(key='form_page_2', clear_on_submit=False):
     #Inisialisasi semua parameter sebelum proses pengondisian menggunakan fungsi IF
         set_output_feeder_1 = None
         actual_output_feeder_1 = None
@@ -568,7 +568,7 @@ if st.session_state["page"] == 3:
     # st.markdown(f"<h3 style='text-align: center;'>EXTRUDER<br></h3>", unsafe_allow_html=True)
     # st.write(df_all_data)
 
-    with st.form(key='form_page_3'):
+    with st.form(key='form_page_3', clear_on_submit=False):
 
         foto_mesin_base64 = None
         set_output_mesin_extruder = None
@@ -1244,7 +1244,7 @@ if st.session_state["page"] == 4:
     # st.markdown(f"<h3 style='text-align: center;'>EXTRUDER<br></h3>", unsafe_allow_html=True)
     # st.write(df_all_data)
 
-    with st.form(key='form_page_4'):
+    with st.form(key='form_page_4', clear_on_submit=False):
 
         set_temperature_adapter = None
         actual_temperature_adapter = None
@@ -1777,7 +1777,7 @@ if st.session_state["page"] == 5:
     # st.markdown(f"<h3 style='text-align: center;'>EXTRUDER<br></h3>", unsafe_allow_html=True)
     # st.write(df_all_data)
 
-    with st.form(key='form_page_5'):
+    with st.form(key='form_page_5', clear_on_submit=False):
 
         tailing_rework = None
         gandeng_rework = None
