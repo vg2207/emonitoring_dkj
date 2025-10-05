@@ -534,8 +534,8 @@ if st.session_state["page"] == 2:
         else :
             pass
     
-        # submit_button_2_1 = st.form_submit_button(label='Submit', width = "stretch", type = "primary")
-        submit_button_2_1 = st.button(label='Submit', width = "stretch", type = "primary")
+        submit_button_2_1 = st.form_submit_button(label='Submit', width = "stretch", type = "primary")
+        
     
         if submit_button_2_1:
             if can_submit == False:
