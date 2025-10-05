@@ -308,12 +308,13 @@ if st.session_state["page"] == 2:
                 col_2_1, col_2_2 = st.columns([1, 1])
                 with col_2_1:
                     set_output_feeder_1 = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_1")
+                    st.write(set_output_feeder_1)
                 with col_2_2 :
                     actual_output_feeder_1 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_1")
         else:
             pass
 
-        st.write(set_output_feeder_1)
+        
 
         if "Feeder 2 - F2" in st.session_state.get("selected_feeders", []): 
             with st.container(border=True):
