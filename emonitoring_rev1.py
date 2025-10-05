@@ -299,7 +299,7 @@ if st.session_state["page"] == 2:
         # else:
         #     pass
         
-        if "Feeder 1 - F1" in df_data_page_1_5.get("selected_feeders", []):
+        if "Feeder 1 - F1" in st.session_state.get("df_data_page_1_5", []):
             with st.container(border=True):
                 st.markdown(f"<h5 style='text-align: left;'>Output Feeder 1 - F1 (kg/jam)</h5>", unsafe_allow_html=True)
                 col_2_1, col_2_2 = st.columns([1, 1])
