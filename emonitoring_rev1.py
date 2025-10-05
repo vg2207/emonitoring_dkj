@@ -255,6 +255,7 @@ if st.session_state["page"] == 1.5:
 #Halaman 2
 if st.session_state["page"] == 2:
     df_data_page_1 = st.session_state.df_data_page_1
+    df_data_page_1_5 = st.session_state.df_data_page_1_5
     # st.write(df_data_page_1["Mesin"][0])
     st.markdown(f"<h3 style='text-align: left;'><br>HALAMAN 3/6 : MESIN FEEDER</h3>", unsafe_allow_html=True)
     # st.markdown(f"<h3 style='text-align: center;'>MESIN FEEDER<br></h3>", unsafe_allow_html=True)
@@ -285,7 +286,8 @@ if st.session_state["page"] == 2:
         rpm_feeder_rework = None
         # liquid_feeder_option = None
 
-        if "Feeder 1 - F1" in st.session_state.get("selected_feeders", []):
+
+        if df_data_page_1_5["Feeder yang digunakan"].isin(["Feeder 1 - F1"]):
             with st.container(border=True):
                 st.markdown(f"<h5 style='text-align: left;'>Output Feeder 1 - F1 (kg/jam)</h5>", unsafe_allow_html=True)
                 col_2_1, col_2_2 = st.columns([1, 1])
@@ -295,6 +297,17 @@ if st.session_state["page"] == 2:
                     actual_output_feeder_1 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_1")
         else:
             pass
+        
+        # if "Feeder 1 - F1" in st.session_state.get("selected_feeders", []):
+        #     with st.container(border=True):
+        #         st.markdown(f"<h5 style='text-align: left;'>Output Feeder 1 - F1 (kg/jam)</h5>", unsafe_allow_html=True)
+        #         col_2_1, col_2_2 = st.columns([1, 1])
+        #         with col_2_1:
+        #             set_output_feeder_1 = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_1")
+        #         with col_2_2 :
+        #             actual_output_feeder_1 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_1")
+        # else:
+        #     pass
 
         if "Feeder 2 - F2" in st.session_state.get("selected_feeders", []): 
             with st.container(border=True):
