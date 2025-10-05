@@ -299,7 +299,8 @@ if st.session_state["page"] == 2:
         #             actual_output_feeder_1 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_1")
         # else:
         #     pass
-        
+
+        st.write("Feeder 1 - F1" in st.session_state.get("selected_feeders", []))
         if "Feeder 1 - F1" in st.session_state.get("selected_feeders", []):
             with st.container(border=True):
                 st.markdown(f"<h5 style='text-align: left;'>Output Feeder 1 - F1 (kg/jam)</h5>", unsafe_allow_html=True)
