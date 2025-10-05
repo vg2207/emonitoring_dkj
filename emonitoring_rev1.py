@@ -162,7 +162,7 @@ if st.session_state["page"] == 1:
                 })
                 df_data_page_1 = pd.concat([df_data_page_1, new_row_page_1]).reset_index(drop=True)
                 st.success(f'Cek apakah data berikut sudah benar? Apabila sudah maka tekan tombol "Next Page"')
-                st.write(df_data_page_1)
+                st.write(df_data_page_1.dropna())
                 st.session_state.df_data_page_1 = df_data_page_1
 
 
@@ -542,7 +542,7 @@ if st.session_state["page"] == 2:
                 })
                 df_data_page_2 = pd.concat([df_data_page_2, new_row_page_2]).reset_index(drop=True)
                 st.success(f'Cek apakah data berikut sudah benar? Apabila sudah maka tekan tombol "Next Page"')
-                st.write(df_data_page_2)
+                st.write(df_data_page_2.dropna())
                 st.session_state.df_data_page_2 = df_data_page_2
 
     left_2, middle_2, right_2 = st.columns([1,3,1])
@@ -1216,7 +1216,7 @@ if st.session_state["page"] == 3:
                 })
                 df_data_page_3 = pd.concat([df_data_page_3, new_row_page_3]).reset_index(drop=True)
                 st.success(f'Cek apakah data berikut sudah benar? Apabila sudah maka tekan tombol "Next Page"')
-                st.write(df_data_page_3)
+                st.write(df_data_page_3.dropna())
                 st.session_state.df_data_page_3 = df_data_page_3
                 
             
@@ -1636,7 +1636,7 @@ if st.session_state["page"] == 4:
                 })
                 df_data_page_4 = pd.concat([df_data_page_4, new_row_page_4]).reset_index(drop=True)
                 st.success(f'Cek apakah data berikut sudah benar? Apabila sudah maka tekan tombol "Next Page"')
-                st.write(df_data_page_4)
+                st.write(df_data_page_4.dropna())
                 st.session_state.df_data_page_4 = df_data_page_4
     
     left_4, middle_4, right_4 = st.columns([1,3,1])
@@ -1885,7 +1885,7 @@ if st.session_state["page"] == 5:
                 })
                 df_data_page_5 = pd.concat([df_data_page_5, new_row_page_5]).reset_index(drop=True)
                 st.success(f'Cek apakah data berikut sudah benar? Apabila sudah maka tekan tombol "Next Page"')
-                st.write(df_data_page_5)
+                st.write(df_data_page_5.dropna())
                 st.session_state.df_data_page_5 = df_data_page_5
     
     left_5, middle_5, right_5 = st.columns([1,3,1])
