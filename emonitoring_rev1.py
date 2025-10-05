@@ -184,36 +184,68 @@ if st.session_state["page"] == 1:
 if st.session_state["page"] == 1.5:
     st.markdown("<h3 style='text-align: left;'><br>HALAMAN 2/6 : PILIH FEEDER YANG DIGUNAKAN</h3>", unsafe_allow_html=True)
 
-    # with st.form(key='form_page_1_5', clear_on_submit=False):
+    with st.form(key='form_page_1_5', clear_on_submit=False):
 
-    feeder_options = [
-        "Feeder 1 - F1",
-        "Feeder 2 - F2",
-        "Feeder 3 - F3",
-        "Feeder 4 - F4",
-        "Feeder Jotam S50",
-        "Feeder Jotam S90 Resin",
-        "Feeder Jotam S90 Aditif",
-        "Liquid Feeder",
-        "Main Feeder",
-        "Side Feeder",
-        "Feeder Rework"
-    ]
+        feeder_options = [
+            "Feeder 1 - F1",
+            "Feeder 2 - F2",
+            "Feeder 3 - F3",
+            "Feeder 4 - F4",
+            "Feeder Jotam S50",
+            "Feeder Jotam S90 Resin",
+            "Feeder Jotam S90 Aditif",
+            "Liquid Feeder",
+            "Main Feeder",
+            "Side Feeder",
+            "Feeder Rework"
+        ]
 
-    selected_feeders = st.multiselect(
-        "Pilih feeder yang digunakan:",
-        feeder_options,
-        key="selected_feeders"
-    )
+        selected_feeders = st.multiselect(
+            "Pilih feeder yang digunakan:",
+            feeder_options,
+            key="selected_feeders"
+        )
+
+        can_submit = True
+
+        if not selected_feeders:
+            st.warning('Isi bagian "Feeder yang digunakan"!')
+            can_submit = False
+
+        submit_button_1_1_5 = st.form_submit_button(label='Submit', width = "stretch", type = "primary")
+        if submit_button_1_1_5:
+            if can_submit == False:
+                st.error(f"Lengkapi seluruh kolom sebelum menekan tombol Submit!")                
+            else:
+                nama_kolom_page_1_5 = {
+                    "Feeder yang digunakan": []
+                    }
+                df_data_page_1_5 = pd.DataFrame(nama_kolom_page_1_5)
+                new_row_page_1_5 = pd.DataFrame(
+                {"Feeder yang digunakan": [selected_feeders]
+                })
+                df_data_page_1_5 = pd.concat([df_data_page_1_5, new_row_page_1_5]).reset_index(drop=True)
+                st.success(f'Cek apakah data berikut sudah benar? Apabila sudah maka tekan tombol "Next Page"')
+                st.write(df_data_page_1_5.dropna(axis=1, inplace=False))
+                st.session_state.df_data_page_1_5 = df_data_page_1_5
+
+
 
     left_1_5, middle_1_5, right_1_5 = st.columns([0.2,0.6,0.2])
     with right_1_5:
-        if st.button("Next Page ➔", width="stretch", type="primary"):
-            if not selected_feeders:
-                st.warning("Pilih minimal 1 feeder sebelum lanjut!")
-            else:
-                st.session_state.page = 2
-                st.rerun()
+        submit_button_1_2_5 = st.button(type="primary", label='Next Page ➔', width="stretch")
+    if submit_button_1_2_5:
+        if "df_data_page_1_5" not in st.session_state:
+            st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit"sebelum menekan tombol "Next Page"!')
+        else:
+            st.session_state.page = 2   # kalau Running, lanjut normal ke halaman 2
+        st.rerun()
+        # if st.button("Next Page ➔", width="stretch", type="primary"):
+        #     if not selected_feeders:
+        #         st.warning("Pilih minimal 1 feeder sebelum lanjut!")
+        #     else:
+        #         st.session_state.page = 2
+        #         st.rerun()
     
     with left_1_5:
         if st.button("🠘 Back"):
