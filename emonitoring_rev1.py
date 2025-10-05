@@ -260,7 +260,7 @@ if st.session_state["page"] == 2:
     st.markdown(f"<h3 style='text-align: left;'><br>HALAMAN 3/6 : MESIN FEEDER</h3>", unsafe_allow_html=True)
     # st.markdown(f"<h3 style='text-align: center;'>MESIN FEEDER<br></h3>", unsafe_allow_html=True)
     # st.write(df_all_data)
-    st.write(st.session_state.selected_feeders)
+    # st.write(st.session_state.selected_feeders)
 
 
     with st.form(key='form_page_2', clear_on_submit=False):
