@@ -313,6 +313,8 @@ if st.session_state["page"] == 2:
         else:
             pass
 
+        st.write(set_output_feeder_1)
+
         if "Feeder 2 - F2" in st.session_state.get("selected_feeders", []): 
             with st.container(border=True):
                 st.markdown(f"<h5 style='text-align: left;'>Output Feeder 2 - F2 (kg/jam)</h5>", unsafe_allow_html=True)
