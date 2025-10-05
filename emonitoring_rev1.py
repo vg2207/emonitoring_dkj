@@ -261,342 +261,340 @@ if st.session_state["page"] == 2:
     # st.markdown(f"<h3 style='text-align: center;'>MESIN FEEDER<br></h3>", unsafe_allow_html=True)
     # st.write(df_all_data)
 
-    # if "selected_feeders" not in st.session_state:
-    #     st.session_state.selected_feeders = df_data_page_1_5
 
-    # with st.form(key='form_page_2', clear_on_submit=False):
-    #Inisialisasi semua parameter sebelum proses pengondisian menggunakan fungsi IF
-    set_output_feeder_1 = None
-    actual_output_feeder_1 = None
-    set_output_feeder_2 = None
-    actual_output_feeder_2 = None
-    set_output_feeder_3 = None
-    actual_output_feeder_3 = None
-    set_output_feeder_4 = None
-    actual_output_feeder_4 = None
-    set_output_feeder_jotam_s50 = None
-    actual_output_feeder_jotam_s50 = None
-    set_output_feeder_jotam_s90_resin = None
-    actual_output_feeder_jotam_s90_resin = None
-    set_output_feeder_jotam_s90_aditif = None
-    actual_output_feeder_jotam_s90_aditif = None
-    set_output_liquid_feeder = None
-    actual_output_liquid_feeder = None
-    tekanan_liquid_feeder = None
-    ampere_main_feeder = None
-    rpm_main_feeder = None
-    rpm_side_feeder = None
-    rpm_feeder_rework = None
-    # liquid_feeder_option = None
-
-    # st.write(df_data_page_1_5[["Feeder yang digunakan"]].values)
-    # st.write(df_data_page_1_5["Feeder yang digunakan"].isin([["Feeder 1 - F1"]]).any())
-    # if df_data_page_1_5["Feeder yang digunakan"].isin(["Feeder 1 - F1"]).any():
-    #     with st.container(border=True):
-    #         st.markdown(f"<h5 style='text-align: left;'>Output Feeder 1 - F1 (kg/jam)</h5>", unsafe_allow_html=True)
-    #         col_2_1, col_2_2 = st.columns([1, 1])
-    #         with col_2_1:
-    #             set_output_feeder_1 = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_1")
-    #         with col_2_2 :
-    #             actual_output_feeder_1 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_1")
-    # else:
-    #     pass
+    with st.form(key='form_page_2', clear_on_submit=False):
+        #Inisialisasi semua parameter sebelum proses pengondisian menggunakan fungsi IF
+        set_output_feeder_1 = None
+        actual_output_feeder_1 = None
+        set_output_feeder_2 = None
+        actual_output_feeder_2 = None
+        set_output_feeder_3 = None
+        actual_output_feeder_3 = None
+        set_output_feeder_4 = None
+        actual_output_feeder_4 = None
+        set_output_feeder_jotam_s50 = None
+        actual_output_feeder_jotam_s50 = None
+        set_output_feeder_jotam_s90_resin = None
+        actual_output_feeder_jotam_s90_resin = None
+        set_output_feeder_jotam_s90_aditif = None
+        actual_output_feeder_jotam_s90_aditif = None
+        set_output_liquid_feeder = None
+        actual_output_liquid_feeder = None
+        tekanan_liquid_feeder = None
+        ampere_main_feeder = None
+        rpm_main_feeder = None
+        rpm_side_feeder = None
+        rpm_feeder_rework = None
+        # liquid_feeder_option = None
     
-    if "Feeder 1 - F1" in st.session_state.get("selected_feeders", []):
-        with st.container(border=True):
-            st.markdown(f"<h5 style='text-align: left;'>Output Feeder 1 - F1 (kg/jam)</h5>", unsafe_allow_html=True)
-            col_2_1, col_2_2 = st.columns([1, 1])
-            with col_2_1:
-                set_output_feeder_1 = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_1")
-                st.write(st.session_state["set_output_feeder_1"])
-            with col_2_2 :
-                actual_output_feeder_1 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_1")
-    else:
-        pass
-
-    
-
-    if "Feeder 2 - F2" in st.session_state.get("selected_feeders", []): 
-        with st.container(border=True):
-            st.markdown(f"<h5 style='text-align: left;'>Output Feeder 2 - F2 (kg/jam)</h5>", unsafe_allow_html=True)
-            col_2_3, col_2_4 = st.columns([1, 1])
-            with col_2_3:
-                set_output_feeder_2 = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_2")
-            with col_2_4 :
-                actual_output_feeder_2 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_2")
-    else:
-        pass
-
-    if "Feeder 3 - F3" in st.session_state.get("selected_feeders", []): 
-        with st.container(border=True):
-            st.markdown(f"<h5 style='text-align: left;'>Output Feeder 3 - F3 (kg/jam)</h5>", unsafe_allow_html=True)
-            col_2_5, col_2_6 = st.columns([1, 1])
-            with col_2_5:
-                set_output_feeder_3 = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_3")
-            with col_2_6 :
-                actual_output_feeder_3 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_3")
-    else:
-        pass
-
-    if "Feeder 4 - F4" in st.session_state.get("selected_feeders", []):
-        with st.container(border=True):
-            st.markdown(f"<h5 style='text-align: left;'>Output Feeder 4 - F4 (kg/jam)</h5>", unsafe_allow_html=True)
-            col_2_7, col_2_8 = st.columns([1, 1])
-            with col_2_7:
-                set_output_feeder_4 = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_4")
-            with col_2_8 :
-                actual_output_feeder_4 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_4")
-    else :
-        pass
-
-    if "Feeder Jotam S50" in st.session_state.get("selected_feeders", []):
-        with st.container(border=True):
-            st.markdown(f"<h5 style='text-align: left;'>Output Feeder Jotam S50 (kg/jam)</h5>", unsafe_allow_html=True)
-            col_2_9, col_2_10 = st.columns([1, 1])
-            with col_2_9:
-                set_output_feeder_jotam_s50 = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_jotam_s50")
-            with col_2_10 :
-                actual_output_feeder_jotam_s50 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_jotam_s50")
-    else :
-        pass
-
-    if "Feeder Jotam S90 Resin" in st.session_state.get("selected_feeders", []):
-        with st.container(border=True):
-            st.markdown(f"<h5 style='text-align: left;'>Output Feeder Jotam S90 - Resin (kg/jam)</h5>", unsafe_allow_html=True)
-            col_2_11, col_2_12 = st.columns([1, 1])
-            with col_2_11:
-                set_output_feeder_jotam_s90_resin = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_jotam_s90_resin")
-            with col_2_12 :
-                actual_output_feeder_jotam_s90_resin = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_jotam_s90_resin")
-    else :
-        pass
-
-    if "Feeder Jotam S90 Aditif" in st.session_state.get("selected_feeders", []):
-        with st.container(border=True):
-            st.markdown(f"<h5 style='text-align: left;'>Output Feeder Jotam S90 - Aditif (kg/jam)</h5>", unsafe_allow_html=True)
-            col_2_13, col_2_14 = st.columns([1, 1])
-            with col_2_13:
-                set_output_feeder_jotam_s90_aditif = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_jotam_s90_aditif")
-            with col_2_14 :
-                actual_output_feeder_jotam_s90_aditif = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_jotam_s90_aditif")
-    else :
-        pass
-
-    if "Liquid Feeder" in st.session_state.get("selected_feeders", []):
-        with st.container(border=True):
-            st.markdown(f"<h5 style='text-align: left;'>Output Liquid Feeder (kg/jam)</h5>", unsafe_allow_html=True)
-            col_2_15, col_2_16 = st.columns([1, 1])
-            with col_2_15:
-                set_output_liquid_feeder = st.number_input("", value=None, placeholder="SET POINT", key="set_output_liquid_feeder")
-            with col_2_16 :
-                actual_output_liquid_feeder = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_liquid_feeder")
-        with st.container(border=True):
-            st.markdown(f"<h5 style='text-align: left;'>Tekanan Liquid Feeder</h5>", unsafe_allow_html=True)
-            tekanan_liquid_feeder = st.number_input("", value=None, placeholder="", key="tekanan_liquid_feeder")
-    else :
-        pass
-
-    if "Main Feeder" in st.session_state.get("selected_feeders", []):
-        with st.container(border=True):
-            st.markdown(f"<h5 style='text-align: left;'>Main Feeder / Feeder 1</h5>", unsafe_allow_html=True)
-            col_2_17, col_2_18 = st.columns([1, 1])
-            if df_data_page_1["Mesin"][0] == 'Lab' or df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05':
-                with col_2_17:
-                    rpm_main_feeder = st.number_input("RPM main feeder", value=None, placeholder="", key="rpm_main_feeder")
-            else :
-                pass
-            if df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03':
-                with col_2_18 :
-                    ampere_main_feeder = st.number_input("Ampere main feeder", value=None, placeholder="", key="ampere_main_feeder")
-            else :
-                pass
-    else:
-        pass
-
-    if "Side Feeder" in st.session_state.get("selected_feeders", []):
-        with st.container(border=True):
-            st.markdown(f"<h5 style='text-align: left;'>Feeder Rework</h5>", unsafe_allow_html=True)
-            rpm_feeder_rework = st.number_input("RPM feeder rework", value=None, placeholder="", key="rpm_feeder_rework")
-    else :
-        pass
-
-    if "Feeder Rework" in st.session_state.get("selected_feeders", []):
-        with st.container(border=True):
-            st.markdown(f"<h5 style='text-align: left;'>Side Feeder</h5>", unsafe_allow_html=True)
-            rpm_side_feeder = st.number_input("RPM side feeder", value=None, placeholder="", key="rpm_side_feeder")
-    else :
-        pass
-    
-    can_submit = True
-    
-    if "Feeder 1 - F1" in st.session_state.get("selected_feeders", []):
-        if set_output_feeder_1 is None:
-            st.warning('Isi bagian "Set Point Output Feeder 1 - F1"!')
-            can_submit = False
-        if actual_output_feeder_1 is None:
-            st.warning('Isi bagian "Aktual Output Feeder 1 - F1"!')
-            can_submit = False
-    else:
-        pass
-
-    if "Feeder 2 - F2" in st.session_state.get("selected_feeders", []):
-        if set_output_feeder_2 is None:
-            st.warning('Isi bagian "Set Point Output Feeder 2 - F2"!')
-            can_submit = False
-        if actual_output_feeder_2 is None:
-            st.warning('Isi bagian "Aktual Output Feeder 2 - F2"!')
-            can_submit = False
-    else:
-        pass
-
-    if "Feeder 3 - F3" in st.session_state.get("selected_feeders", []):
-        if set_output_feeder_3 is None:
-            st.warning('Isi bagian "Set Point Output Feeder 3 - F3"!')
-            can_submit = False
-        if actual_output_feeder_3 is None:
-            st.warning('Isi bagian "Aktual Output Feeder 3 - F3"!')
-            can_submit = False
-    else:
-        pass
-
-    if "Feeder 4 - F4" in st.session_state.get("selected_feeders", []):
-        if set_output_feeder_4 is None:
-            st.warning('Isi bagian "Set Point Output Feeder 4 - F4"!')
-            can_submit = False
-        if actual_output_feeder_4 is None:
-            st.warning('Isi bagian "Aktual Output Feeder 4 - F4"!')
-            can_submit = False
-    else:
-        pass
-
-    if "Feeder Jotam S50" in st.session_state.get("selected_feeders", []):
-        if set_output_feeder_jotam_s50 is None:
-            st.warning('Isi bagian "Set Point Output Feeder Jotam S50"!')
-            can_submit = False
-        if actual_output_feeder_jotam_s50 is None:
-            st.warning('Isi bagian "Aktual Output Feeder Jotam S50"!')
-            can_submit = False
-    else:
-        pass
-
-    if "Feeder Jotam S90 Resin" in st.session_state.get("selected_feeders", []):
-        if set_output_feeder_jotam_s90_resin is None:
-            st.warning('Isi bagian "Set Point Output Feeder Jotam S90 Resin"!')
-            can_submit = False
-        if actual_output_feeder_jotam_s90_resin is None:
-            st.warning('Isi bagian "Aktual Output Feeder Jotam S90 Resin"!')
-            can_submit = False
-    else:
-        pass
-
-    if "Feeder Jotam S90 Aditif" in st.session_state.get("selected_feeders", []):
-        if set_output_feeder_jotam_s90_aditif is None:
-            st.warning('Isi bagian "Set Point Output Feeder Jotam S90 Aditif"!')
-            can_submit = False
-        if actual_output_feeder_jotam_s90_aditif is None:
-            st.warning('Isi bagian "Aktual Output Feeder Jotam S90 Aditif"!')
-            can_submit = False
-    else:
-        pass
-
-    if "Liquid Feeder" in st.session_state.get("selected_feeders", []):
-        if set_output_liquid_feeder is None:
-            st.warning('Isi bagian "Set Point Output Liquid Feeder"!')
-            can_submit = False
-        if actual_output_liquid_feeder is None:
-            st.warning('Isi bagian "Aktual Output Liquid Feeder"!')
-            can_submit = False
-        if tekanan_liquid_feeder is None:
-            st.warning('Isi bagian "Tekanan Liquid Feeder"!')
-            can_submit = False
-    else :
-        pass
-
-    if "Main Feeder" in st.session_state.get("selected_feeders", []):
-        if rpm_main_feeder is None:
-            st.warning('Isi bagian "RPM main feeder"!')
-            can_submit = False
-        if ampere_main_feeder is None:
-            st.warning('Isi bagian "Ampere main feeder"!')
-            can_submit = False
-    else :
-        pass
-
-    if "Feeder Rework" in st.session_state.get("selected_feeders", []):
-        if rpm_feeder_rework is None:
-            st.warning('Isi bagian "RPM Feeder Rework"!')
-            can_submit = False
-    else :
-        pass
-
-    if "Side Feeder" in st.session_state.get("selected_feeders", []):
-        if rpm_side_feeder is None:
-            st.warning('Isi bagian "RPM Side Feeder"!')
-            can_submit = False
-    else :
-        pass
-
-    # submit_button_2_1 = st.form_submit_button(label='Submit', width = "stretch", type = "primary")
-    submit_button_2_1 = st.button(label='Submit', width = "stretch", type = "primary")
-
-    if submit_button_2_1:
-        if can_submit == False:
-            st.error(f"Lengkapi seluruh kolom sebelum menekan tombol Submit!")
+        # st.write(df_data_page_1_5[["Feeder yang digunakan"]].values)
+        # st.write(df_data_page_1_5["Feeder yang digunakan"].isin([["Feeder 1 - F1"]]).any())
+        # if df_data_page_1_5["Feeder yang digunakan"].isin(["Feeder 1 - F1"]).any():
+        #     with st.container(border=True):
+        #         st.markdown(f"<h5 style='text-align: left;'>Output Feeder 1 - F1 (kg/jam)</h5>", unsafe_allow_html=True)
+        #         col_2_1, col_2_2 = st.columns([1, 1])
+        #         with col_2_1:
+        #             set_output_feeder_1 = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_1")
+        #         with col_2_2 :
+        #             actual_output_feeder_1 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_1")
+        # else:
+        #     pass
+        
+        if "Feeder 1 - F1" in st.session_state.get("selected_feeders", []):
+            with st.container(border=True):
+                st.markdown(f"<h5 style='text-align: left;'>Output Feeder 1 - F1 (kg/jam)</h5>", unsafe_allow_html=True)
+                col_2_1, col_2_2 = st.columns([1, 1])
+                with col_2_1:
+                    set_output_feeder_1 = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_1")
+                    st.write(st.session_state["set_output_feeder_1"])
+                with col_2_2 :
+                    actual_output_feeder_1 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_1")
         else:
-            nama_kolom_page_2 = {
-                "Set Point Output Feeder 1 - F1 (kg/jam)": [], 
-                "Aktual Output Feeder 1 - F1 (kg/jam)": [], 
-                "Set Point Output Feeder 2 - F2 (kg/jam)": [], 
-                "Aktual Output Feeder 2 - F2 (kg/jam)": [], 
-                "Set Point Output Feeder 3 - F3 (kg/jam)": [], 
-                "Aktual Output Feeder 3 - F3 (kg/jam)": [], 
-                "Set Point Output Feeder 4 - F4 (kg/jam)": [], 
-                "Aktual Output Feeder 4 - F4 (kg/jam)": [], 
-                "Set Point Output Feeder Jotam S50 (kg/jam)": [], 
-                "Aktual Output Feeder Jotam S50 (kg/jam)": [], 
-                "Set Point Output Feeder Jotam S90 - Resin (kg/jam)": [], 
-                "Aktual Output Feeder Jotam S90 - Resin (kg/jam)": [], 
-                "Set Point Output Feeder Jotam S90 - Aditif (kg/jam)": [], 
-                "Aktual Output Feeder Jotam S90 - Aditif (kg/jam)": [], 
-                # "Menggunakan Liquid Feeder?": [],
-                "Set Point Output Liquid Feeder (kg/jam)": [], 
-                "Aktual Output Liquid Feeder (kg/jam)": [], 
-                "Tekanan Liquid Feeder": [], 
-                "RPM Main Feeder": [], 
-                "Ampere Main Feeder": [], 
-                "RPM Feeder Rework": [], 
-                "RPM Side Feeder": [] 
-                }
-            df_data_page_2 = pd.DataFrame(nama_kolom_page_2)
-
-            new_row_page_2 = pd.DataFrame({
-                "Set Point Output Feeder 1 - F1 (kg/jam)": [set_output_feeder_1], 
-                "Aktual Output Feeder 1 - F1 (kg/jam)": [actual_output_feeder_1], 
-                "Set Point Output Feeder 2 - F2 (kg/jam)": [set_output_feeder_2], 
-                "Aktual Output Feeder 2 - F2 (kg/jam)": [actual_output_feeder_2], 
-                "Set Point Output Feeder 3 - F3 (kg/jam)": [set_output_feeder_3], 
-                "Aktual Output Feeder 3 - F3 (kg/jam)": [actual_output_feeder_3], 
-                "Set Point Output Feeder 4 - F4 (kg/jam)": [set_output_feeder_4], 
-                "Aktual Output Feeder 4 - F4 (kg/jam)": [actual_output_feeder_4], 
-                "Set Point Output Feeder Jotam S50 (kg/jam)": [set_output_feeder_jotam_s50], 
-                "Aktual Output Feeder Jotam S50 (kg/jam)": [actual_output_feeder_jotam_s50], 
-                "Set Point Output Feeder Jotam S90 - Resin (kg/jam)": [set_output_feeder_jotam_s90_resin], 
-                "Aktual Output Feeder Jotam S90 - Resin (kg/jam)": [actual_output_feeder_jotam_s90_resin], 
-                "Set Point Output Feeder Jotam S90 - Aditif (kg/jam)": [set_output_feeder_jotam_s90_aditif], 
-                "Aktual Output Feeder Jotam S90 - Aditif (kg/jam)": [actual_output_feeder_jotam_s90_aditif], 
-                # "Menggunakan Liquid Feeder?": [liquid_feeder_option],
-                "Set Point Output Liquid Feeder (kg/jam)": [set_output_liquid_feeder], 
-                "Aktual Output Liquid Feeder (kg/jam)": [actual_output_liquid_feeder], 
-                "Tekanan Liquid Feeder": [tekanan_liquid_feeder], 
-                "RPM Main Feeder": [rpm_main_feeder], 
-                "Ampere Main Feeder": [ampere_main_feeder], 
-                "RPM Feeder Rework": [rpm_feeder_rework], 
-                "RPM Side Feeder": [rpm_side_feeder] 
-            })
-            df_data_page_2 = pd.concat([df_data_page_2, new_row_page_2]).reset_index(drop=True)
-            st.success(f'Cek apakah data berikut sudah benar? Apabila sudah maka tekan tombol "Next Page"')
-            st.write(df_data_page_2)
-            st.session_state.df_data_page_2 = df_data_page_2
+            pass
+    
+        
+    
+        if "Feeder 2 - F2" in st.session_state.get("selected_feeders", []): 
+            with st.container(border=True):
+                st.markdown(f"<h5 style='text-align: left;'>Output Feeder 2 - F2 (kg/jam)</h5>", unsafe_allow_html=True)
+                col_2_3, col_2_4 = st.columns([1, 1])
+                with col_2_3:
+                    set_output_feeder_2 = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_2")
+                with col_2_4 :
+                    actual_output_feeder_2 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_2")
+        else:
+            pass
+    
+        if "Feeder 3 - F3" in st.session_state.get("selected_feeders", []): 
+            with st.container(border=True):
+                st.markdown(f"<h5 style='text-align: left;'>Output Feeder 3 - F3 (kg/jam)</h5>", unsafe_allow_html=True)
+                col_2_5, col_2_6 = st.columns([1, 1])
+                with col_2_5:
+                    set_output_feeder_3 = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_3")
+                with col_2_6 :
+                    actual_output_feeder_3 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_3")
+        else:
+            pass
+    
+        if "Feeder 4 - F4" in st.session_state.get("selected_feeders", []):
+            with st.container(border=True):
+                st.markdown(f"<h5 style='text-align: left;'>Output Feeder 4 - F4 (kg/jam)</h5>", unsafe_allow_html=True)
+                col_2_7, col_2_8 = st.columns([1, 1])
+                with col_2_7:
+                    set_output_feeder_4 = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_4")
+                with col_2_8 :
+                    actual_output_feeder_4 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_4")
+        else :
+            pass
+    
+        if "Feeder Jotam S50" in st.session_state.get("selected_feeders", []):
+            with st.container(border=True):
+                st.markdown(f"<h5 style='text-align: left;'>Output Feeder Jotam S50 (kg/jam)</h5>", unsafe_allow_html=True)
+                col_2_9, col_2_10 = st.columns([1, 1])
+                with col_2_9:
+                    set_output_feeder_jotam_s50 = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_jotam_s50")
+                with col_2_10 :
+                    actual_output_feeder_jotam_s50 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_jotam_s50")
+        else :
+            pass
+    
+        if "Feeder Jotam S90 Resin" in st.session_state.get("selected_feeders", []):
+            with st.container(border=True):
+                st.markdown(f"<h5 style='text-align: left;'>Output Feeder Jotam S90 - Resin (kg/jam)</h5>", unsafe_allow_html=True)
+                col_2_11, col_2_12 = st.columns([1, 1])
+                with col_2_11:
+                    set_output_feeder_jotam_s90_resin = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_jotam_s90_resin")
+                with col_2_12 :
+                    actual_output_feeder_jotam_s90_resin = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_jotam_s90_resin")
+        else :
+            pass
+    
+        if "Feeder Jotam S90 Aditif" in st.session_state.get("selected_feeders", []):
+            with st.container(border=True):
+                st.markdown(f"<h5 style='text-align: left;'>Output Feeder Jotam S90 - Aditif (kg/jam)</h5>", unsafe_allow_html=True)
+                col_2_13, col_2_14 = st.columns([1, 1])
+                with col_2_13:
+                    set_output_feeder_jotam_s90_aditif = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_jotam_s90_aditif")
+                with col_2_14 :
+                    actual_output_feeder_jotam_s90_aditif = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_jotam_s90_aditif")
+        else :
+            pass
+    
+        if "Liquid Feeder" in st.session_state.get("selected_feeders", []):
+            with st.container(border=True):
+                st.markdown(f"<h5 style='text-align: left;'>Output Liquid Feeder (kg/jam)</h5>", unsafe_allow_html=True)
+                col_2_15, col_2_16 = st.columns([1, 1])
+                with col_2_15:
+                    set_output_liquid_feeder = st.number_input("", value=None, placeholder="SET POINT", key="set_output_liquid_feeder")
+                with col_2_16 :
+                    actual_output_liquid_feeder = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_liquid_feeder")
+            with st.container(border=True):
+                st.markdown(f"<h5 style='text-align: left;'>Tekanan Liquid Feeder</h5>", unsafe_allow_html=True)
+                tekanan_liquid_feeder = st.number_input("", value=None, placeholder="", key="tekanan_liquid_feeder")
+        else :
+            pass
+    
+        if "Main Feeder" in st.session_state.get("selected_feeders", []):
+            with st.container(border=True):
+                st.markdown(f"<h5 style='text-align: left;'>Main Feeder / Feeder 1</h5>", unsafe_allow_html=True)
+                col_2_17, col_2_18 = st.columns([1, 1])
+                if df_data_page_1["Mesin"][0] == 'Lab' or df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05':
+                    with col_2_17:
+                        rpm_main_feeder = st.number_input("RPM main feeder", value=None, placeholder="", key="rpm_main_feeder")
+                else :
+                    pass
+                if df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03':
+                    with col_2_18 :
+                        ampere_main_feeder = st.number_input("Ampere main feeder", value=None, placeholder="", key="ampere_main_feeder")
+                else :
+                    pass
+        else:
+            pass
+    
+        if "Side Feeder" in st.session_state.get("selected_feeders", []):
+            with st.container(border=True):
+                st.markdown(f"<h5 style='text-align: left;'>Feeder Rework</h5>", unsafe_allow_html=True)
+                rpm_feeder_rework = st.number_input("RPM feeder rework", value=None, placeholder="", key="rpm_feeder_rework")
+        else :
+            pass
+    
+        if "Feeder Rework" in st.session_state.get("selected_feeders", []):
+            with st.container(border=True):
+                st.markdown(f"<h5 style='text-align: left;'>Side Feeder</h5>", unsafe_allow_html=True)
+                rpm_side_feeder = st.number_input("RPM side feeder", value=None, placeholder="", key="rpm_side_feeder")
+        else :
+            pass
+        
+        can_submit = True
+        
+        if "Feeder 1 - F1" in st.session_state.get("selected_feeders", []):
+            if set_output_feeder_1 is None:
+                st.warning('Isi bagian "Set Point Output Feeder 1 - F1"!')
+                can_submit = False
+            if actual_output_feeder_1 is None:
+                st.warning('Isi bagian "Aktual Output Feeder 1 - F1"!')
+                can_submit = False
+        else:
+            pass
+    
+        if "Feeder 2 - F2" in st.session_state.get("selected_feeders", []):
+            if set_output_feeder_2 is None:
+                st.warning('Isi bagian "Set Point Output Feeder 2 - F2"!')
+                can_submit = False
+            if actual_output_feeder_2 is None:
+                st.warning('Isi bagian "Aktual Output Feeder 2 - F2"!')
+                can_submit = False
+        else:
+            pass
+    
+        if "Feeder 3 - F3" in st.session_state.get("selected_feeders", []):
+            if set_output_feeder_3 is None:
+                st.warning('Isi bagian "Set Point Output Feeder 3 - F3"!')
+                can_submit = False
+            if actual_output_feeder_3 is None:
+                st.warning('Isi bagian "Aktual Output Feeder 3 - F3"!')
+                can_submit = False
+        else:
+            pass
+    
+        if "Feeder 4 - F4" in st.session_state.get("selected_feeders", []):
+            if set_output_feeder_4 is None:
+                st.warning('Isi bagian "Set Point Output Feeder 4 - F4"!')
+                can_submit = False
+            if actual_output_feeder_4 is None:
+                st.warning('Isi bagian "Aktual Output Feeder 4 - F4"!')
+                can_submit = False
+        else:
+            pass
+    
+        if "Feeder Jotam S50" in st.session_state.get("selected_feeders", []):
+            if set_output_feeder_jotam_s50 is None:
+                st.warning('Isi bagian "Set Point Output Feeder Jotam S50"!')
+                can_submit = False
+            if actual_output_feeder_jotam_s50 is None:
+                st.warning('Isi bagian "Aktual Output Feeder Jotam S50"!')
+                can_submit = False
+        else:
+            pass
+    
+        if "Feeder Jotam S90 Resin" in st.session_state.get("selected_feeders", []):
+            if set_output_feeder_jotam_s90_resin is None:
+                st.warning('Isi bagian "Set Point Output Feeder Jotam S90 Resin"!')
+                can_submit = False
+            if actual_output_feeder_jotam_s90_resin is None:
+                st.warning('Isi bagian "Aktual Output Feeder Jotam S90 Resin"!')
+                can_submit = False
+        else:
+            pass
+    
+        if "Feeder Jotam S90 Aditif" in st.session_state.get("selected_feeders", []):
+            if set_output_feeder_jotam_s90_aditif is None:
+                st.warning('Isi bagian "Set Point Output Feeder Jotam S90 Aditif"!')
+                can_submit = False
+            if actual_output_feeder_jotam_s90_aditif is None:
+                st.warning('Isi bagian "Aktual Output Feeder Jotam S90 Aditif"!')
+                can_submit = False
+        else:
+            pass
+    
+        if "Liquid Feeder" in st.session_state.get("selected_feeders", []):
+            if set_output_liquid_feeder is None:
+                st.warning('Isi bagian "Set Point Output Liquid Feeder"!')
+                can_submit = False
+            if actual_output_liquid_feeder is None:
+                st.warning('Isi bagian "Aktual Output Liquid Feeder"!')
+                can_submit = False
+            if tekanan_liquid_feeder is None:
+                st.warning('Isi bagian "Tekanan Liquid Feeder"!')
+                can_submit = False
+        else :
+            pass
+    
+        if "Main Feeder" in st.session_state.get("selected_feeders", []):
+            if rpm_main_feeder is None:
+                st.warning('Isi bagian "RPM main feeder"!')
+                can_submit = False
+            if ampere_main_feeder is None:
+                st.warning('Isi bagian "Ampere main feeder"!')
+                can_submit = False
+        else :
+            pass
+    
+        if "Feeder Rework" in st.session_state.get("selected_feeders", []):
+            if rpm_feeder_rework is None:
+                st.warning('Isi bagian "RPM Feeder Rework"!')
+                can_submit = False
+        else :
+            pass
+    
+        if "Side Feeder" in st.session_state.get("selected_feeders", []):
+            if rpm_side_feeder is None:
+                st.warning('Isi bagian "RPM Side Feeder"!')
+                can_submit = False
+        else :
+            pass
+    
+        # submit_button_2_1 = st.form_submit_button(label='Submit', width = "stretch", type = "primary")
+        submit_button_2_1 = st.button(label='Submit', width = "stretch", type = "primary")
+    
+        if submit_button_2_1:
+            if can_submit == False:
+                st.error(f"Lengkapi seluruh kolom sebelum menekan tombol Submit!")
+            else:
+                nama_kolom_page_2 = {
+                    "Set Point Output Feeder 1 - F1 (kg/jam)": [], 
+                    "Aktual Output Feeder 1 - F1 (kg/jam)": [], 
+                    "Set Point Output Feeder 2 - F2 (kg/jam)": [], 
+                    "Aktual Output Feeder 2 - F2 (kg/jam)": [], 
+                    "Set Point Output Feeder 3 - F3 (kg/jam)": [], 
+                    "Aktual Output Feeder 3 - F3 (kg/jam)": [], 
+                    "Set Point Output Feeder 4 - F4 (kg/jam)": [], 
+                    "Aktual Output Feeder 4 - F4 (kg/jam)": [], 
+                    "Set Point Output Feeder Jotam S50 (kg/jam)": [], 
+                    "Aktual Output Feeder Jotam S50 (kg/jam)": [], 
+                    "Set Point Output Feeder Jotam S90 - Resin (kg/jam)": [], 
+                    "Aktual Output Feeder Jotam S90 - Resin (kg/jam)": [], 
+                    "Set Point Output Feeder Jotam S90 - Aditif (kg/jam)": [], 
+                    "Aktual Output Feeder Jotam S90 - Aditif (kg/jam)": [], 
+                    # "Menggunakan Liquid Feeder?": [],
+                    "Set Point Output Liquid Feeder (kg/jam)": [], 
+                    "Aktual Output Liquid Feeder (kg/jam)": [], 
+                    "Tekanan Liquid Feeder": [], 
+                    "RPM Main Feeder": [], 
+                    "Ampere Main Feeder": [], 
+                    "RPM Feeder Rework": [], 
+                    "RPM Side Feeder": [] 
+                    }
+                df_data_page_2 = pd.DataFrame(nama_kolom_page_2)
+    
+                new_row_page_2 = pd.DataFrame({
+                    "Set Point Output Feeder 1 - F1 (kg/jam)": [set_output_feeder_1], 
+                    "Aktual Output Feeder 1 - F1 (kg/jam)": [actual_output_feeder_1], 
+                    "Set Point Output Feeder 2 - F2 (kg/jam)": [set_output_feeder_2], 
+                    "Aktual Output Feeder 2 - F2 (kg/jam)": [actual_output_feeder_2], 
+                    "Set Point Output Feeder 3 - F3 (kg/jam)": [set_output_feeder_3], 
+                    "Aktual Output Feeder 3 - F3 (kg/jam)": [actual_output_feeder_3], 
+                    "Set Point Output Feeder 4 - F4 (kg/jam)": [set_output_feeder_4], 
+                    "Aktual Output Feeder 4 - F4 (kg/jam)": [actual_output_feeder_4], 
+                    "Set Point Output Feeder Jotam S50 (kg/jam)": [set_output_feeder_jotam_s50], 
+                    "Aktual Output Feeder Jotam S50 (kg/jam)": [actual_output_feeder_jotam_s50], 
+                    "Set Point Output Feeder Jotam S90 - Resin (kg/jam)": [set_output_feeder_jotam_s90_resin], 
+                    "Aktual Output Feeder Jotam S90 - Resin (kg/jam)": [actual_output_feeder_jotam_s90_resin], 
+                    "Set Point Output Feeder Jotam S90 - Aditif (kg/jam)": [set_output_feeder_jotam_s90_aditif], 
+                    "Aktual Output Feeder Jotam S90 - Aditif (kg/jam)": [actual_output_feeder_jotam_s90_aditif], 
+                    # "Menggunakan Liquid Feeder?": [liquid_feeder_option],
+                    "Set Point Output Liquid Feeder (kg/jam)": [set_output_liquid_feeder], 
+                    "Aktual Output Liquid Feeder (kg/jam)": [actual_output_liquid_feeder], 
+                    "Tekanan Liquid Feeder": [tekanan_liquid_feeder], 
+                    "RPM Main Feeder": [rpm_main_feeder], 
+                    "Ampere Main Feeder": [ampere_main_feeder], 
+                    "RPM Feeder Rework": [rpm_feeder_rework], 
+                    "RPM Side Feeder": [rpm_side_feeder] 
+                })
+                df_data_page_2 = pd.concat([df_data_page_2, new_row_page_2]).reset_index(drop=True)
+                st.success(f'Cek apakah data berikut sudah benar? Apabila sudah maka tekan tombol "Next Page"')
+                st.write(df_data_page_2)
+                st.session_state.df_data_page_2 = df_data_page_2
                 
 
     left_2, middle_2, right_2 = st.columns([1,3,1])
