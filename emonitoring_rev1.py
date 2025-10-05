@@ -286,7 +286,7 @@ if st.session_state["page"] == 2:
         rpm_feeder_rework = None
         # liquid_feeder_option = None
 
-        st.write(df_data_page_1_5["Feeder yang digunakan"].value())
+        st.write(df_data_page_1_5["Feeder yang digunakan"].values)
         st.write(df_data_page_1_5["Feeder yang digunakan"].isin([["Feeder 1 - F1"]]).any())
         if df_data_page_1_5["Feeder yang digunakan"].isin(["Feeder 1 - F1"]).any():
             with st.container(border=True):
