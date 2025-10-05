@@ -216,7 +216,7 @@ if st.session_state["page"] == 1.5:
                 st.rerun()
     
     with left_1_5:
-        if st.button("🡐 Back"):
+        if st.button("🠘 Back"):
             st.session_state.page = 1
             st.rerun()
 
@@ -556,7 +556,7 @@ if st.session_state["page"] == 2:
             st.rerun()
 
     with left_2:
-        back_button_2 = st.button("🡐 Back")
+        back_button_2 = st.button("🠘 Back")
     if back_button_2:
         st.session_state.page = 1.5  # kembali ke halaman 1.5
         st.rerun()
@@ -1232,7 +1232,7 @@ if st.session_state["page"] == 3:
             st.rerun()
 
     with left_3:
-        back_button_3 = st.button("🡐 Back")
+        back_button_3 = st.button("🠘 Back")
     if back_button_3:
         st.session_state.page = 2  # kembali ke halaman 1
         st.rerun()
@@ -1654,7 +1654,7 @@ if st.session_state["page"] == 4:
             st.rerun()
 
     with left_4:
-        back_button_4 = st.button("🡐 Back")
+        back_button_4 = st.button("🠘 Back")
     if back_button_4:
         st.session_state.page = 3
         st.rerun()
@@ -1899,12 +1899,12 @@ if st.session_state["page"] == 5:
             st.rerun()
 
     with left_5:
-        back_button_5 = st.button("🡐 Back")
+        back_button_5 = st.button("🠘 Back")
     if back_button_5:
         st.session_state.page = 4 
         st.rerun()
 
-    back_button_5_to_1 = st.button("⬅️ Back ke Halaman 1 (ubah kondisi mesin)")
+    back_button_5_to_1 = st.button("🠘 Back ke Halaman 1 (ubah kondisi mesin)")
     if back_button_5_to_1:
         st.session_state.page = 1
         st.rerun()
