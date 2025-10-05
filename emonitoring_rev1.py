@@ -309,7 +309,9 @@ if st.session_state["page"] == 2:
                 with col_2_2 :
                     actual_output_feeder_1 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_1")
         else:
-            pass
+            set_output_feeder_1 = None
+            actual_output_feeder_1 = None
+        
     
         
     
