@@ -301,7 +301,7 @@ if st.session_state["page"] == 2:
         # else:
         #     pass
 
-        st.write(df_data_page_1_5["Feeder yang digunakan"].values)
+        st.write(df_data_page_1_5["Feeder yang digunakan"].values == "Feeder 1 - F1")
         
         if "Feeder 1 - F1" in df_data_page_1_5["Feeder yang digunakan"].values:
             with st.container(border=True):
