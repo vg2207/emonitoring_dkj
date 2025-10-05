@@ -306,7 +306,6 @@ if st.session_state["page"] == 2:
                 col_2_1, col_2_2 = st.columns([1, 1])
                 with col_2_1:
                     set_output_feeder_1 = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_1")
-                    st.write(st.session_state["set_output_feeder_1"])
                 with col_2_2 :
                     actual_output_feeder_1 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_1")
         else:
