@@ -86,11 +86,6 @@ if st.session_state["page"] == 0 :
 # Halaman 1
 
 if st.session_state["page"] == 1:
-    st.components.v1.html("""
-                <script>
-                    window.scrollTo(0, 0);
-                </script>
-            """, height=0)
 
     st.markdown(f"<h3 style='text-align: left;'><br>HALAMAN 1/6 : DATA UMUM</h3>", unsafe_allow_html=True)
 
@@ -188,12 +183,7 @@ if st.session_state["page"] == 1:
 
 # Halaman 1.5 - Pilih Feeder
 if st.session_state["page"] == 1.5:
-    st.components.v1.html("""
-                <script>
-                    window.scrollTo(0, 0);
-                </script>
-            """, height=0)
-    
+       
     st.markdown("<h3 style='text-align: left;'><br>HALAMAN 2/6 : PILIH FEEDER YANG DIGUNAKAN</h3>", unsafe_allow_html=True)
 
     with st.form(key='form_page_1_5', clear_on_submit=False):
@@ -263,11 +253,7 @@ if st.session_state["page"] == 1.5:
 
 #Halaman 2
 if st.session_state["page"] == 2:
-    st.components.v1.html("""
-                <script>
-                    window.scrollTo(0, 0);
-                </script>
-            """, height=0)
+    
     df_data_page_1 = st.session_state.df_data_page_1
     df_data_page_1_5 = st.session_state.df_data_page_1_5
     st.markdown(f"<h3 style='text-align: left;'><br>HALAMAN 3/6 : MESIN FEEDER</h3>", unsafe_allow_html=True)
@@ -614,11 +600,7 @@ if st.session_state["page"] == 2:
 
 #Halaman 3
 if st.session_state["page"] == 3:
-    st.components.v1.html("""
-                <script>
-                    window.scrollTo(0, 0);
-                </script>
-            """, height=0)
+    
     df_data_page_1 = st.session_state.df_data_page_1
     st.markdown(f"<h3 style='text-align: left;'><br>HALAMAN 4/6 : EXTRUDER</h3>", unsafe_allow_html=True)
     # st.markdown(f"<h3 style='text-align: center;'>EXTRUDER<br></h3>", unsafe_allow_html=True)
@@ -1297,11 +1279,7 @@ if st.session_state["page"] == 3:
 
 #Halaman 4
 if st.session_state["page"] == 4:
-    st.components.v1.html("""
-                <script>
-                    window.scrollTo(0, 0);
-                </script>
-            """, height=0)
+    
     df_data_page_1 = st.session_state.df_data_page_1
     st.markdown(f"<h3 style='text-align: left;'><br>HALAMAN 5/6 : UWP-PELLETIZER</h3>", unsafe_allow_html=True)
     # st.markdown(f"<h3 style='text-align: center;'>EXTRUDER<br></h3>", unsafe_allow_html=True)
@@ -1726,11 +1704,7 @@ if st.session_state["page"] == 4:
 
 #Halaman 5
 if st.session_state["page"] == 5:
-    st.components.v1.html("""
-                <script>
-                    window.scrollTo(0, 0);
-                </script>
-            """, height=0)
+    
     df_data_page_1 = st.session_state.df_data_page_1
     
     if df_data_page_1["Kondisi Mesin"][0] == "Stop":
@@ -1980,11 +1954,7 @@ if st.session_state["page"] == 5:
     if back_button_5_to_1:
         st.session_state.page = 1
         st.rerun()
-        st.components.v1.html("""
-            <script>
-                window.scrollTo(0, 0);
-            </script>
-        """, height=0)
+        
 
 #Halaman 6
 if st.session_state["page"] == 6:
