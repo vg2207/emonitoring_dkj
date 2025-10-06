@@ -56,6 +56,14 @@ def save_data(df):
 
 st.cache_data.clear()
 
+st.components.v1.html("""
+                <script>
+                    window.scrollTo(0, 0);
+                </script>
+            """, height=0)
+
+
+
 # col_0_1, col_0_2, col_0_3 = st.columns([1, 3, 1])
 # with col_0_1 :
 #     logo = Image.open('assets_logo/Logo Dunia Kimia Jaya.png')
