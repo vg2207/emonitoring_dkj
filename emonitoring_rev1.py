@@ -100,16 +100,16 @@ if st.session_state["page"] == 1:
     with st.form(key='form_page_1', clear_on_submit=False):
         nama_operator = st.text_input("Nama Operator", key="nama_operator")
         with st.container(horizontal=True):
-            col_1, col_2, col_3 = st.columns([1, 1, 1])
-            with col_1:
-                machine_options = ["Lab","E01", "E02", "E03", "E05", "E06"]
-                machine_selected_options = st.radio('Mesin', machine_options, key="machine_selected_options")
-            with col_2:
-                shift_options = ["1", "2", "3"]
-                shift_selected_options = st.radio('Shift', shift_options, key="shift_selected_options")
-            with col_3:
-                group_options = ["Kuning", "Hijau", "Merah", "Biru"]
-                group_selected_options = st.radio('Grup', group_options, key="group_selected_options")
+            # col_1, col_2, col_3 = st.columns([1, 1, 1])
+            # with col_1:
+            machine_options = ["Lab","E01", "E02", "E03", "E05", "E06"]
+            machine_selected_options = st.radio('Mesin', machine_options, key="machine_selected_options")
+            # with col_2:
+            shift_options = ["1", "2", "3"]
+            shift_selected_options = st.radio('Shift', shift_options, key="shift_selected_options")
+            # with col_3:
+            group_options = ["Kuning", "Hijau", "Merah", "Biru"]
+            group_selected_options = st.radio('Grup', group_options, key="group_selected_options")
         col_4, col_5 = st.columns([1, 1])
         with col_4:
             date_input = st.date_input("Tanggal Pengisian")
