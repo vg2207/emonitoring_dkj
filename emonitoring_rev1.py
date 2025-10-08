@@ -409,18 +409,18 @@ if st.session_state["page"] == 2:
             with st.container(border=True):
                 st.markdown(f"<h5 style='text-align: left;'>Main Feeder / Feeder 1</h5>", unsafe_allow_html=True)
 
-                # with st.container(horizontal=True):
-                col_2_17, col_2_18 = st.columns([1, 1])
-                if df_data_page_1["Mesin"][0] == 'Lab' or df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05':
-                    with col_2_17:
+                with st.container(horizontal=True):
+                    # col_2_17, col_2_18 = st.columns([1, 1])
+                    if df_data_page_1["Mesin"][0] == 'Lab' or df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05':
+                        # with col_2_17:
                         rpm_main_feeder = st.number_input("RPM main feeder", value=None, placeholder="", key="rpm_main_feeder")
-                else :
-                    pass
-                if df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03':
-                    with col_2_18 :
+                    else :
+                        pass
+                    if df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03':
+                        # with col_2_18 :
                         ampere_main_feeder = st.number_input("Ampere main feeder", value=None, placeholder="", key="ampere_main_feeder")
-                else :
-                    pass
+                    else :
+                        pass
         else:
             pass
     
