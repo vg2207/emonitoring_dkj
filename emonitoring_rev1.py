@@ -724,14 +724,16 @@ if st.session_state["page"] == 3:
 
         with st.container(border=True):
             st.markdown(f"<h5 style='text-align: left;'>Melt Temperature - Pressure Ekstruder</h5>", unsafe_allow_html=True)
-            col_3_5, col_3_6 = st.columns([1, 1])
-            if df_data_page_1["Mesin"][0] == 'Lab' or df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E05' or df_data_page_1["Mesin"][0] == 'E06':
-                with col_3_5:
-                    set_melt_temperature_extruder = st.number_input("", value=None, placeholder="MELT TEMPERATURE", key="set_melt_temperature_extruder")
-            else : 
-                pass
 
-            with col_3_6 :
+            with st.container(horizontal=True):
+                # col_3_5, col_3_6 = st.columns([1, 1])
+                if df_data_page_1["Mesin"][0] == 'Lab' or df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E05' or df_data_page_1["Mesin"][0] == 'E06':
+                    # with col_3_5:
+                    set_melt_temperature_extruder = st.number_input("", value=None, placeholder="MELT TEMPERATURE", key="set_melt_temperature_extruder")
+                else : 
+                    pass
+    
+                # with col_3_6 :
                 set_melt_pressure_extruder = st.number_input("", value=None, placeholder="MELT PRESSURE", key="set_melt_pressure_extruder")
    
         if df_data_page_1["Mesin"][0] == 'E06':
@@ -744,14 +746,16 @@ if st.session_state["page"] == 3:
 
         with st.container(border=True):
             st.markdown(f"<h5 style='text-align: left;'>Temperature Zone 1</h5>", unsafe_allow_html=True)
-            col_3_7, col_3_8 = st.columns([1, 1])
-            if df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05':
-                with col_3_7:
-                    set_temperature_zone_1 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_zone_1")
-            else :
-                pass
 
-            with col_3_8 :
+            with st.container(horizontal=True):
+                # col_3_7, col_3_8 = st.columns([1, 1])
+                if df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05':
+                    # with col_3_7:
+                    set_temperature_zone_1 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_zone_1")
+                else :
+                    pass
+    
+                # with col_3_8 :
                 actual_temperature_zone_1 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_zone_1")
 
         with st.container(border=True):
@@ -934,14 +938,16 @@ if st.session_state["page"] == 3:
         if df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05' or df_data_page_1["Mesin"][0] == 'E06':
             with st.container(border=True):
                 st.markdown(f"<h5 style='text-align: left;'>Cooling Barrell Mesin (Soft Water)</h5>", unsafe_allow_html=True)
-                col_3_39, col_3_40 = st.columns([1, 1])
-                if df_data_page_1["Mesin"][0] == 'E06':
-                    with col_3_39:
-                        temperature_cooling_barrel_mesin = st.number_input("", value=None, placeholder="TEMPERATURE", key="temperature_cooling_barrel_mesin")
-                else :
-                    pass
 
-                with col_3_40 :
+                with st.container(horizontal=True):
+                    # col_3_39, col_3_40 = st.columns([1, 1])
+                    if df_data_page_1["Mesin"][0] == 'E06':
+                        # with col_3_39:
+                        temperature_cooling_barrel_mesin = st.number_input("", value=None, placeholder="TEMPERATURE", key="temperature_cooling_barrel_mesin")
+                    else :
+                        pass
+    
+                    # with col_3_40 :
                     pressure_cooling_barrel_mesin = st.number_input("", value=None, placeholder="TEKANAN AIR", key="pressure_cooling_barrel_mesin")
         else:
             pass
@@ -969,14 +975,16 @@ if st.session_state["page"] == 3:
         if df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05' or df_data_page_1["Mesin"][0] == 'E06':
             with st.container(border=True):
                 st.markdown(f"<h5 style='text-align: left;'>Parameter Vacuum System</h5>", unsafe_allow_html=True)
-                col_3_44, col_3_45 = st.columns([1, 1])
-                with col_3_44:
+
+                with st.container(horizontal=True):
+                    # col_3_44, col_3_45 = st.columns([1, 1])
+                    # with col_3_44:
                     vacuum_bar_value = st.number_input("", value=None, placeholder="VACUUM BAR", key="vacuum_bar_value")
-                if df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E06':
-                    with col_3_45:
+                    if df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E06':
+                        # with col_3_45:
                         pressure_vacuum_system_water = st.number_input("", value=None, placeholder="TEKANAN AIR VACUUM SYSTEM", key="pressure_vacuum_system_water")
-                else :
-                    pass
+                    else :
+                        pass
         else:
             pass
 
@@ -1468,20 +1476,23 @@ if st.session_state["page"] == 4:
 
         with st.container(border=True):
             st.markdown(f"<h5 style='text-align: left;'>Cutter</h5>", unsafe_allow_html=True)
-            col_4_11, col_4_12, col_4_13, col_4_14 = st.columns([1, 1, 1, 1])
-            if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
-                with col_4_11:
+            with st.container(horizontal=True):
+            # col_4_11, col_4_12, col_4_13, col_4_14 = st.columns([1, 1, 1, 1])
+                if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
+                    # with col_4_11:
                     ampere_cutter = st.number_input("", value=None, placeholder="AMPERE/TORSI CUTTER", key="ampere_cutter")
-            else:
-                pass
-
-            with col_4_12:
+                else:
+                    pass
+    
+                # with col_4_12:
                 rpm_cutter = st.number_input("", value=None, placeholder="RPM CUTTER", key="rpm_cutter")
 
+            
             if df_data_page_1["Mesin"][0] == 'E06':
-                with col_4_13:
+                with st.container(horizontal=True):
+                # with col_4_13:
                     setting_cutter = st.number_input("", value=None, placeholder="SETTING MAJU CUTTER", key="setting_cutter")
-                with col_4_14:
+                # with col_4_14:
                     percentage_cutter = st.number_input("", value=None, placeholder="% PANJANG CUTTER", key="percentage_cutter")
             else:
                 pass
@@ -1489,17 +1500,18 @@ if st.session_state["page"] == 4:
         if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
             with st.container(border=True):
                 st.markdown(f"<h5 style='text-align: left;'>Air Proses UWP</h5>", unsafe_allow_html=True)
-                col_4_15, col_4_16 = st.columns([1, 1])
-                if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
-                    with col_4_15:
+                with st.container(horizontal=True):
+                    # col_4_15, col_4_16 = st.columns([1, 1])
+                    if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
+                        # with col_4_15:
                         uwp_water_pressure = st.number_input("", value=None, placeholder="TEKANAN AIR PROSES UWP", key="uwp_water_pressure")
-                else:
-                    pass
-                if df_data_page_1["Mesin"][0] == 'E06':
-                    with col_4_16:
+                    else:
+                        pass
+                    if df_data_page_1["Mesin"][0] == 'E06':
+                        # with col_4_16:
                         uwp_water_flow = st.number_input("", value=None, placeholder="FLOW/DEBIT AIR PROSES UWP", key="uwp_water_flow")
-                else:
-                    pass
+                    else:
+                        pass
         else:
             pass
 
@@ -1520,10 +1532,12 @@ if st.session_state["page"] == 4:
         if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
             with st.container(border=True):
                 st.markdown(f"<h5 style='text-align: left;'>Air Proses UWP</h5>", unsafe_allow_html=True)
-                col_4_17, col_4_18 = st.columns([1, 1])
-                with col_4_17:
+
+                with st.container(horizontal=True):
+                # col_4_17, col_4_18 = st.columns([1, 1])
+                # with col_4_17:
                     temperature_in_proses = st.number_input("", value=None, placeholder="TEMPERATURE IN AIR PROSES", key="temperature_in_proses")
-                with col_4_18:
+                # with col_4_18:
                     temperature_out_proses = st.number_input("", value=None, placeholder="TEMPERATURE OUT AIR PROSES", key="temperature_out_proses")
         else:
             pass
