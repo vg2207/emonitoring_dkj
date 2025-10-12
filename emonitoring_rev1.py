@@ -524,12 +524,15 @@ if st.session_state["page"] == 2:
             pass
     
         if "Main Feeder" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
-            if rpm_main_feeder is None:
-                st.warning('Isi bagian "RPM main feeder"!')
-                can_submit = False
-            if ampere_main_feeder is None:
-                st.warning('Isi bagian "Ampere main feeder"!')
-                can_submit = False
+            if df_data_page_1["Mesin"][0] == 'Lab' or df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05':
+                if rpm_main_feeder is None:
+                    st.warning('Isi bagian "RPM main feeder"!')
+                    can_submit = False
+            if df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03':
+                if ampere_main_feeder is None:
+                    st.warning('Isi bagian "Ampere main feeder"!')
+                    can_submit = False
+
         else :
             pass
     
