@@ -150,8 +150,8 @@ if st.session_state["page"] == 1:
         submit_button_1_1 = st.form_submit_button(label='Submit', width = "stretch", type = "primary")
         if submit_button_1_1:
             if can_submit == False:
-                # st.error(f"Lengkapi seluruh kolom sebelum menekan tombol Submit!")   
-                st.toast(f"Lengkapi seluruh kolom sebelum menekan tombol Submit!", icon="😍")
+                st.error(f"Lengkapi seluruh kolom sebelum menekan tombol Submit!")   
+                
             else:
                 nama_kolom_page_1 = {
                     "Nama Operator": [], 
