@@ -1420,8 +1420,10 @@ if st.session_state["page"] == 3:
             st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit" sebelum menekan tombol "Next Page"!')
         else:
             foto_mesin, path_to_save_extruder, file_name_extruder = save_image(image = foto_mesin, path_to_save = path_to_save_extruder, file_name = file_name_extruder)
-            st.session_state.page = 4
+            
             scroll_to_top()
+            st.session_state.page = 4
+            
             st.rerun()
             
             
