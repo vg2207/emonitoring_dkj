@@ -55,7 +55,12 @@ def save_data(df):
 
 def scroll_to_top():
     js = "window.scrollTo({top: 0, behavior: 'smooth'});"
-    st.components.v1.html(f"<script>{js}</script>", height=0)
+    temp = st.empty()
+    with temp:
+        st.components.v1.html(f"<script>{js}</script>", height=0)
+        time.sleep(.5) # To make sure the script can execute before being deleted
+    temp.empty()
+    
 
 
 st.cache_data.clear()
