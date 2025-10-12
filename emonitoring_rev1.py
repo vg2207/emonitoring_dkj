@@ -125,7 +125,9 @@ if "page" not in st.session_state:
     st.session_state["page"] = 0
 
 if st.session_state["page"] == 0 :
-    scroll_to_top()
+    if st.session_state.get("scroll_to_top", False):
+        scroll_to_top()
+        st.session_state.scroll_to_top = False
     
     col_00, col_01, col_02 = st.columns([1, 3, 1])
     with col_01:
@@ -139,14 +141,17 @@ if st.session_state["page"] == 0 :
         tombol_mulai = st.button(type="primary", label='Mulai', width="stretch")
     if tombol_mulai:
         st.session_state.page = 1
-        scroll_to_top()
+        st.session_state.scroll_to_top = True
         st.rerun()
         
         
 
 # Halaman 1
 if st.session_state["page"] == 1:
-    scroll_to_top()
+    if st.session_state.get("scroll_to_top", False):
+        scroll_to_top()
+        st.session_state.scroll_to_top = False
+
      
     
     st.markdown(f"<h3 style='text-align: left;'><br>HALAMAN 1/6 : DATA UMUM</h3>", unsafe_allow_html=True)
@@ -244,7 +249,7 @@ if st.session_state["page"] == 1:
             else:
                 st.session_state.page = 1.5   # kalau Running, lanjut normal ke halaman 2
         
-        scroll_to_top()
+        st.session_state.scroll_to_top = True
         st.rerun()
         
 
@@ -252,7 +257,9 @@ if st.session_state["page"] == 1:
 
 # Halaman 1.5 - Pilih Feeder
 if st.session_state["page"] == 1.5:
-    scroll_to_top()
+    if st.session_state.get("scroll_to_top", False):
+        scroll_to_top()
+        st.session_state.scroll_to_top = False
      
        
     st.markdown("<h3 style='text-align: left;'><br>HALAMAN 2/6 : PILIH FEEDER YANG DIGUNAKAN</h3>", unsafe_allow_html=True)
@@ -313,7 +320,7 @@ if st.session_state["page"] == 1.5:
         else:
             st.session_state.page = 2   # kalau Running, lanjut normal ke halaman 2
         
-        scroll_to_top()
+        st.session_state.scroll_to_top = True
         st.rerun()
 
 
@@ -321,14 +328,17 @@ if st.session_state["page"] == 1.5:
     with left_1_5:
         if st.button("🠘 Balik"):
             st.session_state.page = 1
-            scroll_to_top()
+            st.session_state.scroll_to_top = True
             st.rerun()
             
 
 
 #Halaman 2
 if st.session_state["page"] == 2:
-    scroll_to_top()
+    if st.session_state.get("scroll_to_top", False):
+        scroll_to_top()
+        st.session_state.scroll_to_top = False
+
      
     
     df_data_page_1 = st.session_state.df_data_page_1
@@ -686,7 +696,7 @@ if st.session_state["page"] == 2:
             st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit"sebelum menekan tombol "Next Page"!')
         else:
             st.session_state.page = 3
-            scroll_to_top()
+            st.session_state.scroll_to_top = True
             st.rerun()
             
 
@@ -696,14 +706,16 @@ if st.session_state["page"] == 2:
         back_button_2 = st.button("🠘 Balik")
     if back_button_2:
         st.session_state.page = 1.5  # kembali ke halaman 1.5
-        scroll_to_top()
+        st.session_state.scroll_to_top = True
         st.rerun()
         
         
 
 #Halaman 3
 if st.session_state["page"] == 3:
-    scroll_to_top()
+    if st.session_state.get("scroll_to_top", False):
+        scroll_to_top()
+        st.session_state.scroll_to_top = False
      
     
     df_data_page_1 = st.session_state.df_data_page_1
@@ -1421,7 +1433,7 @@ if st.session_state["page"] == 3:
         else:
             foto_mesin, path_to_save_extruder, file_name_extruder = save_image(image = foto_mesin, path_to_save = path_to_save_extruder, file_name = file_name_extruder)
             st.session_state.page = 4
-            scroll_to_top()
+            st.session_state.scroll_to_top = True
             st.rerun()
             
             
@@ -1430,14 +1442,16 @@ if st.session_state["page"] == 3:
         back_button_3 = st.button("🠘 Balik")
     if back_button_3:
         st.session_state.page = 2  # kembali ke halaman 1
-        scroll_to_top()
+        st.session_state.scroll_to_top = True
         st.rerun()
         
         
 
 #Halaman 4
 if st.session_state["page"] == 4:
-    scroll_to_top()
+    if st.session_state.get("scroll_to_top", False):
+        scroll_to_top()
+        st.session_state.scroll_to_top = False
      
     
     df_data_page_1 = st.session_state.df_data_page_1
@@ -1872,7 +1886,7 @@ if st.session_state["page"] == 4:
             else:
                 pass
             st.session_state.page = 5
-            scroll_to_top()
+            st.session_state.scroll_to_top = True
             st.rerun()
             
             
@@ -1881,7 +1895,7 @@ if st.session_state["page"] == 4:
         back_button_4 = st.button("🠘 Balik")
     if back_button_4:
         st.session_state.page = 3
-        scroll_to_top()
+        st.session_state.scroll_to_top = True
         st.rerun()
         
         
@@ -1889,7 +1903,9 @@ if st.session_state["page"] == 4:
 
 #Halaman 5
 if st.session_state["page"] == 5:
-    scroll_to_top()
+    if st.session_state.get("scroll_to_top", False):
+        scroll_to_top()
+        st.session_state.scroll_to_top = False
      
     
     df_data_page_1 = st.session_state.df_data_page_1
@@ -2127,7 +2143,7 @@ if st.session_state["page"] == 5:
             st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit"sebelum menekan tombol "Next Page"!')
         else:
             st.session_state.page = 6
-            scroll_to_top()
+            st.session_state.scroll_to_top = True
             st.rerun()
             
             
@@ -2136,7 +2152,7 @@ if st.session_state["page"] == 5:
         back_button_5 = st.button("🠘 Balik")
     if back_button_5:
         st.session_state.page = 4 
-        scroll_to_top()
+        st.session_state.scroll_to_top = True
         st.rerun()
         
         
@@ -2144,14 +2160,16 @@ if st.session_state["page"] == 5:
     back_button_5_to_1 = st.button("🠘 Balik ke Halaman 1 (ubah kondisi mesin)")
     if back_button_5_to_1:
         st.session_state.page = 1
-        scroll_to_top()
+        st.session_state.scroll_to_top = True
         st.rerun()
         
         
 
 #Halaman 6
 if st.session_state["page"] == 6:
-    scroll_to_top()
+    if st.session_state.get("scroll_to_top", False):
+        scroll_to_top()
+        st.session_state.scroll_to_top = False
      
     
     df_data_page_1 = st.session_state.df_data_page_1
