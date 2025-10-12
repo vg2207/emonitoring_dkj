@@ -89,6 +89,11 @@ if st.session_state["page"] == 0 :
     if tombol_mulai:
         st.session_state.page = 1
         st.rerun()
+        st.components.v1.html("""
+                <script>
+                    window.scrollTo(0, 0);
+                </script>
+            """, height=0)
 
 
 # Halaman 1
@@ -190,6 +195,11 @@ if st.session_state["page"] == 1:
             else:
                 st.session_state.page = 1.5   # kalau Running, lanjut normal ke halaman 2
         st.rerun()
+        st.components.v1.html("""
+                <script>
+                    window.scrollTo(0, 0);
+                </script>
+            """, height=0)
 
 
 # Halaman 1.5 - Pilih Feeder
@@ -253,6 +263,11 @@ if st.session_state["page"] == 1.5:
         else:
             st.session_state.page = 2   # kalau Running, lanjut normal ke halaman 2
         st.rerun()
+        st.components.v1.html("""
+                <script>
+                    window.scrollTo(0, 0);
+                </script>
+            """, height=0)
 
 
     
@@ -260,6 +275,11 @@ if st.session_state["page"] == 1.5:
         if st.button("🠘 Balik"):
             st.session_state.page = 1
             st.rerun()
+            st.components.v1.html("""
+                <script>
+                    window.scrollTo(0, 0);
+                </script>
+            """, height=0)
 
 
 #Halaman 2
@@ -621,6 +641,11 @@ if st.session_state["page"] == 2:
         else:
             st.session_state.page = 3
             st.rerun()
+            st.components.v1.html("""
+                <script>
+                    window.scrollTo(0, 0);
+                </script>
+            """, height=0)
 
 
     with left_2:
@@ -628,6 +653,11 @@ if st.session_state["page"] == 2:
     if back_button_2:
         st.session_state.page = 1.5  # kembali ke halaman 1.5
         st.rerun()
+        st.components.v1.html("""
+                <script>
+                    window.scrollTo(0, 0);
+                </script>
+            """, height=0)
 
 
 #Halaman 3
@@ -1349,6 +1379,11 @@ if st.session_state["page"] == 3:
             foto_mesin, path_to_save_extruder, file_name_extruder = save_image(image = foto_mesin, path_to_save = path_to_save_extruder, file_name = file_name_extruder)
             st.session_state.page = 4
             st.rerun()
+            st.components.v1.html("""
+                <script>
+                    window.scrollTo(0, 0);
+                </script>
+            """, height=0)
 
 
     with left_3:
@@ -1356,6 +1391,11 @@ if st.session_state["page"] == 3:
     if back_button_3:
         st.session_state.page = 2  # kembali ke halaman 1
         st.rerun()
+        st.components.v1.html("""
+                <script>
+                    window.scrollTo(0, 0);
+                </script>
+            """, height=0)
 
 
 #Halaman 4
@@ -1794,6 +1834,11 @@ if st.session_state["page"] == 4:
                 pass
             st.session_state.page = 5
             st.rerun()
+            st.components.v1.html("""
+                <script>
+                    window.scrollTo(0, 0);
+                </script>
+            """, height=0)
 
 
     with left_4:
@@ -1801,6 +1846,11 @@ if st.session_state["page"] == 4:
     if back_button_4:
         st.session_state.page = 3
         st.rerun()
+        st.components.v1.html("""
+                <script>
+                    window.scrollTo(0, 0);
+                </script>
+            """, height=0)
         
 
 #Halaman 5
@@ -2042,6 +2092,11 @@ if st.session_state["page"] == 5:
         else:
             st.session_state.page = 6
             st.rerun()
+            st.components.v1.html("""
+                <script>
+                    window.scrollTo(0, 0);
+                </script>
+            """, height=0)
 
 
     with left_5:
@@ -2049,12 +2104,22 @@ if st.session_state["page"] == 5:
     if back_button_5:
         st.session_state.page = 4 
         st.rerun()
+        st.components.v1.html("""
+                <script>
+                    window.scrollTo(0, 0);
+                </script>
+            """, height=0)
 
 
     back_button_5_to_1 = st.button("🠘 Balik ke Halaman 1 (ubah kondisi mesin)")
     if back_button_5_to_1:
         st.session_state.page = 1
         st.rerun()
+        st.components.v1.html("""
+                <script>
+                    window.scrollTo(0, 0);
+                </script>
+            """, height=0)
         
 
 #Halaman 6
