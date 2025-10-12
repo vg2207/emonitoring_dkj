@@ -70,13 +70,27 @@ def save_data(df):
 #         time.sleep(.5) # To make sure the script can execute before being deleted
 #     temp.empty()
 
+# def scroll_to_top():
+#     js_code = "window.scrollTo({top: 0, behavior: 'smooth'});"
+#     temp = st.empty()
+#     with temp:
+#         st.components.v1.html(f"<script>{js_code}</script>", height=0)
+#         time.sleep(0.5)
+#     temp.empty()
+
 def scroll_to_top():
-    js_code = "window.scrollTo({top: 0, behavior: 'smooth'});"
-    temp = st.empty()
-    with temp:
-        st.components.v1.html(f"<script>{js_code}</script>", height=0)
-        time.sleep(0.5)
-    temp.empty()
+    scroll_js = """
+        <script>
+        const main = window.parent.document.querySelector('section.main');
+        if (main) {
+            main.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        </script>
+    """
+    container = st.empty()
+    container.markdown(scroll_js, unsafe_allow_html=True)
+    time.sleep(0.5)
+    container.empty()
     
 
 
