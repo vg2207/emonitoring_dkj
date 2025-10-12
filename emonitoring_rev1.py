@@ -75,8 +75,8 @@ with col_01:
     # st.image(logo)
     st.logo(logo)
 
-st.markdown(f"<h2 style='text-align: center;'>WELCOME TO E-MONITORING PRODUKSI<br>DUNIA KIMIA JAYA</h2>", unsafe_allow_html=True)
-st.markdown("""---""")
+# st.markdown(f"<h2 style='text-align: center;'>WELCOME TO E-MONITORING PRODUKSI<br>DUNIA KIMIA JAYA</h2>", unsafe_allow_html=True)
+# st.markdown("""---""")
 
 # Halaman Awal
 
@@ -84,6 +84,10 @@ if "page" not in st.session_state:
     st.session_state["page"] = 0
 
 if st.session_state["page"] == 0 :
+    
+    st.markdown(f"<h2 style='text-align: center;'>WELCOME TO E-MONITORING PRODUKSI<br>DUNIA KIMIA JAYA</h2>", unsafe_allow_html=True)
+    st.markdown("""---""")
+    
     left_0, middle_0, right_0 = st.columns(3)
     with middle_0:
         tombol_mulai = st.button(type="primary", label='Mulai', width="stretch")
