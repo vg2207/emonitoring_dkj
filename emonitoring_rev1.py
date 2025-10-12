@@ -55,10 +55,18 @@ def save_data(df):
     return new_df
 
 def scroll_to_top():
-    js = "window.scrollTo({top: 0, behavior: 'smooth'});"
+    # js = "window.scrollTo({top: 0, behavior: 'smooth'});"
+    js = '''
+    <script>
+        var body = window.parent.document.querySelector(".main");
+        console.log(body);
+        body.scrollTop = 0;
+    </script>
+    '''
     temp = st.empty()
     with temp:
-        st.components.v1.html(f"<script>{js}</script>", height=0)
+        # st.components.v1.html(f"<script>{js}</script>", height=0)
+        st.components.v1.html(js)
         time.sleep(.5) # To make sure the script can execute before being deleted
     temp.empty()
     
