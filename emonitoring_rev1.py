@@ -9,6 +9,7 @@ from datetime import datetime
 import cv2
 from PIL import Image
 from io import BytesIO
+import time
 
 def collect_image(nama_layar):
     datetime_now = datetime.now()
