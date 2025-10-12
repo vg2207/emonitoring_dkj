@@ -98,11 +98,12 @@ if st.session_state["page"] == 0 :
     if tombol_mulai:
         st.session_state.page = 1
         st.rerun()
-        st.empty()
+        
 
 # Halaman 1
 if st.session_state["page"] == 1:
-
+    st.empty()
+    
     st.markdown(f"<h3 style='text-align: left;'><br>HALAMAN 1/6 : DATA UMUM</h3>", unsafe_allow_html=True)
 
     with st.form(key='form_page_1', clear_on_submit=False):
@@ -198,11 +199,12 @@ if st.session_state["page"] == 1:
             else:
                 st.session_state.page = 1.5   # kalau Running, lanjut normal ke halaman 2
         st.rerun()
-        st.empty()
+
         
 
 # Halaman 1.5 - Pilih Feeder
 if st.session_state["page"] == 1.5:
+    st.empty()
        
     st.markdown("<h3 style='text-align: left;'><br>HALAMAN 2/6 : PILIH FEEDER YANG DIGUNAKAN</h3>", unsafe_allow_html=True)
 
@@ -262,18 +264,19 @@ if st.session_state["page"] == 1.5:
         else:
             st.session_state.page = 2   # kalau Running, lanjut normal ke halaman 2
         st.rerun()
-        st.empty()
+
 
     
     with left_1_5:
         if st.button("🠘 Balik"):
             st.session_state.page = 1
             st.rerun()
-            st.empty()
+
 
 
 #Halaman 2
 if st.session_state["page"] == 2:
+    st.empty()
     
     df_data_page_1 = st.session_state.df_data_page_1
     df_data_page_1_5 = st.session_state.df_data_page_1_5
@@ -631,7 +634,7 @@ if st.session_state["page"] == 2:
         else:
             st.session_state.page = 3
             st.rerun()
-            st.empty()
+
             
 
     with left_2:
@@ -639,11 +642,12 @@ if st.session_state["page"] == 2:
     if back_button_2:
         st.session_state.page = 1.5  # kembali ke halaman 1.5
         st.rerun()
-        st.empty()
+
         
 
 #Halaman 3
 if st.session_state["page"] == 3:
+    st.empty()
     
     df_data_page_1 = st.session_state.df_data_page_1
     st.markdown(f"<h3 style='text-align: left;'><br>HALAMAN 4/6 : EXTRUDER</h3>", unsafe_allow_html=True)
@@ -1361,7 +1365,7 @@ if st.session_state["page"] == 3:
             foto_mesin, path_to_save_extruder, file_name_extruder = save_image(image = foto_mesin, path_to_save = path_to_save_extruder, file_name = file_name_extruder)
             st.session_state.page = 4
             st.rerun()
-            st.empty()
+
             
 
     with left_3:
@@ -1369,11 +1373,12 @@ if st.session_state["page"] == 3:
     if back_button_3:
         st.session_state.page = 2  # kembali ke halaman 1
         st.rerun()
-        st.empty()
+
         
 
 #Halaman 4
 if st.session_state["page"] == 4:
+    st.empty()
     
     df_data_page_1 = st.session_state.df_data_page_1
     st.markdown(f"<h3 style='text-align: left;'><br>HALAMAN 5/6 : UWP-PELLETIZER</h3>", unsafe_allow_html=True)
@@ -1808,7 +1813,7 @@ if st.session_state["page"] == 4:
                 pass
             st.session_state.page = 5
             st.rerun()
-            st.empty()
+
             
 
     with left_4:
@@ -1816,12 +1821,13 @@ if st.session_state["page"] == 4:
     if back_button_4:
         st.session_state.page = 3
         st.rerun()
-        st.empty()
+
         
         
 
 #Halaman 5
 if st.session_state["page"] == 5:
+    st.empty()
     
     df_data_page_1 = st.session_state.df_data_page_1
     
@@ -2059,7 +2065,7 @@ if st.session_state["page"] == 5:
         else:
             st.session_state.page = 6
             st.rerun()
-            st.empty()
+
             
 
     with left_5:
@@ -2067,18 +2073,20 @@ if st.session_state["page"] == 5:
     if back_button_5:
         st.session_state.page = 4 
         st.rerun()
-        st.empty()
+
         
 
     back_button_5_to_1 = st.button("🠘 Balik ke Halaman 1 (ubah kondisi mesin)")
     if back_button_5_to_1:
         st.session_state.page = 1
         st.rerun()
-        st.empty()
+
         
 
 #Halaman 6
 if st.session_state["page"] == 6:
+    st.empty()
+    
     df_data_page_1 = st.session_state.df_data_page_1
     df_data_page_2 = st.session_state.df_data_page_2
     df_data_page_3 = st.session_state.df_data_page_3
