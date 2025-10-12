@@ -301,7 +301,7 @@ if st.session_state["page"] == 2:
                 with st.container(horizontal=True):
                 # col_2_1, col_2_2 = st.columns([1, 1])
                 # with col_2_1:
-                    set_output_feeder_1 = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_1", format="%d")
+                    set_output_feeder_1 = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_1", format="%d", step=1)
                 # with col_2_2 :
                     actual_output_feeder_1 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_1", format="%d")
         else:
@@ -331,9 +331,9 @@ if st.session_state["page"] == 2:
                 with st.container(horizontal=True):
                 # col_2_5, col_2_6 = st.columns([1, 1])
                 # with col_2_5:
-                    set_output_feeder_3 = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_3", format="%d")
+                    set_output_feeder_3 = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_3", format="%d", step=1)
                 # with col_2_6 :
-                    actual_output_feeder_3 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_3", format="%d")
+                    actual_output_feeder_3 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_3", format="%d", step=1)
         else:
             pass
     
