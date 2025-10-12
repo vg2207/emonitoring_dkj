@@ -74,7 +74,7 @@ logo = Image.open('assets_logo/Logo Dunia Kimia Jaya.png')
 # with col_01:
 #     st.image(logo)
 
-# st.logo(logo, size="large")
+st.logo(logo, size="large")
 
 # st.markdown(f"<h2 style='text-align: center;'>WELCOME TO E-MONITORING PRODUKSI<br>DUNIA KIMIA JAYA</h2>", unsafe_allow_html=True)
 # st.markdown("""---""")
@@ -105,7 +105,6 @@ if st.session_state["page"] == 0 :
             """, height=0)
 
 
-st.logo(logo)
 # Halaman 1
 if st.session_state["page"] == 1:
 
