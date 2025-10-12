@@ -1378,10 +1378,10 @@ if st.session_state["page"] == 3:
 
 #Halaman 4
 if st.session_state["page"] == 4:
-    st.empty()
+    placeholder = st.empty()
     
     df_data_page_1 = st.session_state.df_data_page_1
-    st.markdown(f"<h3 style='text-align: left;'><br>HALAMAN 5/6 : UWP-PELLETIZER</h3>", unsafe_allow_html=True)
+    placeholder.markdown(f"<h3 style='text-align: left;'><br>HALAMAN 5/6 : UWP-PELLETIZER</h3>", unsafe_allow_html=True)
     # st.markdown(f"<h3 style='text-align: center;'>EXTRUDER<br></h3>", unsafe_allow_html=True)
     # st.write(df_all_data)
 
