@@ -303,7 +303,7 @@ if st.session_state["page"] == 2:
                 # with col_2_1:
                     set_output_feeder_1 = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_1", format="%d", step=1)
                 # with col_2_2 :
-                    actual_output_feeder_1 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_1", format="%d")
+                    actual_output_feeder_1 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_1", format="%d", step=1)
         else:
             set_output_feeder_1 = None
             actual_output_feeder_1 = None
@@ -318,9 +318,9 @@ if st.session_state["page"] == 2:
                 with st.container(horizontal=True):
                 # col_2_3, col_2_4 = st.columns([1, 1])
                 # with col_2_3:
-                    set_output_feeder_2 = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_2", format="%d")
+                    set_output_feeder_2 = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_2", format="%d", step=1)
                 # with col_2_4 :
-                    actual_output_feeder_2 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_2", format="%d")
+                    actual_output_feeder_2 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_2", format="%d", step=1)
         else:
             pass
     
@@ -344,9 +344,9 @@ if st.session_state["page"] == 2:
                 with st.container(horizontal=True):
                 # col_2_7, col_2_8 = st.columns([1, 1])
                 # with col_2_7:
-                    set_output_feeder_4 = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_4", format="%d")
+                    set_output_feeder_4 = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_4", format="%d", step=1)
                 # with col_2_8 :
-                    actual_output_feeder_4 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_4", format="%d")
+                    actual_output_feeder_4 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_4", format="%d", step=1)
         else :
             pass
     
@@ -357,9 +357,9 @@ if st.session_state["page"] == 2:
                 with st.container(horizontal=True):
                 # col_2_9, col_2_10 = st.columns([1, 1])
                 # with col_2_9:
-                    set_output_feeder_jotam_s50 = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_jotam_s50", format="%d")
+                    set_output_feeder_jotam_s50 = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_jotam_s50", format="%d", step=1)
                 # with col_2_10 :
-                    actual_output_feeder_jotam_s50 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_jotam_s50", format="%d")
+                    actual_output_feeder_jotam_s50 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_jotam_s50", format="%d", step=1)
         else :
             pass
     
@@ -370,9 +370,9 @@ if st.session_state["page"] == 2:
                 with st.container(horizontal=True):
                 # col_2_11, col_2_12 = st.columns([1, 1])
                 # with col_2_11:
-                    set_output_feeder_jotam_s90_resin = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_jotam_s90_resin", format="%d")
+                    set_output_feeder_jotam_s90_resin = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_jotam_s90_resin", format="%d", step=1)
                 # with col_2_12 :
-                    actual_output_feeder_jotam_s90_resin = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_jotam_s90_resin", format="%d")
+                    actual_output_feeder_jotam_s90_resin = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_jotam_s90_resin", format="%d", step=1)
         else :
             pass
     
@@ -383,9 +383,9 @@ if st.session_state["page"] == 2:
                 with st.container(horizontal=True):
                 # col_2_13, col_2_14 = st.columns([1, 1])
                 # with col_2_13:
-                    set_output_feeder_jotam_s90_aditif = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_jotam_s90_aditif", format="%d")
+                    set_output_feeder_jotam_s90_aditif = st.number_input("", value=None, placeholder="SET POINT", key="set_output_feeder_jotam_s90_aditif", format="%d", step=1)
                 # with col_2_14 :
-                    actual_output_feeder_jotam_s90_aditif = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_jotam_s90_aditif", format="%d")
+                    actual_output_feeder_jotam_s90_aditif = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_feeder_jotam_s90_aditif", format="%d", step=1)
         else :
             pass
     
@@ -396,12 +396,12 @@ if st.session_state["page"] == 2:
                 with st.container(horizontal=True):
                 # col_2_15, col_2_16 = st.columns([1, 1])
                 # with col_2_15:
-                    set_output_liquid_feeder = st.number_input("", value=None, placeholder="SET POINT", key="set_output_liquid_feeder", format="%d")
+                    set_output_liquid_feeder = st.number_input("", value=None, placeholder="SET POINT", key="set_output_liquid_feeder", format="%d", step=1)
                 # with col_2_16 :
-                    actual_output_liquid_feeder = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_liquid_feeder", format="%d")
+                    actual_output_liquid_feeder = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_liquid_feeder", format="%d", step=1)
             with st.container(border=True):
                 st.markdown(f"<h5 style='text-align: left;'>Tekanan Liquid Feeder</h5>", unsafe_allow_html=True)
-                tekanan_liquid_feeder = st.number_input("", value=None, placeholder="", key="tekanan_liquid_feeder", format="%d")
+                tekanan_liquid_feeder = st.number_input("", value=None, placeholder="", key="tekanan_liquid_feeder", format="%d", step=1)
         else :
             pass
     
@@ -413,7 +413,7 @@ if st.session_state["page"] == 2:
                     # col_2_17, col_2_18 = st.columns([1, 1])
                     if df_data_page_1["Mesin"][0] == 'Lab' or df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05':
                         # with col_2_17:
-                        rpm_main_feeder = st.number_input("RPM main feeder", value=None, placeholder="", key="rpm_main_feeder", format="%d")
+                        rpm_main_feeder = st.number_input("RPM main feeder", value=None, placeholder="", key="rpm_main_feeder", format="%d", step=1)
                     else :
                         pass
                     if df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03':
@@ -427,14 +427,14 @@ if st.session_state["page"] == 2:
         if "Side Feeder" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
             with st.container(border=True):
                 st.markdown(f"<h5 style='text-align: left;'>Feeder Rework</h5>", unsafe_allow_html=True)
-                rpm_feeder_rework = st.number_input("RPM feeder rework", value=None, placeholder="", key="rpm_feeder_rework", format="%d")
+                rpm_feeder_rework = st.number_input("RPM feeder rework", value=None, placeholder="", key="rpm_feeder_rework", format="%d", step=1)
         else :
             pass
     
         if "Feeder Rework" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
             with st.container(border=True):
                 st.markdown(f"<h5 style='text-align: left;'>Side Feeder</h5>", unsafe_allow_html=True)
-                rpm_side_feeder = st.number_input("RPM side feeder", value=None, placeholder="", key="rpm_side_feeder", format="%d")
+                rpm_side_feeder = st.number_input("RPM side feeder", value=None, placeholder="", key="rpm_side_feeder", format="%d", step=1)
         else :
             pass
         
@@ -699,9 +699,9 @@ if st.session_state["page"] == 3:
                 with st.container(horizontal=True):
                 # col_3_1, col_3_2 = st.columns([1, 1])
                 # with col_3_1:
-                    set_output_mesin_extruder = st.number_input("", value=None, placeholder="SET POINT", key="set_output_mesin_extruder", format="%d")
+                    set_output_mesin_extruder = st.number_input("", value=None, placeholder="SET POINT", key="set_output_mesin_extruder", format="%d", step=1)
                 # with col_3_2 :
-                    actual_output_mesin_extruder = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_mesin_extruder", format="%d")
+                    actual_output_mesin_extruder = st.number_input("", value=None, placeholder="AKTUAL", key="actual_output_mesin_extruder", format="%d", step=1)
         else : 
             pass
 
@@ -729,12 +729,12 @@ if st.session_state["page"] == 3:
                 # col_3_5, col_3_6 = st.columns([1, 1])
                 if df_data_page_1["Mesin"][0] == 'Lab' or df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E05' or df_data_page_1["Mesin"][0] == 'E06':
                     # with col_3_5:
-                    set_melt_temperature_extruder = st.number_input("", value=None, placeholder="MELT TEMPERATURE", key="set_melt_temperature_extruder", format="%d")
+                    set_melt_temperature_extruder = st.number_input("", value=None, placeholder="MELT TEMPERATURE", key="set_melt_temperature_extruder", format="%d", step=1)
                 else : 
                     pass
     
                 # with col_3_6 :
-                set_melt_pressure_extruder = st.number_input("", value=None, placeholder="MELT PRESSURE", key="set_melt_pressure_extruder", format="%d")
+                set_melt_pressure_extruder = st.number_input("", value=None, placeholder="MELT PRESSURE", key="set_melt_pressure_extruder", format="%d", step=1)
    
         if df_data_page_1["Mesin"][0] == 'E06':
             with st.container(border=True):
@@ -751,12 +751,12 @@ if st.session_state["page"] == 3:
                 # col_3_7, col_3_8 = st.columns([1, 1])
                 if df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05':
                     # with col_3_7:
-                    set_temperature_zone_1 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_zone_1", format="%d")
+                    set_temperature_zone_1 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_zone_1", format="%d", step=1)
                 else :
                     pass
     
                 # with col_3_8 :
-                actual_temperature_zone_1 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_zone_1", format="%d")
+                actual_temperature_zone_1 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_zone_1", format="%d", step=1)
 
         with st.container(border=True):
             st.markdown(f"<h5 style='text-align: left;'>Temperature Zone 2</h5>", unsafe_allow_html=True)
@@ -764,9 +764,9 @@ if st.session_state["page"] == 3:
             with st.container(horizontal=True):
             # col_3_9, col_3_10 = st.columns([1, 1])
             # with col_3_9:
-                set_temperature_zone_2 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_zone_2", format="%d")
+                set_temperature_zone_2 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_zone_2", format="%d", step=1)
             # with col_3_10 :
-                actual_temperature_zone_2 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_zone_2", format="%d")
+                actual_temperature_zone_2 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_zone_2", format="%d", step=1)
         
         with st.container(border=True):
             st.markdown(f"<h5 style='text-align: left;'>Temperature Zone 3</h5>", unsafe_allow_html=True)
@@ -774,9 +774,9 @@ if st.session_state["page"] == 3:
             with st.container(horizontal=True):
             # col_3_11, col_3_12 = st.columns([1, 1])
             # with col_3_11:
-                set_temperature_zone_3 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_zone_3", format="%d")
+                set_temperature_zone_3 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_zone_3", format="%d", step=1)
             # with col_3_12 :
-                actual_temperature_zone_3 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_zone_3", format="%d")
+                actual_temperature_zone_3 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_zone_3", format="%d", step=1)
         
         with st.container(border=True):
             st.markdown(f"<h5 style='text-align: left;'>Temperature Zone 4</h5>", unsafe_allow_html=True)
@@ -784,9 +784,9 @@ if st.session_state["page"] == 3:
             with st.container(horizontal=True):
             # col_3_13, col_3_14 = st.columns([1, 1])
             # with col_3_13:
-                set_temperature_zone_4 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_zone_4", format="%d")
+                set_temperature_zone_4 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_zone_4", format="%d", step=1)
             # with col_3_14 :
-                actual_temperature_zone_4 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_zone_4", format="%d")
+                actual_temperature_zone_4 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_zone_4", format="%d", step=1)
                 
         with st.container(border=True):
             st.markdown(f"<h5 style='text-align: left;'>Temperature Zone 5</h5>", unsafe_allow_html=True)
@@ -794,9 +794,9 @@ if st.session_state["page"] == 3:
             with st.container(horizontal=True):
             # col_3_15, col_3_16 = st.columns([1, 1])
             # with col_3_15:
-                set_temperature_zone_5 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_zone_5", format="%d")
+                set_temperature_zone_5 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_zone_5", format="%d", step=1)
             # with col_3_16 :
-                actual_temperature_zone_5 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_zone_5", format="%d")
+                actual_temperature_zone_5 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_zone_5", format="%d", step=1)
         
         if df_data_page_1["Mesin"][0] == 'E01'or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05' or df_data_page_1["Mesin"][0] == 'E06':
             with st.container(border=True):
@@ -805,9 +805,9 @@ if st.session_state["page"] == 3:
                 with st.container(horizontal=True):
                 # col_3_17, col_3_18 = st.columns([1, 1])
                 # with col_3_17:
-                    set_temperature_zone_6 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_zone_6", format="%d")
+                    set_temperature_zone_6 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_zone_6", format="%d", step=1)
                 # with col_3_18 :
-                    actual_temperature_zone_6 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_zone_6", format="%d")
+                    actual_temperature_zone_6 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_zone_6", format="%d", step=1)
             
             with st.container(border=True):
                 st.markdown(f"<h5 style='text-align: left;'>Temperature Zone 7</h5>", unsafe_allow_html=True)
@@ -815,9 +815,9 @@ if st.session_state["page"] == 3:
                 with st.container(horizontal=True):
                 # col_3_19, col_3_20 = st.columns([1, 1])
                 # with col_3_19:
-                    set_temperature_zone_7 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_zone_7", format="%d")
+                    set_temperature_zone_7 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_zone_7", format="%d", step=1)
                 # with col_3_20 :
-                    actual_temperature_zone_7 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_zone_7", format="%d")
+                    actual_temperature_zone_7 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_zone_7", format="%d", step=1)
                     
             with st.container(border=True):
                 st.markdown(f"<h5 style='text-align: left;'>Temperature Zone 8</h5>", unsafe_allow_html=True)
@@ -825,9 +825,9 @@ if st.session_state["page"] == 3:
                 with st.container(horizontal=True):
                 # col_3_21, col_3_22 = st.columns([1, 1])
                 # with col_3_21:
-                    set_temperature_zone_8 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_zone_8", format="%d")
+                    set_temperature_zone_8 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_zone_8", format="%d", step=1)
                 # with col_3_22 :
-                    actual_temperature_zone_8 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_zone_8", format="%d")
+                    actual_temperature_zone_8 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_zone_8", format="%d", step=1)
         else:
             pass
 
@@ -838,9 +838,9 @@ if st.session_state["page"] == 3:
                 with st.container(horizontal=True):
                 # col_3_23, col_3_24 = st.columns([1, 1])
                 # with col_3_23:
-                    set_temperature_zone_9 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_zone_9", format="%d")
+                    set_temperature_zone_9 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_zone_9", format="%d", step=1)
                 # with col_3_24 :
-                    actual_temperature_zone_9 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_zone_9", format="%d")
+                    actual_temperature_zone_9 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_zone_9", format="%d", step=1)
         else :
             pass
 
@@ -851,9 +851,9 @@ if st.session_state["page"] == 3:
                 with st.container(horizontal=True):
                 # col_3_25, col_3_26 = st.columns([1, 1])
                 # with col_3_25:
-                    set_temperature_zone_10 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_zone_10", format="%d")
+                    set_temperature_zone_10 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_zone_10", format="%d", step=1)
                 # with col_3_26 :
-                    actual_temperature_zone_10 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_zone_10", format="%d")
+                    actual_temperature_zone_10 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_zone_10", format="%d", step=1)
         else :
             pass
 
@@ -864,9 +864,9 @@ if st.session_state["page"] == 3:
                 with st.container(horizontal=True):
                 # col_3_27, col_3_28 = st.columns([1, 1])
                 # with col_3_27:
-                    set_temperature_zone_11 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_zone_11", format="%d")
+                    set_temperature_zone_11 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_zone_11", format="%d", step=1)
                 # with col_3_28 :
-                    actual_temperature_zone_11 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_zone_11", format="%d")
+                    actual_temperature_zone_11 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_zone_11", format="%d", step=1)
         else :
             pass
 
@@ -877,9 +877,9 @@ if st.session_state["page"] == 3:
                 with st.container(horizontal=True):
                 # col_3_29, col_3_30 = st.columns([1, 1])
                 # with col_3_29:
-                    set_temperature_zone_12 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_zone_12", format="%d")
+                    set_temperature_zone_12 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_zone_12", format="%d", step=1)
                 # with col_3_30 :
-                    actual_temperature_zone_12 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_zone_12", format="%d")
+                    actual_temperature_zone_12 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_zone_12", format="%d", step=1)
         else :
             pass
 
@@ -890,9 +890,9 @@ if st.session_state["page"] == 3:
                 with st.container(horizontal=True):
                 # col_3_31, col_3_32 = st.columns([1, 1])
                 # with col_3_31:
-                    set_temperature_8 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_8", format="%d")
+                    set_temperature_8 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_8", format="%d", step=1)
                 # with col_3_32 :
-                    actual_temperature_8 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_8", format="%d")
+                    actual_temperature_8 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_8", format="%d", step=1)
         else :
             pass
         
@@ -903,9 +903,9 @@ if st.session_state["page"] == 3:
                 with st.container(horizontal=True):
                 # col_3_33, col_3_34 = st.columns([1, 1])
                 # with col_3_33:
-                    set_temperature_input_screen_changer = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_input_screen_changer", format="%d")
+                    set_temperature_input_screen_changer = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_input_screen_changer", format="%d", step=1)
                 # with col_3_34 :
-                    actual_temperature_input_screen_changer = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_input_screen_changer", format="%d")
+                    actual_temperature_input_screen_changer = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_input_screen_changer", format="%d", step=1)
         else :
             pass
 
@@ -916,9 +916,9 @@ if st.session_state["page"] == 3:
                 with st.container(horizontal=True):
                 # col_3_35, col_3_36 = st.columns([1, 1])
                 # with col_3_35:
-                    set_temperature_TSW_screen_changer_1 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_TSW_screen_changer_1", format="%d")
+                    set_temperature_TSW_screen_changer_1 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_TSW_screen_changer_1", format="%d", step=1)
                 # with col_3_36 :
-                    actual_temperature_TSW_screen_changer_1 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_TSW_screen_changer_1", format="%d")
+                    actual_temperature_TSW_screen_changer_1 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_TSW_screen_changer_1", format="%d", step=1)
         else :
             pass
 
@@ -929,9 +929,9 @@ if st.session_state["page"] == 3:
                 with st.container(horizontal=True):
                 # col_3_37, col_3_38 = st.columns([1, 1])
                 # with col_3_37:
-                    set_temperature_screen_changer_2 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_screen_changer_2", format="%d")
+                    set_temperature_screen_changer_2 = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_screen_changer_2", format="%d", step=1)
                 # with col_3_38 :
-                    actual_temperature_screen_changer_2 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_screen_changer_2", format="%d")
+                    actual_temperature_screen_changer_2 = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_screen_changer_2", format="%d", step=1)
         else :
             pass
 
@@ -943,19 +943,19 @@ if st.session_state["page"] == 3:
                     # col_3_39, col_3_40 = st.columns([1, 1])
                     if df_data_page_1["Mesin"][0] == 'E06':
                         # with col_3_39:
-                        temperature_cooling_barrel_mesin = st.number_input("", value=None, placeholder="TEMPERATURE", key="temperature_cooling_barrel_mesin", format="%d")
+                        temperature_cooling_barrel_mesin = st.number_input("", value=None, placeholder="TEMPERATURE", key="temperature_cooling_barrel_mesin", format="%d", step=1)
                     else :
                         pass
     
                     # with col_3_40 :
-                    pressure_cooling_barrel_mesin = st.number_input("", value=None, placeholder="TEKANAN AIR", key="pressure_cooling_barrel_mesin", format="%d")
+                    pressure_cooling_barrel_mesin = st.number_input("", value=None, placeholder="TEKANAN AIR", key="pressure_cooling_barrel_mesin", format="%d", step=1)
         else:
             pass
 
         if df_data_page_1["Mesin"][0] == 'E05' or df_data_page_1["Mesin"][0] == 'E06':
             with st.container(border=True):
                 st.markdown(f"<h5 style='text-align: left;'>Cooling Gearbox (Cooling Tower)</h5>", unsafe_allow_html=True)
-                temperature_gearbox_cooling = st.number_input("", value=None, placeholder="TEMPERATURE COOLING", key="temperature_gearbox_cooling", format="%d")
+                temperature_gearbox_cooling = st.number_input("", value=None, placeholder="TEMPERATURE COOLING", key="temperature_gearbox_cooling", format="%d", step=1)
         else:
             pass
 
@@ -966,7 +966,7 @@ if st.session_state["page"] == 3:
                 with st.container(horizontal=True):
                 # col_3_42, col_3_43 = st.columns([1, 1])
                 # with col_3_42:
-                    temperature_gearbox_oil = st.number_input("", value=None, placeholder="TEMPERATURE OLI GEARBOX", key="temperature_gearbox_oil", format="%d")
+                    temperature_gearbox_oil = st.number_input("", value=None, placeholder="TEMPERATURE OLI GEARBOX", key="temperature_gearbox_oil", format="%d", step=1)
                 # with col_3_43:
                     pressure_gearbox_oil = st.number_input("", value=None, placeholder="TEKANAN OLI GEARBOX", key="pressure_gearbox_oil")
         else :
@@ -979,7 +979,7 @@ if st.session_state["page"] == 3:
                 with st.container(horizontal=True):
                     # col_3_44, col_3_45 = st.columns([1, 1])
                     # with col_3_44:
-                    vacuum_bar_value = st.number_input("", value=None, placeholder="VACUUM BAR", key="vacuum_bar_value", format="%d")
+                    vacuum_bar_value = st.number_input("", value=None, placeholder="VACUUM BAR", key="vacuum_bar_value", format="%d", step=1)
                     if df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E06':
                         # with col_3_45:
                         pressure_vacuum_system_water = st.number_input("", value=None, placeholder="TEKANAN AIR VACUUM SYSTEM", key="pressure_vacuum_system_water")
@@ -1412,9 +1412,9 @@ if st.session_state["page"] == 4:
                 with st.container(horizontal=True):
                 # col_4_1, col_4_2 = st.columns([1, 1])
                 # with col_4_1:
-                    set_temperature_adapter = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_adapter", format="%d")
+                    set_temperature_adapter = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_adapter", format="%d", step=1)
                 # with col_4_2 :
-                    actual_temperature_adapter = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_adapter", format="%d")
+                    actual_temperature_adapter = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_adapter", format="%d", step=1)
         else:
             pass
 
@@ -1425,9 +1425,9 @@ if st.session_state["page"] == 4:
                 with st.container(horizontal=True):
                 # col_4_3, col_4_4 = st.columns([1, 1])
                 # with col_4_3:
-                    set_temperature_podv = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_podv", format="%d")
+                    set_temperature_podv = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_podv", format="%d", step=1)
                 # with col_4_4 :
-                    actual_temperature_podv = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_podv", format="%d")
+                    actual_temperature_podv = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_podv", format="%d", step=1)
         else:
             pass
 
@@ -1437,9 +1437,9 @@ if st.session_state["page"] == 4:
             with st.container(horizontal=True):
             # col_4_5, col_4_6 = st.columns([1, 1])
             # with col_4_5:
-                set_temperature_die_plate = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_die_plate", format="%d")
+                set_temperature_die_plate = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_die_plate", format="%d", step=1)
             # with col_4_6 :
-                actual_temperature_die_plate = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_die_plate", format="%d")
+                actual_temperature_die_plate = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_die_plate", format="%d", step=1)
 
         if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
             with st.container(border=True):
@@ -1448,9 +1448,9 @@ if st.session_state["page"] == 4:
                 with st.container(horizontal=True):
                 # col_4_7, col_4_8 = st.columns([1, 1])
                 # with col_4_7:
-                    set_temperature_water_tank = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_water_tank", format="%d")
+                    set_temperature_water_tank = st.number_input("", value=None, placeholder="SET POINT", key="set_temperature_water_tank", format="%d", step=1)
                 # with col_4_8 :
-                    actual_temperature_water_tank = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_water_tank", format="%d")
+                    actual_temperature_water_tank = st.number_input("", value=None, placeholder="AKTUAL", key="actual_temperature_water_tank", format="%d", step=1)
         else:
             pass
 
@@ -1461,9 +1461,9 @@ if st.session_state["page"] == 4:
                 with st.container(horizontal=True):
                 # col_4_9, col_4_10 = st.columns([1, 1])
                 # with col_4_9:
-                    melt_pressure_uwp = st.number_input("", value=None, placeholder="MELT PRESSURE", key="melt_pressure_uwp", format="%d")
+                    melt_pressure_uwp = st.number_input("", value=None, placeholder="MELT PRESSURE", key="melt_pressure_uwp", format="%d", step=1)
                 # with col_4_10:
-                    melt_temperature_uwp = st.number_input("", value=None, placeholder="MELT TEMPERATURE", key="melt_temperature_uwp", format="%d")
+                    melt_temperature_uwp = st.number_input("", value=None, placeholder="MELT TEMPERATURE", key="melt_temperature_uwp", format="%d", step=1)
         else:
             pass
 
@@ -1485,15 +1485,15 @@ if st.session_state["page"] == 4:
                     pass
     
                 # with col_4_12:
-                rpm_cutter = st.number_input("", value=None, placeholder="RPM CUTTER", key="rpm_cutter", format="%d")
+                rpm_cutter = st.number_input("", value=None, placeholder="RPM CUTTER", key="rpm_cutter", format="%d", step=1)
 
             
             if df_data_page_1["Mesin"][0] == 'E06':
                 with st.container(horizontal=True):
                 # with col_4_13:
-                    setting_cutter = st.number_input("", value=None, placeholder="SETTING MAJU CUTTER", key="setting_cutter", format="%d")
+                    setting_cutter = st.number_input("", value=None, placeholder="SETTING MAJU CUTTER", key="setting_cutter", format="%d", step=1)
                 # with col_4_14:
-                    percentage_cutter = st.number_input("", value=None, placeholder="% PANJANG CUTTER", key="percentage_cutter", format="%d")
+                    percentage_cutter = st.number_input("", value=None, placeholder="% PANJANG CUTTER", key="percentage_cutter", format="%d", step=1)
             else:
                 pass
 
@@ -1509,7 +1509,7 @@ if st.session_state["page"] == 4:
                         pass
                     if df_data_page_1["Mesin"][0] == 'E06':
                         # with col_4_16:
-                        uwp_water_flow = st.number_input("", value=None, placeholder="FLOW/DEBIT AIR PROSES UWP", key="uwp_water_flow", format="%d")
+                        uwp_water_flow = st.number_input("", value=None, placeholder="FLOW/DEBIT AIR PROSES UWP", key="uwp_water_flow", format="%d", step=1)
                     else:
                         pass
         else:
@@ -1536,9 +1536,9 @@ if st.session_state["page"] == 4:
                 with st.container(horizontal=True):
                 # col_4_17, col_4_18 = st.columns([1, 1])
                 # with col_4_17:
-                    temperature_in_proses = st.number_input("", value=None, placeholder="TEMPERATURE IN AIR PROSES", key="temperature_in_proses", format="%d")
+                    temperature_in_proses = st.number_input("", value=None, placeholder="TEMPERATURE IN AIR PROSES", key="temperature_in_proses", format="%d", step=1)
                 # with col_4_18:
-                    temperature_out_proses = st.number_input("", value=None, placeholder="TEMPERATURE OUT AIR PROSES", key="temperature_out_proses", format="%d")
+                    temperature_out_proses = st.number_input("", value=None, placeholder="TEMPERATURE OUT AIR PROSES", key="temperature_out_proses", format="%d", step=1)
         else:
             pass
 
@@ -1549,9 +1549,9 @@ if st.session_state["page"] == 4:
                 with st.container(horizontal=True):
                 # col_4_19, col_4_20 = st.columns([1, 1])
                 # with col_4_19:
-                    temperature_in_cooling_water = st.number_input("", value=None, placeholder="TEMPERATURE IN AIR COOLING TOWER", key="temperature_in_cooling_water", format="%d")
+                    temperature_in_cooling_water = st.number_input("", value=None, placeholder="TEMPERATURE IN AIR COOLING TOWER", key="temperature_in_cooling_water", format="%d", step=1)
                 # with col_4_20:
-                    temperature_out_cooling_water = st.number_input("", value=None, placeholder="TEMPERATURE OUT AIR COOLING TOWER", key="temperature_out_cooling_water", format="%d")
+                    temperature_out_cooling_water = st.number_input("", value=None, placeholder="TEMPERATURE OUT AIR COOLING TOWER", key="temperature_out_cooling_water", format="%d", step=1)
         else:
             pass
 
@@ -1561,9 +1561,9 @@ if st.session_state["page"] == 4:
             with st.container(horizontal=True):
             # col_4_21, col_4_22 = st.columns([1, 1])
             # with col_4_21:
-                actual_output_finished_good = st.number_input("", value=None, placeholder="OUTPUT AKTUAL FG", key="actual_output_finished_good", format="%d")
+                actual_output_finished_good = st.number_input("", value=None, placeholder="OUTPUT AKTUAL FG", key="actual_output_finished_good", format="%d", step=1)
             # with col_4_22 :
-                granule_number = st.number_input("", value=None, placeholder="JUMLAH GRANULE PER GRAM", key="granule_number", format="%d")
+                granule_number = st.number_input("", value=None, placeholder="JUMLAH GRANULE PER GRAM", key="granule_number", format="%d", step=1)
 
         if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
             with st.container(border=True):
@@ -1930,35 +1930,35 @@ if st.session_state["page"] == 5:
 
         with st.container(border=True):
             st.markdown(f"<h5 style='text-align: left;'>QUANTITY REWORK TAILING</h5>", unsafe_allow_html=True)
-            tailing_rework = st.number_input("", key="tailing_rework", format="%d")
+            tailing_rework = st.number_input("", key="tailing_rework", format="%d", step=1)
 
         with st.container(border=True):
             st.markdown(f"<h5 style='text-align: left;'>QUANTITY REWORK GANDENG/DEMPET</h5>", unsafe_allow_html=True)
-            gandeng_rework = st.number_input("", key="gandeng_rework", format="%d")
+            gandeng_rework = st.number_input("", key="gandeng_rework", format="%d", step=1)
 
         with st.container(border=True):
             st.markdown(f"<h5 style='text-align: left;'>QUANTITY REWORK HAZY</h5>", unsafe_allow_html=True)
-            hazy_rework = st.number_input("", key="hazy_rework", format="%d")
+            hazy_rework = st.number_input("", key="hazy_rework", format="%d", step=1)
 
         with st.container(border=True):
             st.markdown(f"<h5 style='text-align: left;'>QUANTITY REWORK DISPERSE</h5>", unsafe_allow_html=True)
-            disperse_rework = st.number_input("", key="disperse_rework", format="%d")
+            disperse_rework = st.number_input("", key="disperse_rework", format="%d", step=1)
 
         with st.container(border=True):
             st.markdown(f"<h5 style='text-align: left;'>QUANTITY REWORK GRAMASI</h5>", unsafe_allow_html=True)
-            gramasi_rework = st.number_input("", key="gramasi_rework", format="%d")
+            gramasi_rework = st.number_input("", key="gramasi_rework", format="%d", step=1)
 
         with st.container(border=True):
             st.markdown(f"<h5 style='text-align: left;'>QUANTITY REWORK HOMOGEN</h5>", unsafe_allow_html=True)
-            homogen_rework = st.number_input("", key="homogen_rework", format="%d")
+            homogen_rework = st.number_input("", key="homogen_rework", format="%d", step=1)
 
         with st.container(border=True):
             st.markdown(f"<h5 style='text-align: left;'>QUANTITY REWORK PHOROUS</h5>", unsafe_allow_html=True)
-            phorous_rework = st.number_input("", key="phorous_rework", format="%d")
+            phorous_rework = st.number_input("", key="phorous_rework", format="%d", step=1)
 
         with st.container(border=True):
             st.markdown(f"<h5 style='text-align: left;'>QUANTITY REWORK REKONDISI</h5>", unsafe_allow_html=True)
-            rekondisi_rework = st.number_input("", key="rekondisi_rework", format="%d")
+            rekondisi_rework = st.number_input("", key="rekondisi_rework", format="%d", step=1)
 
         can_submit = True
 
