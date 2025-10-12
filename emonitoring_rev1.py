@@ -72,9 +72,9 @@ logo = Image.open('assets_logo/Logo Dunia Kimia Jaya.png')
 # logo = Image.open("D:\Coding\Project Form Monitoring\Logo\logo.jpg")
 # col_00, col_01, col_02 = st.columns([1, 3, 1])
 # with col_01:
-    # st.image(logo)
+#     st.image(logo)
 
-st.logo(logo, size="large")
+# st.logo(logo, size="large")
 
 # st.markdown(f"<h2 style='text-align: center;'>WELCOME TO E-MONITORING PRODUKSI<br>DUNIA KIMIA JAYA</h2>", unsafe_allow_html=True)
 # st.markdown("""---""")
@@ -85,6 +85,9 @@ if "page" not in st.session_state:
     st.session_state["page"] = 0
 
 if st.session_state["page"] == 0 :
+    col_00, col_01, col_02 = st.columns([1, 3, 1])
+    with col_01:
+        st.image(logo)
     
     st.markdown(f"<h2 style='text-align: center;'>WELCOME TO E-MONITORING PRODUKSI<br>DUNIA KIMIA JAYA</h2>", unsafe_allow_html=True)
     st.markdown("""---""")
@@ -102,8 +105,8 @@ if st.session_state["page"] == 0 :
             """, height=0)
 
 
+st.logo(logo)
 # Halaman 1
-
 if st.session_state["page"] == 1:
 
     st.markdown(f"<h3 style='text-align: left;'><br>HALAMAN 1/6 : DATA UMUM</h3>", unsafe_allow_html=True)
