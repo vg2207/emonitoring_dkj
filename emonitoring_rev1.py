@@ -55,7 +55,7 @@ def save_data(df):
 
 
 st.cache_data.clear()
-
+st.empty()
 st.components.v1.html("""
                 <script>
                     window.scrollTo(0, 0);
