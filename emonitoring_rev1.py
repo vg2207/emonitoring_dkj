@@ -139,8 +139,9 @@ if st.session_state["page"] == 0 :
         tombol_mulai = st.button(type="primary", label='Mulai', width="stretch")
     if tombol_mulai:
         st.session_state.page = 1
-        st.rerun()
         scroll_to_top()
+        st.rerun()
+        
         
 
 # Halaman 1
@@ -242,8 +243,10 @@ if st.session_state["page"] == 1:
                 st.session_state.page = 5   # langsung lompat ke halaman 5
             else:
                 st.session_state.page = 1.5   # kalau Running, lanjut normal ke halaman 2
-        st.rerun()
+        
         scroll_to_top()
+        st.rerun()
+        
 
         
 
@@ -309,17 +312,18 @@ if st.session_state["page"] == 1.5:
             st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit"sebelum menekan tombol "Next Page"!')
         else:
             st.session_state.page = 2   # kalau Running, lanjut normal ke halaman 2
-        st.rerun()
+        
         scroll_to_top()
+        st.rerun()
 
 
     
     with left_1_5:
         if st.button("🠘 Balik"):
             st.session_state.page = 1
-            st.rerun()
             scroll_to_top()
-
+            st.rerun()
+            
 
 
 #Halaman 2
@@ -682,8 +686,9 @@ if st.session_state["page"] == 2:
             st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit"sebelum menekan tombol "Next Page"!')
         else:
             st.session_state.page = 3
-            st.rerun()
             scroll_to_top()
+            st.rerun()
+            
 
             
 
@@ -691,9 +696,9 @@ if st.session_state["page"] == 2:
         back_button_2 = st.button("🠘 Balik")
     if back_button_2:
         st.session_state.page = 1.5  # kembali ke halaman 1.5
-        st.rerun()
         scroll_to_top()
-
+        st.rerun()
+        
         
 
 #Halaman 3
@@ -1416,18 +1421,18 @@ if st.session_state["page"] == 3:
         else:
             foto_mesin, path_to_save_extruder, file_name_extruder = save_image(image = foto_mesin, path_to_save = path_to_save_extruder, file_name = file_name_extruder)
             st.session_state.page = 4
-            st.rerun()
             scroll_to_top()
-
+            st.rerun()
+            
             
 
     with left_3:
         back_button_3 = st.button("🠘 Balik")
     if back_button_3:
         st.session_state.page = 2  # kembali ke halaman 1
-        st.rerun()
         scroll_to_top()
-
+        st.rerun()
+        
         
 
 #Halaman 4
@@ -1867,18 +1872,18 @@ if st.session_state["page"] == 4:
             else:
                 pass
             st.session_state.page = 5
-            st.rerun()
             scroll_to_top()
-
+            st.rerun()
+            
             
 
     with left_4:
         back_button_4 = st.button("🠘 Balik")
     if back_button_4:
         st.session_state.page = 3
-        st.rerun()
         scroll_to_top()
-
+        st.rerun()
+        
         
         
 
@@ -2122,26 +2127,26 @@ if st.session_state["page"] == 5:
             st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit"sebelum menekan tombol "Next Page"!')
         else:
             st.session_state.page = 6
-            st.rerun()
             scroll_to_top()
-
+            st.rerun()
+            
             
 
     with left_5:
         back_button_5 = st.button("🠘 Balik")
     if back_button_5:
         st.session_state.page = 4 
-        st.rerun()
         scroll_to_top()
-
+        st.rerun()
+        
         
 
     back_button_5_to_1 = st.button("🠘 Balik ke Halaman 1 (ubah kondisi mesin)")
     if back_button_5_to_1:
         st.session_state.page = 1
-        st.rerun()
         scroll_to_top()
-
+        st.rerun()
+        
         
 
 #Halaman 6
