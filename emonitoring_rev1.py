@@ -53,14 +53,18 @@ def save_data(df):
 
     return new_df
 
+def scroll_to_top():
+    js = "window.scrollTo({top: 0, behavior: 'smooth'});"
+    st.components.v1.html(f"<script>{js}</script>", height=0)
+
 
 st.cache_data.clear()
  
-st.components.v1.html("""
-                <script>
-                    window.scrollTo(0, 0);
-                </script>
-            """, height=0)
+# st.components.v1.html("""
+#                 <script>
+#                     window.scrollTo(0, 0);
+#                 </script>
+#             """, height=0)
 
 
 
@@ -85,6 +89,8 @@ if "page" not in st.session_state:
     st.session_state["page"] = 0
 
 if st.session_state["page"] == 0 :
+    scroll_to_top()
+    
     col_00, col_01, col_02 = st.columns([1, 3, 1])
     with col_01:
         st.image(logo)
@@ -102,6 +108,7 @@ if st.session_state["page"] == 0 :
 
 # Halaman 1
 if st.session_state["page"] == 1:
+    scroll_to_top()
      
     
     st.markdown(f"<h3 style='text-align: left;'><br>HALAMAN 1/6 : DATA UMUM</h3>", unsafe_allow_html=True)
@@ -204,6 +211,7 @@ if st.session_state["page"] == 1:
 
 # Halaman 1.5 - Pilih Feeder
 if st.session_state["page"] == 1.5:
+    scroll_to_top()
      
        
     st.markdown("<h3 style='text-align: left;'><br>HALAMAN 2/6 : PILIH FEEDER YANG DIGUNAKAN</h3>", unsafe_allow_html=True)
@@ -276,6 +284,7 @@ if st.session_state["page"] == 1.5:
 
 #Halaman 2
 if st.session_state["page"] == 2:
+    scroll_to_top()
      
     
     df_data_page_1 = st.session_state.df_data_page_1
@@ -647,6 +656,7 @@ if st.session_state["page"] == 2:
 
 #Halaman 3
 if st.session_state["page"] == 3:
+    scroll_to_top()
      
     
     df_data_page_1 = st.session_state.df_data_page_1
@@ -1378,6 +1388,7 @@ if st.session_state["page"] == 3:
 
 #Halaman 4
 if st.session_state["page"] == 4:
+    scroll_to_top()
      
     
     df_data_page_1 = st.session_state.df_data_page_1
@@ -1827,6 +1838,7 @@ if st.session_state["page"] == 4:
 
 #Halaman 5
 if st.session_state["page"] == 5:
+    scroll_to_top()
      
     
     df_data_page_1 = st.session_state.df_data_page_1
@@ -2085,6 +2097,7 @@ if st.session_state["page"] == 5:
 
 #Halaman 6
 if st.session_state["page"] == 6:
+    scroll_to_top()
      
     
     df_data_page_1 = st.session_state.df_data_page_1
