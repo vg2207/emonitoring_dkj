@@ -418,7 +418,7 @@ if st.session_state["page"] == 2:
                         pass
                     if df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03':
                         # with col_2_18 :
-                        ampere_main_feeder = st.number_input("Ampere main feeder", value=None, placeholder="", key="ampere_main_feeder")
+                        ampere_main_feeder = st.number_input("Ampere main feeder", value=None, placeholder="", key="ampere_main_feeder", format="%0.1f", step=0.1)
                     else :
                         pass
         else:
@@ -721,7 +721,7 @@ if st.session_state["page"] == 3:
         if df_data_page_1["Mesin"][0] == 'E06':
             with st.container(border=True):
                 st.markdown(f"<h5 style='text-align: left;'>SEI (KWh/kg)</h5>", unsafe_allow_html=True)
-                specific_energy_index = st.text_input("", key="specific_energy_index")
+                specific_energy_index = st.number_input("", key="specific_energy_index", format="%0.2f", step=0.01)
         else :
             pass
 
@@ -971,7 +971,7 @@ if st.session_state["page"] == 3:
                 # with col_3_42:
                     temperature_gearbox_oil = st.number_input("", value=None, placeholder="TEMPERATURE OLI GEARBOX", key="temperature_gearbox_oil", format="%d", step=1)
                 # with col_3_43:
-                    pressure_gearbox_oil = st.number_input("", value=None, placeholder="TEKANAN OLI GEARBOX", key="pressure_gearbox_oil")
+                    pressure_gearbox_oil = st.number_input("", value=None, placeholder="TEKANAN OLI GEARBOX", key="pressure_gearbox_oil", format="%0.1f", step=0.1)
         else :
             pass
 
@@ -985,7 +985,7 @@ if st.session_state["page"] == 3:
                     vacuum_bar_value = st.number_input("", value=None, placeholder="VACUUM BAR", key="vacuum_bar_value", format="%d", step=1)
                     if df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E06':
                         # with col_3_45:
-                        pressure_vacuum_system_water = st.number_input("", value=None, placeholder="TEKANAN AIR VACUUM SYSTEM", key="pressure_vacuum_system_water")
+                        pressure_vacuum_system_water = st.number_input("", value=None, placeholder="TEKANAN AIR VACUUM SYSTEM", key="pressure_vacuum_system_water", format="%0.1f", step=0.1)
                     else :
                         pass
         else:
@@ -1483,7 +1483,7 @@ if st.session_state["page"] == 4:
             # col_4_11, col_4_12, col_4_13, col_4_14 = st.columns([1, 1, 1, 1])
                 if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
                     # with col_4_11:
-                    ampere_cutter = st.number_input("", value=None, placeholder="AMPERE/TORSI CUTTER", key="ampere_cutter")
+                    ampere_cutter = st.number_input("", value=None, placeholder="AMPERE/TORSI CUTTER", key="ampere_cutter", format="%0.1f", step=0.1)
                 else:
                     pass
     
@@ -1507,7 +1507,7 @@ if st.session_state["page"] == 4:
                     # col_4_15, col_4_16 = st.columns([1, 1])
                     if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
                         # with col_4_15:
-                        uwp_water_pressure = st.number_input("", value=None, placeholder="TEKANAN AIR PROSES UWP", key="uwp_water_pressure")
+                        uwp_water_pressure = st.number_input("", value=None, placeholder="TEKANAN AIR PROSES UWP", key="uwp_water_pressure", format="%0.1f", step=0.1)
                     else:
                         pass
                     if df_data_page_1["Mesin"][0] == 'E06':
