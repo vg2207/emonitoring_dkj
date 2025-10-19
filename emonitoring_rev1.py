@@ -2427,7 +2427,7 @@ if st.session_state["page"] == 5:
         
         
 
-    back_button_5_to_1 = st.button("⏪ Balik ke Halaman 1 (ubah kondisi mesin)")
+    back_button_5_to_1 = st.button("⏪ Balik ke Halaman 1")
     if back_button_5_to_1:
         if 'df_data_page_6' in st.session_state:
             del st.session_state['df_data_page_6']
