@@ -271,7 +271,6 @@ if st.session_state["page"] == 1:
         if "df_data_page_1" not in st.session_state:
             # st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit" sebelum menekan tombol "Next Page"!')
             st.toast(f'Tekan tombol "Submit" sebelum menekan tombol "Next Page"!', icon="❌")
-            # time.sleep(2)
         else:
             if st.session_state.df_data_page_1["Kondisi Mesin"][0] == "Stop":
                 st.session_state.page = 5   # langsung lompat ke halaman 5
@@ -317,7 +316,8 @@ if st.session_state["page"] == 1.5:
         can_submit = True
 
         if not selected_feeders:
-            st.warning('Isi bagian "Feeder yang digunakan"!')
+            # st.warning('Isi bagian "Feeder yang digunakan"!')
+            # st.toast('Isi bagian "Feeder yang digunakan"!', icon="⚠️")
             can_submit = False
 
         with stylable_container(
@@ -334,6 +334,8 @@ if st.session_state["page"] == 1.5:
             submit_button_1_1_5 = st.form_submit_button(label='Submit', width = "stretch")
         if submit_button_1_1_5:
             if can_submit == False:
+                if not selected_feeders:
+                    st.toast('Isi bagian "Feeder yang digunakan"!', icon="⚠️")
                 st.error(f"Lengkapi seluruh kolom sebelum menekan tombol Submit!")                
             else:
                 nama_kolom_page_1_5 = {
@@ -563,83 +565,83 @@ if st.session_state["page"] == 2:
         
         if "Feeder 1 - F1" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
             if set_output_feeder_1 is None:
-                st.warning('Isi bagian "Set Point Output Feeder 1 - F1"!')
+                # st.warning('Isi bagian "Set Point Output Feeder 1 - F1"!')
                 can_submit = False
             if actual_output_feeder_1 is None:
-                st.warning('Isi bagian "Aktual Output Feeder 1 - F1"!')
+                # st.warning('Isi bagian "Aktual Output Feeder 1 - F1"!')
                 can_submit = False
         else:
             pass
     
         if "Feeder 2 - F2" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
             if set_output_feeder_2 is None:
-                st.warning('Isi bagian "Set Point Output Feeder 2 - F2"!')
+                # st.warning('Isi bagian "Set Point Output Feeder 2 - F2"!')
                 can_submit = False
             if actual_output_feeder_2 is None:
-                st.warning('Isi bagian "Aktual Output Feeder 2 - F2"!')
+                # st.warning('Isi bagian "Aktual Output Feeder 2 - F2"!')
                 can_submit = False
         else:
             pass
     
         if "Feeder 3 - F3" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
             if set_output_feeder_3 is None:
-                st.warning('Isi bagian "Set Point Output Feeder 3 - F3"!')
+                # st.warning('Isi bagian "Set Point Output Feeder 3 - F3"!')
                 can_submit = False
             if actual_output_feeder_3 is None:
-                st.warning('Isi bagian "Aktual Output Feeder 3 - F3"!')
+                # st.warning('Isi bagian "Aktual Output Feeder 3 - F3"!')
                 can_submit = False
         else:
             pass
     
         if "Feeder 4 - F4" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
             if set_output_feeder_4 is None:
-                st.warning('Isi bagian "Set Point Output Feeder 4 - F4"!')
+                # st.warning('Isi bagian "Set Point Output Feeder 4 - F4"!')
                 can_submit = False
             if actual_output_feeder_4 is None:
-                st.warning('Isi bagian "Aktual Output Feeder 4 - F4"!')
+                # st.warning('Isi bagian "Aktual Output Feeder 4 - F4"!')
                 can_submit = False
         else:
             pass
     
         if "Feeder Jotam S50" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
             if set_output_feeder_jotam_s50 is None:
-                st.warning('Isi bagian "Set Point Output Feeder Jotam S50"!')
+                # st.warning('Isi bagian "Set Point Output Feeder Jotam S50"!')
                 can_submit = False
             if actual_output_feeder_jotam_s50 is None:
-                st.warning('Isi bagian "Aktual Output Feeder Jotam S50"!')
+                # st.warning('Isi bagian "Aktual Output Feeder Jotam S50"!')
                 can_submit = False
         else:
             pass
     
         if "Feeder Jotam S90 Resin" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
             if set_output_feeder_jotam_s90_resin is None:
-                st.warning('Isi bagian "Set Point Output Feeder Jotam S90 Resin"!')
+                # st.warning('Isi bagian "Set Point Output Feeder Jotam S90 Resin"!')
                 can_submit = False
             if actual_output_feeder_jotam_s90_resin is None:
-                st.warning('Isi bagian "Aktual Output Feeder Jotam S90 Resin"!')
+                # st.warning('Isi bagian "Aktual Output Feeder Jotam S90 Resin"!')
                 can_submit = False
         else:
             pass
     
         if "Feeder Jotam S90 Aditif" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
             if set_output_feeder_jotam_s90_aditif is None:
-                st.warning('Isi bagian "Set Point Output Feeder Jotam S90 Aditif"!')
+                # st.warning('Isi bagian "Set Point Output Feeder Jotam S90 Aditif"!')
                 can_submit = False
             if actual_output_feeder_jotam_s90_aditif is None:
-                st.warning('Isi bagian "Aktual Output Feeder Jotam S90 Aditif"!')
+                # st.warning('Isi bagian "Aktual Output Feeder Jotam S90 Aditif"!')
                 can_submit = False
         else:
             pass
     
         if "Liquid Feeder" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
             if set_output_liquid_feeder is None:
-                st.warning('Isi bagian "Set Point Output Liquid Feeder"!')
+                # st.warning('Isi bagian "Set Point Output Liquid Feeder"!')
                 can_submit = False
             if actual_output_liquid_feeder is None:
-                st.warning('Isi bagian "Aktual Output Liquid Feeder"!')
+                # st.warning('Isi bagian "Aktual Output Liquid Feeder"!')
                 can_submit = False
             if tekanan_liquid_feeder is None:
-                st.warning('Isi bagian "Tekanan Liquid Feeder"!')
+                # st.warning('Isi bagian "Tekanan Liquid Feeder"!')
                 can_submit = False
         else :
             pass
@@ -647,11 +649,11 @@ if st.session_state["page"] == 2:
         if "Main Feeder" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
             if df_data_page_1["Mesin"][0] == 'Lab' or df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05':
                 if rpm_main_feeder is None:
-                    st.warning('Isi bagian "RPM main feeder"!')
+                    # st.warning('Isi bagian "RPM main feeder"!')
                     can_submit = False
             if df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03':
                 if ampere_main_feeder is None:
-                    st.warning('Isi bagian "Ampere main feeder"!')
+                    # st.warning('Isi bagian "Ampere main feeder"!')
                     can_submit = False
 
         else :
@@ -659,14 +661,14 @@ if st.session_state["page"] == 2:
     
         if "Feeder Rework" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
             if rpm_feeder_rework is None:
-                st.warning('Isi bagian "RPM Feeder Rework"!')
+                # st.warning('Isi bagian "RPM Feeder Rework"!')
                 can_submit = False
         else :
             pass
     
         if "Side Feeder" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
             if rpm_side_feeder is None:
-                st.warning('Isi bagian "RPM Side Feeder"!')
+                # st.warning('Isi bagian "RPM Side Feeder"!')
                 can_submit = False
         else :
             pass
@@ -687,7 +689,96 @@ if st.session_state["page"] == 2:
     
         if submit_button_2_1:
             if can_submit == False:
+                if "Feeder 1 - F1" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
+                    if set_output_feeder_1 is None:
+                        st.toast('Isi bagian "Set Point Output Feeder 1 - F1"!', icon="⚠️")
+                    if actual_output_feeder_1 is None:
+                        st.toast('Isi bagian "Aktual Output Feeder 1 - F1"!', icon="⚠️")
+                else:
+                    pass
+            
+                if "Feeder 2 - F2" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
+                    if set_output_feeder_2 is None:
+                        st.toast('Isi bagian "Set Point Output Feeder 2 - F2"!', icon="⚠️")
+                    if actual_output_feeder_2 is None:
+                        st.toast('Isi bagian "Aktual Output Feeder 2 - F2"!', icon="⚠️")
+                else:
+                    pass
+            
+                if "Feeder 3 - F3" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
+                    if set_output_feeder_3 is None:
+                        st.toast('Isi bagian "Set Point Output Feeder 3 - F3"!', icon="⚠️")
+                    if actual_output_feeder_3 is None:
+                        st.toast('Isi bagian "Aktual Output Feeder 3 - F3"!', icon="⚠️")
+                else:
+                    pass
+            
+                if "Feeder 4 - F4" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
+                    if set_output_feeder_4 is None:
+                        st.toast('Isi bagian "Set Point Output Feeder 4 - F4"!', icon="⚠️")
+                    if actual_output_feeder_4 is None:
+                        st.toast('Isi bagian "Aktual Output Feeder 4 - F4"!', icon="⚠️")
+                else:
+                    pass
+            
+                if "Feeder Jotam S50" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
+                    if set_output_feeder_jotam_s50 is None:
+                        st.toast('Isi bagian "Set Point Output Feeder Jotam S50"!', icon="⚠️")
+                    if actual_output_feeder_jotam_s50 is None:
+                        st.toast('Isi bagian "Aktual Output Feeder Jotam S50"!', icon="⚠️")
+                else:
+                    pass
+            
+                if "Feeder Jotam S90 Resin" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
+                    if set_output_feeder_jotam_s90_resin is None:
+                        st.toast('Isi bagian "Set Point Output Feeder Jotam S90 Resin"!', icon="⚠️")
+                    if actual_output_feeder_jotam_s90_resin is None:
+                        st.toast('Isi bagian "Aktual Output Feeder Jotam S90 Resin"!', icon="⚠️")
+                else:
+                    pass
+            
+                if "Feeder Jotam S90 Aditif" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
+                    if set_output_feeder_jotam_s90_aditif is None:
+                        st.toast('Isi bagian "Set Point Output Feeder Jotam S90 Aditif"!', icon="⚠️")
+                    if actual_output_feeder_jotam_s90_aditif is None:
+                        st.toast('Isi bagian "Aktual Output Feeder Jotam S90 Aditif"!', icon="⚠️")
+                else:
+                    pass
+            
+                if "Liquid Feeder" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
+                    if set_output_liquid_feeder is None:
+                        st.toast('Isi bagian "Set Point Output Liquid Feeder"!', icon="⚠️")
+                    if actual_output_liquid_feeder is None:
+                        st.toast('Isi bagian "Aktual Output Liquid Feeder"!', icon="⚠️")
+                    if tekanan_liquid_feeder is None:
+                        st.toast('Isi bagian "Tekanan Liquid Feeder"!', icon="⚠️")
+                else :
+                    pass
+            
+                if "Main Feeder" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
+                    if df_data_page_1["Mesin"][0] == 'Lab' or df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05':
+                        if rpm_main_feeder is None:
+                            st.toast('Isi bagian "RPM main feeder"!', icon="⚠️")
+                    if df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03':
+                        if ampere_main_feeder is None:
+                            st.toast('Isi bagian "Ampere main feeder"!', icon="⚠️")
+                else :
+                    pass
+            
+                if "Feeder Rework" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
+                    if rpm_feeder_rework is None:
+                        st.toast('Isi bagian "RPM Feeder Rework"!', icon="⚠️")
+                else :
+                    pass
+            
+                if "Side Feeder" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
+                    if rpm_side_feeder is None:
+                        st.toast('Isi bagian "RPM Side Feeder"!', icon="⚠️")
+                else :
+                    pass
+                    
                 st.error(f"Lengkapi seluruh kolom sebelum menekan tombol Submit!")
+                
             else:
                 nama_kolom_page_2 = {
                     "Set Point Output Feeder 1 - F1 (kg/jam)": [], 
