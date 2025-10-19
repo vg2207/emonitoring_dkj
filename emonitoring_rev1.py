@@ -752,7 +752,7 @@ if st.session_state["page"] == 2:
             
 
     with left_2:
-        back_button_2 = st.button(":previous_track_button: Balik")
+        back_button_2 = st.button("◀️ Balik")
     if back_button_2:
         st.session_state.page = 1.5  # kembali ke halaman 1.5
         st.session_state.scroll_to_top = True
@@ -1500,7 +1500,7 @@ if st.session_state["page"] == 3:
             
 
     with left_3:
-        back_button_3 = st.button(":previous_track_button: Balik")
+        back_button_3 = st.button("◀️ Balik")
     if back_button_3:
         st.session_state.page = 2  # kembali ke halaman 1
         st.session_state.scroll_to_top = True
@@ -1965,7 +1965,7 @@ if st.session_state["page"] == 4:
             
 
     with left_4:
-        back_button_4 = st.button(":previous_track_button: Balik")
+        back_button_4 = st.button("◀️ Balik")
     if back_button_4:
         st.session_state.page = 3
         st.session_state.scroll_to_top = True
@@ -2234,7 +2234,7 @@ if st.session_state["page"] == 5:
             
 
     with left_5:
-        back_button_5 = st.button(":previous_track_button: Balik")
+        back_button_5 = st.button("◀️ Balik")
     if back_button_5:
         st.session_state.page = 4 
         st.session_state.scroll_to_top = True
@@ -2242,7 +2242,7 @@ if st.session_state["page"] == 5:
         
         
 
-    back_button_5_to_1 = st.button(":previous_track_button: Balik ke Halaman 1 (ubah kondisi mesin)")
+    back_button_5_to_1 = st.button("⏪ Balik ke Halaman 1 (ubah kondisi mesin)")
     if back_button_5_to_1:
         st.session_state.page = 1
         st.session_state.scroll_to_top = True
