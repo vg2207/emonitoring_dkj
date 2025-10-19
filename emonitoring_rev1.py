@@ -271,6 +271,7 @@ if st.session_state["page"] == 1:
         if "df_data_page_1" not in st.session_state:
             # st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit" sebelum menekan tombol "Next Page"!')
             st.toast(f'Lengkapi seluruh kolom dan tekan tombol "Submit" sebelum menekan tombol "Next Page"!', icon="❌")
+            time.sleep(3)
         else:
             if st.session_state.df_data_page_1["Kondisi Mesin"][0] == "Stop":
                 st.session_state.page = 5   # langsung lompat ke halaman 5
@@ -358,6 +359,7 @@ if st.session_state["page"] == 1.5:
         if "df_data_page_1_5" not in st.session_state:
             # st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit" sebelum menekan tombol "Next Page"!')
             st.toast(f'Lengkapi seluruh kolom dan tekan tombol "Submit" sebelum menekan tombol "Next Page"!', icon="❌")
+            time.sleep(3)
         else:
             st.session_state.page = 2   # kalau Running, lanjut normal ke halaman 2
         
