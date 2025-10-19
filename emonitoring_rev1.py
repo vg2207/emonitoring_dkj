@@ -10,6 +10,7 @@ import cv2
 from PIL import Image
 from io import BytesIO
 import time
+from streamlit_extras.stylable_container import stylable_container
 
 def collect_image(nama_layar):
     datetime_now = datetime.now()
