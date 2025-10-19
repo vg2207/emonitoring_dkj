@@ -2264,8 +2264,12 @@ if st.session_state["page"] == 5:
     if back_button_5:
         if 'df_data_page_5' in st.session_state:
             del st.session_state['df_data_page_5']
-        del st.session_state['df_data_page_4']
-        st.session_state.page = 4 
+        if df_data_page_1["Kondisi Mesin"][0] == 'Running'
+            del st.session_state['df_data_page_4']
+            st.session_state.page = 4 
+        else:
+            del st.session_state['df_data_page_1']
+            st.session_state.page = 1
         st.session_state.scroll_to_top = True
         st.rerun()
         
