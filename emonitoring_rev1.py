@@ -169,7 +169,8 @@ if st.session_state["page"] == 1:
         can_submit = True
 
         if not nama_operator:
-            st.warning('Isi bagian "Nama Operator"!')
+            # st.warning('Isi bagian "Nama Operator"!')
+            st.toast("Isi bagian "Nama Operator"!", icon="⚠️")
             can_submit = False
         if not machine_selected_options:
             st.warning('Isi bagian "Mesin"!')
