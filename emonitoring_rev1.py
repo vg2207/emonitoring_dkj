@@ -75,7 +75,9 @@ def scroll_to_top():
 
 
 st.cache_data.clear()
-
+if "initialized" not in st.session_state:
+    st.session_state.clear()  # Clears everything
+    st.session_state.initialized = True  # Set a flag to prevent repeated clearing
 
 
 
@@ -353,7 +355,7 @@ if st.session_state["page"] == 1.5:
         
     if submit_button_1_2_5:
         if "df_data_page_1_5" not in st.session_state:
-            st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit"sebelum menekan tombol "Next Page"!')
+            st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit" sebelum menekan tombol "Next Page"!')
         else:
             st.session_state.page = 2   # kalau Running, lanjut normal ke halaman 2
         
