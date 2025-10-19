@@ -227,17 +227,7 @@ if st.session_state["page"] == 1:
 
     left_1, middle_1, right_1 = st.columns([1,3,1])
     with right_1:
-        # with stylable_container(
-        #     "green",
-        #     css_styles="""
-        #     button {
-        #         background-color: green !important;
-        #         color: white !important;
-        #         border: none !important;
-        #         transition: background-color 0.3s ease;
-        #     }""",
-        # ):
-        submit_button_1_2 = st.button(label='Next Page ➔', width="stretch")
+        submit_button_1_2 = st.button(type="primary", label='Next Page ➔', width="stretch")
                 
     if submit_button_1_2:
         if "df_data_page_1" not in st.session_state:
@@ -291,7 +281,18 @@ if st.session_state["page"] == 1.5:
             st.warning('Isi bagian "Feeder yang digunakan"!')
             can_submit = False
 
-        submit_button_1_1_5 = st.form_submit_button(label='Submit', width = "stretch", type = "primary")
+        with stylable_container(
+            "green",
+            css_styles="""
+            button {
+                background-color: green !important;
+                color: white !important;
+                border: none !important;
+                transition: background-color 0.3s ease;
+                margin-bottom: 20px !important;  /* Add space after button */
+            }""",
+        ):
+            submit_button_1_1_5 = st.form_submit_button(label='Submit', width = "stretch")
         if submit_button_1_1_5:
             if can_submit == False:
                 st.error(f"Lengkapi seluruh kolom sebelum menekan tombol Submit!")                
@@ -312,15 +313,8 @@ if st.session_state["page"] == 1.5:
 
     left_1_5, middle_1_5, right_1_5 = st.columns([0.2,0.6,0.2])
     with right_1_5:
-        with stylable_container(
-                "dark blue",
-                css_styles="""
-                button {
-                    background-color: #283281;
-                    color: white;
-                }""",
-            ):
-            submit_button_1_2_5 = st.button(type="secondary", label='Next Page ➔', width="stretch")
+        submit_button_1_2_5 = st.button(type="primary", label='Next Page ➔', width="stretch")
+        
     if submit_button_1_2_5:
         if "df_data_page_1_5" not in st.session_state:
             st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit"sebelum menekan tombol "Next Page"!')
@@ -633,8 +627,19 @@ if st.session_state["page"] == 2:
                 can_submit = False
         else :
             pass
-    
-        submit_button_2_1 = st.form_submit_button(label='Submit', width = "stretch", type = "primary")
+
+        with stylable_container(
+            "green",
+            css_styles="""
+            button {
+                background-color: green !important;
+                color: white !important;
+                border: none !important;
+                transition: background-color 0.3s ease;
+                margin-bottom: 20px !important;  /* Add space after button */
+            }""",
+        ):
+            submit_button_2_1 = st.form_submit_button(label='Submit', width = "stretch")
         
     
         if submit_button_2_1:
@@ -697,15 +702,7 @@ if st.session_state["page"] == 2:
 
     left_2, middle_2, right_2 = st.columns([1,3,1])
     with right_2:
-        with stylable_container(
-                "dark blue",
-                css_styles="""
-                button {
-                    background-color: #283281;
-                    color: white;
-                }""",
-            ):
-            submit_button_2_2 = st.button(type="secondary", label='Next Page ➔', width="stretch")
+        submit_button_2_2 = st.button(type="primary", label='Next Page ➔', width="stretch")
                 
     if submit_button_2_2:
         if "df_data_page_2" not in st.session_state:
@@ -1326,7 +1323,18 @@ if st.session_state["page"] == 3:
         else :
             pass
 
-        submit_button_3_1 = st.form_submit_button(label='Submit', width = "stretch", type = "primary")
+        with stylable_container(
+            "green",
+            css_styles="""
+            button {
+                background-color: green !important;
+                color: white !important;
+                border: none !important;
+                transition: background-color 0.3s ease;
+                margin-bottom: 20px !important;  /* Add space after button */
+            }""",
+        ):
+            submit_button_3_1 = st.form_submit_button(label='Submit', width = "stretch")
 
         if submit_button_3_1:
             if can_submit == False:
@@ -1442,15 +1450,7 @@ if st.session_state["page"] == 3:
             
     left_3, middle_3, right_3 = st.columns([1,3,1])
     with right_3 :
-        with stylable_container(
-                "dark blue",
-                css_styles="""
-                button {
-                    background-color: #283281;
-                    color: white;
-                }""",
-            ):
-            submit_button_3_2 = st.button(type="secondary", label='Next Page ➔', width="stretch")
+        submit_button_3_2 = st.button(type="primary", label='Next Page ➔', width="stretch")
                 
     if submit_button_3_2:
         if "df_data_page_3" not in st.session_state:
@@ -1831,7 +1831,18 @@ if st.session_state["page"] == 4:
         else:
             pass
 
-        submit_button_4_1 = st.form_submit_button(label='Submit', width = "stretch", type = "primary")
+        with stylable_container(
+            "green",
+            css_styles="""
+            button {
+                background-color: green !important;
+                color: white !important;
+                border: none !important;
+                transition: background-color 0.3s ease;
+                margin-bottom: 20px !important;  /* Add space after button */
+            }""",
+        ):
+            submit_button_4_1 = st.form_submit_button(label='Submit', width = "stretch")
 
         if submit_button_4_1:
 
@@ -1901,15 +1912,7 @@ if st.session_state["page"] == 4:
     
     left_4, middle_4, right_4 = st.columns([1,3,1])
     with right_4:
-        with stylable_container(
-                "dark blue",
-                css_styles="""
-                button {
-                    background-color: #283281;
-                    color: white;
-                }""",
-            ):
-            submit_button_2_4 = st.button(type="secondary", label='Next Page ➔', width="stretch")
+        submit_button_2_4 = st.button(type="primary", label='Next Page ➔', width="stretch")
                 
     if submit_button_2_4:
         if "df_data_page_4" not in st.session_state:
@@ -2134,7 +2137,18 @@ if st.session_state["page"] == 5:
             st.warning('Isi bagian "Quantity Rework Rekondisi"!')
             can_submit = False
 
-        submit_button_5_1 = st.form_submit_button(label='Submit', width = "stretch", type = "primary")
+        with stylable_container(
+            "green",
+            css_styles="""
+            button {
+                background-color: green !important;
+                color: white !important;
+                border: none !important;
+                transition: background-color 0.3s ease;
+                margin-bottom: 20px !important;  /* Add space after button */
+            }""",
+        ):
+            submit_button_5_1 = st.form_submit_button(label='Submit', width = "stretch")
 
         if submit_button_5_1:
 
@@ -2171,15 +2185,7 @@ if st.session_state["page"] == 5:
     
     left_5, middle_5, right_5 = st.columns([1,3,1])
     with right_5:
-        with stylable_container(
-                "dark blue",
-                css_styles="""
-                button {
-                    background-color: #283281;
-                    color: white;
-                }""",
-            ):
-            submit_button_2_5 = st.button(type="secondary", label='Next Page ➔', width="stretch")
+        submit_button_2_5 = st.button(type="primary", label='Next Page ➔', width="stretch")
                 
     if submit_button_2_5:
         if "df_data_page_5" not in st.session_state:
