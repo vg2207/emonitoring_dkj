@@ -363,7 +363,7 @@ if st.session_state["page"] == 1.5:
 
     
     with left_1_5:
-        if st.button("🠘 Balik"):
+        if st.button("◀️ Balik"):
             st.session_state.page = 1
             st.session_state.scroll_to_top = True
             st.rerun()
@@ -752,7 +752,7 @@ if st.session_state["page"] == 2:
             
 
     with left_2:
-        back_button_2 = st.button("⬅ Balik")
+        back_button_2 = st.button("◀️ Balik")
     if back_button_2:
         st.session_state.page = 1.5  # kembali ke halaman 1.5
         st.session_state.scroll_to_top = True
