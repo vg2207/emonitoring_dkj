@@ -775,7 +775,7 @@ if st.session_state["page"] == 3:
             # with col_3_3:
                 set_ampere_RPM_extruder = st.number_input("Ampere/Torsi", value=None, placeholder="", key="set_ampere_RPM_extruder")
             # with col_3_4 :
-                actual_ampere_RPM_extruder = st.number_input("RPM", value=None, placeholder="", key="actual_ampere_RPM_extruder")
+                actual_ampere_RPM_extruder = st.number_input("RPM", value=None, placeholder="", key="actual_ampere_RPM_extruder", format="%d", step=1)
 
         if df_data_page_1["Mesin"][0] == 'E06':
             with st.container(border=True):
