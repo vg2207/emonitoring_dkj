@@ -2431,12 +2431,15 @@ if st.session_state["page"] == 5:
     if back_button_5_to_1:
         if 'df_data_page_6' in st.session_state:
             del st.session_state['df_data_page_6']
-        del st.session_state['df_data_page_5']
-        del st.session_state['df_data_page_4']
-        del st.session_state['df_data_page_3']
-        del st.session_state['df_data_page_2']
-        del st.session_state['df_data_page_1_5']
-        del st.session_state['df_data_page_1']
+        if df_data_page_1["Kondisi Mesin"][0] == 'Running':
+            del st.session_state['df_data_page_5']
+            del st.session_state['df_data_page_4']
+            del st.session_state['df_data_page_3']
+            del st.session_state['df_data_page_2']
+            del st.session_state['df_data_page_1_5']
+            del st.session_state['df_data_page_1']
+        else :
+            del st.session_state['df_data_page_1']
         st.session_state.page = 1
         st.session_state.scroll_to_top = True
         st.rerun()
