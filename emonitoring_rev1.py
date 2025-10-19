@@ -202,10 +202,10 @@ if st.session_state["page"] == 1:
             can_submit = False
 
         with stylable_container(
-            "green",
+            "dark blue",
             css_styles="""
             button {
-                background-color: green !important;
+                background-color: #283281 !important;
                 color: white !important;
                 border: none !important;
                 transition: background-color 0.3s ease;
@@ -318,10 +318,10 @@ if st.session_state["page"] == 1.5:
             can_submit = False
 
         with stylable_container(
-            "green",
+            "dark blue",
             css_styles="""
             button {
-                background-color: green !important;
+                background-color: #283281 !important;
                 color: white !important;
                 border: none !important;
                 transition: background-color 0.3s ease;
@@ -665,10 +665,10 @@ if st.session_state["page"] == 2:
             pass
 
         with stylable_container(
-            "green",
+            "dark blue",
             css_styles="""
             button {
-                background-color: green !important;
+                background-color: #283281 !important;
                 color: white !important;
                 border: none !important;
                 transition: background-color 0.3s ease;
@@ -1360,10 +1360,10 @@ if st.session_state["page"] == 3:
             pass
 
         with stylable_container(
-            "green",
+            "dark blue",
             css_styles="""
             button {
-                background-color: green !important;
+                background-color: #283281 !important;
                 color: white !important;
                 border: none !important;
                 transition: background-color 0.3s ease;
@@ -1868,10 +1868,10 @@ if st.session_state["page"] == 4:
             pass
 
         with stylable_container(
-            "green",
+            "dark blue",
             css_styles="""
             button {
-                background-color: green !important;
+                background-color: #283281 !important;
                 color: white !important;
                 border: none !important;
                 transition: background-color 0.3s ease;
@@ -2174,10 +2174,10 @@ if st.session_state["page"] == 5:
             can_submit = False
 
         with stylable_container(
-            "green",
+            "dark blue",
             css_styles="""
             button {
-                background-color: green !important;
+                background-color: #283281 !important;
                 color: white !important;
                 border: none !important;
                 transition: background-color 0.3s ease;
