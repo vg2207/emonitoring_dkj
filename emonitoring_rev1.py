@@ -220,8 +220,9 @@ if st.session_state["page"] == 1:
             "green",
             css_styles="""
             button {
-                background-color: #00FF00;
-                border: none;
+                background-color: #00FF00 !important;
+                color: white !important;
+                border: none !important;
                 transition: background-color 0.3s ease;
             }""",
         ):
