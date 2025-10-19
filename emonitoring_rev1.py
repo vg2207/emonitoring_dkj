@@ -93,8 +93,6 @@ logo = Image.open('assets_logo/Logo Dunia Kimia Jaya.png')
 
 st.logo(logo, size="large")
 
-# st.markdown(f"<h2 style='text-align: center;'>WELCOME TO E-MONITORING PRODUKSI<br>DUNIA KIMIA JAYA</h2>", unsafe_allow_html=True)
-# st.markdown("""---""")
 
 # Halaman Awal
 
@@ -146,61 +144,44 @@ if st.session_state["page"] == 1:
 
     with st.form(key='form_page_1', clear_on_submit=False):
         nama_operator = st.text_input("Nama Operator", key="nama_operator")
+        
         with st.container(horizontal=True):
-        # col_1, col_2, col_3 = st.columns([1, 1, 1])
-        # with col_1:
             machine_options = ["Lab","E01", "E02", "E03", "E05", "E06"]
             machine_selected_options = st.radio('Mesin', machine_options, key="machine_selected_options")
-        # with col_2:
+            
             shift_options = ["1", "2", "3"]
             shift_selected_options = st.radio('Shift', shift_options, key="shift_selected_options")
-        # with col_3:
+            
             group_options = ["Kuning", "Hijau", "Merah", "Biru"]
             group_selected_options = st.radio('Grup', group_options, key="group_selected_options")
+            
         with st.container(horizontal=True):
-        # col_4, col_5 = st.columns([1, 1])
-        # with col_4:
             date_input = st.date_input("Tanggal Pengisian")
-        # with col_5 :
             time_input = st.time_input("Jam Pengisian",step=3600)
+            
         nama_produk = st.text_input("Nama Produk", key="nama_produk")
         # (Tuliskan angka belakang dan huruf lengkap dibelakang angka saja, CONTOH : Untuk produk ASITHYLEN P White 9440 A, cukup tuliskan : 9440 A)
+        
         kondisi_mesin_options = ["Running", "Stop"]
         kondisi_mesin_selected_options = st.pills('Kondisi Mesin', options=kondisi_mesin_options, key="kondisi_mesin_selected_options")
 
         can_submit = True
 
         if not nama_operator:
-            # st.warning('Isi bagian "Nama Operator"!')
-            # st.toast('Isi bagian "Nama Operator"!', icon="⚠️")
             can_submit = False
         if not machine_selected_options:
-            # st.warning('Isi bagian "Mesin"!')
-            # st.toast('Isi bagian "Mesin"!', icon="⚠️")
             can_submit = False
         if not shift_selected_options:
-            # st.warning('Isi bagian "Shift"!')
-            # st.toast('Isi bagian "Shift"!', icon="⚠️")
             can_submit = False
         if not group_selected_options:
-            # st.warning('Isi bagian "Grup"!')
-            # st.toast('Isi bagian "Grup"!', icon="⚠️")
             can_submit = False
         if not date_input:
-            # st.warning('Isi bagian "Tanggal Pengisian"!')
-            # st.toast('Isi bagian "Tanggal Pengisian"!', icon="⚠️")
             can_submit = False
         if not time_input:
-            # st.warning('Isi bagian "Jam Pengisian"!')
-            # st.toast('Isi bagian "Jam Pengisian"!', icon="⚠️")
             can_submit = False
         if not nama_produk:
-            # st.warning('Isi bagian "Nama Produk"!')
-            # st.toast('Isi bagian "Nama Produk"!', icon="⚠️")
             can_submit = False
         if not kondisi_mesin_selected_options:
-            # st.warning('Isi bagian "Kondisi Mesin"!')
-            # st.toast('Isi bagian "Kondisi Mesin"!', icon="⚠️")
             can_submit = False
 
         with stylable_container(
@@ -316,8 +297,6 @@ if st.session_state["page"] == 1.5:
         can_submit = True
 
         if not selected_feeders:
-            # st.warning('Isi bagian "Feeder yang digunakan"!')
-            # st.toast('Isi bagian "Feeder yang digunakan"!', icon="⚠️")
             can_submit = False
 
         with stylable_container(
@@ -422,10 +401,7 @@ if st.session_state["page"] == 2:
                 st.markdown(f"<h5 style='text-align: left;'>Output Feeder 1 - F1 (kg/jam)</h5>", unsafe_allow_html=True)
                 
                 with st.container(horizontal=True):
-                # col_2_1, col_2_2 = st.columns([1, 1])
-                # with col_2_1:
                     set_output_feeder_1 = st.number_input("Set Point", value=None, placeholder="SET", key="set_output_feeder_1", format="%d", step=1)
-                # with col_2_2 :
                     actual_output_feeder_1 = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_output_feeder_1", format="%d", step=1)
         else:
             set_output_feeder_1 = None
@@ -439,10 +415,7 @@ if st.session_state["page"] == 2:
                 st.markdown(f"<h5 style='text-align: left;'>Output Feeder 2 - F2 (kg/jam)</h5>", unsafe_allow_html=True)
                 
                 with st.container(horizontal=True):
-                # col_2_3, col_2_4 = st.columns([1, 1])
-                # with col_2_3:
                     set_output_feeder_2 = st.number_input("Set Point", value=None, placeholder="SET", key="set_output_feeder_2", format="%d", step=1)
-                # with col_2_4 :
                     actual_output_feeder_2 = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_output_feeder_2", format="%d", step=1)
         else:
             pass
@@ -452,10 +425,7 @@ if st.session_state["page"] == 2:
                 st.markdown(f"<h5 style='text-align: left;'>Output Feeder 3 - F3 (kg/jam)</h5>", unsafe_allow_html=True)
                 
                 with st.container(horizontal=True):
-                # col_2_5, col_2_6 = st.columns([1, 1])
-                # with col_2_5:
                     set_output_feeder_3 = st.number_input("Set Point", value=None, placeholder="SET", key="set_output_feeder_3", format="%d", step=1)
-                # with col_2_6 :
                     actual_output_feeder_3 = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_output_feeder_3", format="%d", step=1)
         else:
             pass
@@ -465,10 +435,7 @@ if st.session_state["page"] == 2:
                 st.markdown(f"<h5 style='text-align: left;'>Output Feeder 4 - F4 (kg/jam)</h5>", unsafe_allow_html=True)
                 
                 with st.container(horizontal=True):
-                # col_2_7, col_2_8 = st.columns([1, 1])
-                # with col_2_7:
                     set_output_feeder_4 = st.number_input("Set Point", value=None, placeholder="SET", key="set_output_feeder_4", format="%d", step=1)
-                # with col_2_8 :
                     actual_output_feeder_4 = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_output_feeder_4", format="%d", step=1)
         else :
             pass
@@ -478,10 +445,7 @@ if st.session_state["page"] == 2:
                 st.markdown(f"<h5 style='text-align: left;'>Output Feeder Jotam S50 (kg/jam)</h5>", unsafe_allow_html=True)
 
                 with st.container(horizontal=True):
-                # col_2_9, col_2_10 = st.columns([1, 1])
-                # with col_2_9:
                     set_output_feeder_jotam_s50 = st.number_input("Set Point", value=None, placeholder="SET", key="set_output_feeder_jotam_s50", format="%d", step=1)
-                # with col_2_10 :
                     actual_output_feeder_jotam_s50 = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_output_feeder_jotam_s50", format="%d", step=1)
         else :
             pass
@@ -491,10 +455,7 @@ if st.session_state["page"] == 2:
                 st.markdown(f"<h5 style='text-align: left;'>Output Feeder Jotam S90 - Resin (kg/jam)</h5>", unsafe_allow_html=True)
 
                 with st.container(horizontal=True):
-                # col_2_11, col_2_12 = st.columns([1, 1])
-                # with col_2_11:
                     set_output_feeder_jotam_s90_resin = st.number_input("Set Point", value=None, placeholder="SET", key="set_output_feeder_jotam_s90_resin", format="%d", step=1)
-                # with col_2_12 :
                     actual_output_feeder_jotam_s90_resin = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_output_feeder_jotam_s90_resin", format="%d", step=1)
         else :
             pass
@@ -504,10 +465,7 @@ if st.session_state["page"] == 2:
                 st.markdown(f"<h5 style='text-align: left;'>Output Feeder Jotam S90 - Aditif (kg/jam)</h5>", unsafe_allow_html=True)
 
                 with st.container(horizontal=True):
-                # col_2_13, col_2_14 = st.columns([1, 1])
-                # with col_2_13:
                     set_output_feeder_jotam_s90_aditif = st.number_input("Set Point", value=None, placeholder="SET", key="set_output_feeder_jotam_s90_aditif", format="%d", step=1)
-                # with col_2_14 :
                     actual_output_feeder_jotam_s90_aditif = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_output_feeder_jotam_s90_aditif", format="%d", step=1)
         else :
             pass
@@ -517,10 +475,7 @@ if st.session_state["page"] == 2:
                 st.markdown(f"<h5 style='text-align: left;'>Output Liquid Feeder (kg/jam)</h5>", unsafe_allow_html=True)
 
                 with st.container(horizontal=True):
-                # col_2_15, col_2_16 = st.columns([1, 1])
-                # with col_2_15:
                     set_output_liquid_feeder = st.number_input("Set Point", value=None, placeholder="SET", key="set_output_liquid_feeder", format="%d", step=1)
-                # with col_2_16 :
                     actual_output_liquid_feeder = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_output_liquid_feeder", format="%d", step=1)
             with st.container(border=True):
                 st.markdown(f"<h5 style='text-align: left;'>Tekanan Liquid Feeder</h5>", unsafe_allow_html=True)
@@ -533,14 +488,11 @@ if st.session_state["page"] == 2:
                 st.markdown(f"<h5 style='text-align: left;'>Main Feeder / Feeder 1</h5>", unsafe_allow_html=True)
 
                 with st.container(horizontal=True):
-                    # col_2_17, col_2_18 = st.columns([1, 1])
                     if df_data_page_1["Mesin"][0] == 'Lab' or df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05':
-                        # with col_2_17:
                         rpm_main_feeder = st.number_input("RPM main feeder", value=None, placeholder="", key="rpm_main_feeder", format="%d", step=1)
                     else :
                         pass
                     if df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03':
-                        # with col_2_18 :
                         ampere_main_feeder = st.number_input("Ampere main feeder", value=None, placeholder="", key="ampere_main_feeder", format="%0.1f", step=0.1)
                     else :
                         pass
@@ -565,83 +517,66 @@ if st.session_state["page"] == 2:
         
         if "Feeder 1 - F1" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
             if set_output_feeder_1 is None:
-                # st.warning('Isi bagian "Set Point Output Feeder 1 - F1"!')
                 can_submit = False
             if actual_output_feeder_1 is None:
-                # st.warning('Isi bagian "Aktual Output Feeder 1 - F1"!')
                 can_submit = False
         else:
             pass
     
         if "Feeder 2 - F2" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
             if set_output_feeder_2 is None:
-                # st.warning('Isi bagian "Set Point Output Feeder 2 - F2"!')
                 can_submit = False
             if actual_output_feeder_2 is None:
-                # st.warning('Isi bagian "Aktual Output Feeder 2 - F2"!')
                 can_submit = False
         else:
             pass
     
         if "Feeder 3 - F3" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
             if set_output_feeder_3 is None:
-                # st.warning('Isi bagian "Set Point Output Feeder 3 - F3"!')
                 can_submit = False
             if actual_output_feeder_3 is None:
-                # st.warning('Isi bagian "Aktual Output Feeder 3 - F3"!')
                 can_submit = False
         else:
             pass
     
         if "Feeder 4 - F4" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
             if set_output_feeder_4 is None:
-                # st.warning('Isi bagian "Set Point Output Feeder 4 - F4"!')
                 can_submit = False
             if actual_output_feeder_4 is None:
-                # st.warning('Isi bagian "Aktual Output Feeder 4 - F4"!')
                 can_submit = False
         else:
             pass
     
         if "Feeder Jotam S50" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
             if set_output_feeder_jotam_s50 is None:
-                # st.warning('Isi bagian "Set Point Output Feeder Jotam S50"!')
                 can_submit = False
             if actual_output_feeder_jotam_s50 is None:
-                # st.warning('Isi bagian "Aktual Output Feeder Jotam S50"!')
                 can_submit = False
         else:
             pass
     
         if "Feeder Jotam S90 Resin" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
             if set_output_feeder_jotam_s90_resin is None:
-                # st.warning('Isi bagian "Set Point Output Feeder Jotam S90 Resin"!')
                 can_submit = False
             if actual_output_feeder_jotam_s90_resin is None:
-                # st.warning('Isi bagian "Aktual Output Feeder Jotam S90 Resin"!')
                 can_submit = False
         else:
             pass
     
         if "Feeder Jotam S90 Aditif" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
             if set_output_feeder_jotam_s90_aditif is None:
-                # st.warning('Isi bagian "Set Point Output Feeder Jotam S90 Aditif"!')
                 can_submit = False
             if actual_output_feeder_jotam_s90_aditif is None:
-                # st.warning('Isi bagian "Aktual Output Feeder Jotam S90 Aditif"!')
                 can_submit = False
         else:
             pass
     
         if "Liquid Feeder" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
             if set_output_liquid_feeder is None:
-                # st.warning('Isi bagian "Set Point Output Liquid Feeder"!')
                 can_submit = False
             if actual_output_liquid_feeder is None:
-                # st.warning('Isi bagian "Aktual Output Liquid Feeder"!')
                 can_submit = False
             if tekanan_liquid_feeder is None:
-                # st.warning('Isi bagian "Tekanan Liquid Feeder"!')
                 can_submit = False
         else :
             pass
@@ -649,11 +584,9 @@ if st.session_state["page"] == 2:
         if "Main Feeder" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
             if df_data_page_1["Mesin"][0] == 'Lab' or df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05':
                 if rpm_main_feeder is None:
-                    # st.warning('Isi bagian "RPM main feeder"!')
                     can_submit = False
             if df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03':
                 if ampere_main_feeder is None:
-                    # st.warning('Isi bagian "Ampere main feeder"!')
                     can_submit = False
 
         else :
@@ -661,18 +594,17 @@ if st.session_state["page"] == 2:
     
         if "Feeder Rework" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
             if rpm_feeder_rework is None:
-                # st.warning('Isi bagian "RPM Feeder Rework"!')
                 can_submit = False
         else :
             pass
     
         if "Side Feeder" in df_data_page_1_5["Feeder yang digunakan"].tolist()[0]:
             if rpm_side_feeder is None:
-                # st.warning('Isi bagian "RPM Side Feeder"!')
                 can_submit = False
         else :
             pass
 
+        
         with stylable_container(
             "dark blue",
             css_styles="""
@@ -840,9 +772,7 @@ if st.session_state["page"] == 2:
                 
     if submit_button_2_2:
         if "df_data_page_2" not in st.session_state:
-            # st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit" sebelum menekan tombol "Next Page"!')
             st.toast(f'Tekan tombol "Submit" sebelum menekan tombol "Next Page"!', icon="❌")
-            # time.sleep(2)
         else:
             st.session_state.page = 3
             st.session_state.scroll_to_top = True
@@ -929,8 +859,6 @@ if st.session_state["page"] == 3:
         st.markdown(f"<h5 style='text-align: left;'>📷 Dokumentasi Panel Mesin Extruder</h5>", unsafe_allow_html=True)
         foto_mesin = st.camera_input("Ambil foto panel mesin extruder", key="foto_mesin")
         if foto_mesin is not None:
-            # konversi ke base64 agar bisa disimpan ke DataFrame
-            # foto_mesin_base64 = base64.b64encode(foto_mesin.getvalue()).decode("utf-8")
             path_to_save_extruder, file_name_extruder = collect_image(nama_layar = 'extruder')
 
         if df_data_page_1["Mesin"][0] == 'E06':
@@ -938,10 +866,7 @@ if st.session_state["page"] == 3:
                 st.markdown(f"<h5 style='text-align: left;'>Output Mesin (kg/jam)</h5>", unsafe_allow_html=True)
 
                 with st.container(horizontal=True):
-                # col_3_1, col_3_2 = st.columns([1, 1])
-                # with col_3_1:
                     set_output_mesin_extruder = st.number_input("Set Point", value=None, placeholder="SET", key="set_output_mesin_extruder", format="%d", step=1)
-                # with col_3_2 :
                     actual_output_mesin_extruder = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_output_mesin_extruder", format="%d", step=1)
         else : 
             pass
@@ -950,10 +875,7 @@ if st.session_state["page"] == 3:
             st.markdown(f"<h5 style='text-align: left;'>Ampere & RPM Extruder</h5>", unsafe_allow_html=True)
 
             with st.container(horizontal=True):
-            # col_3_3, col_3_4 = st.columns([1, 1])
-            # with col_3_3:
                 set_ampere_RPM_extruder = st.number_input("Ampere/Torsi", value=None, placeholder="", key="set_ampere_RPM_extruder")
-            # with col_3_4 :
                 actual_ampere_RPM_extruder = st.number_input("RPM", value=None, placeholder="", key="actual_ampere_RPM_extruder", format="%d", step=1)
 
         if df_data_page_1["Mesin"][0] == 'E06':
@@ -967,14 +889,11 @@ if st.session_state["page"] == 3:
             st.markdown(f"<h5 style='text-align: left;'>Melt Temperature - Pressure Ekstruder</h5>", unsafe_allow_html=True)
 
             with st.container(horizontal=True):
-                # col_3_5, col_3_6 = st.columns([1, 1])
                 if df_data_page_1["Mesin"][0] == 'Lab' or df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E05' or df_data_page_1["Mesin"][0] == 'E06':
-                    # with col_3_5:
                     set_melt_temperature_extruder = st.number_input("Set Melt Temperature", value=None, placeholder="", key="set_melt_temperature_extruder", format="%d", step=1)
                 else : 
                     pass
     
-                # with col_3_6 :
                 set_melt_pressure_extruder = st.number_input("Set Melt Pressure", value=None, placeholder="", key="set_melt_pressure_extruder", format="%d", step=1)
    
         if df_data_page_1["Mesin"][0] == 'E06':
@@ -989,54 +908,39 @@ if st.session_state["page"] == 3:
             st.markdown(f"<h5 style='text-align: left;'>Temperature Zone 1</h5>", unsafe_allow_html=True)
 
             with st.container(horizontal=True):
-                # col_3_7, col_3_8 = st.columns([1, 1])
                 if df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05':
-                    # with col_3_7:
                     set_temperature_zone_1 = st.number_input("Set Point", value=None, placeholder="SET", key="set_temperature_zone_1", format="%d", step=1)
                 else :
                     pass
-    
-                # with col_3_8 :
+
                 actual_temperature_zone_1 = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_temperature_zone_1", format="%d", step=1)
 
         with st.container(border=True):
             st.markdown(f"<h5 style='text-align: left;'>Temperature Zone 2</h5>", unsafe_allow_html=True)
 
             with st.container(horizontal=True):
-            # col_3_9, col_3_10 = st.columns([1, 1])
-            # with col_3_9:
                 set_temperature_zone_2 = st.number_input("Set Point", value=None, placeholder="SET", key="set_temperature_zone_2", format="%d", step=1)
-            # with col_3_10 :
                 actual_temperature_zone_2 = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_temperature_zone_2", format="%d", step=1)
         
         with st.container(border=True):
             st.markdown(f"<h5 style='text-align: left;'>Temperature Zone 3</h5>", unsafe_allow_html=True)
 
             with st.container(horizontal=True):
-            # col_3_11, col_3_12 = st.columns([1, 1])
-            # with col_3_11:
                 set_temperature_zone_3 = st.number_input("Set Point", value=None, placeholder="SET", key="set_temperature_zone_3", format="%d", step=1)
-            # with col_3_12 :
                 actual_temperature_zone_3 = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_temperature_zone_3", format="%d", step=1)
         
         with st.container(border=True):
             st.markdown(f"<h5 style='text-align: left;'>Temperature Zone 4</h5>", unsafe_allow_html=True)
             
             with st.container(horizontal=True):
-            # col_3_13, col_3_14 = st.columns([1, 1])
-            # with col_3_13:
                 set_temperature_zone_4 = st.number_input("Set Point", value=None, placeholder="SET", key="set_temperature_zone_4", format="%d", step=1)
-            # with col_3_14 :
                 actual_temperature_zone_4 = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_temperature_zone_4", format="%d", step=1)
                 
         with st.container(border=True):
             st.markdown(f"<h5 style='text-align: left;'>Temperature Zone 5</h5>", unsafe_allow_html=True)
 
             with st.container(horizontal=True):
-            # col_3_15, col_3_16 = st.columns([1, 1])
-            # with col_3_15:
                 set_temperature_zone_5 = st.number_input("Set Point", value=None, placeholder="SET", key="set_temperature_zone_5", format="%d", step=1)
-            # with col_3_16 :
                 actual_temperature_zone_5 = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_temperature_zone_5", format="%d", step=1)
         
         if df_data_page_1["Mesin"][0] == 'E01'or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05' or df_data_page_1["Mesin"][0] == 'E06':
@@ -1044,30 +948,21 @@ if st.session_state["page"] == 3:
                 st.markdown(f"<h5 style='text-align: left;'>Temperature Zone 6</h5>", unsafe_allow_html=True)
 
                 with st.container(horizontal=True):
-                # col_3_17, col_3_18 = st.columns([1, 1])
-                # with col_3_17:
                     set_temperature_zone_6 = st.number_input("Set Point", value=None, placeholder="SET", key="set_temperature_zone_6", format="%d", step=1)
-                # with col_3_18 :
                     actual_temperature_zone_6 = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_temperature_zone_6", format="%d", step=1)
             
             with st.container(border=True):
                 st.markdown(f"<h5 style='text-align: left;'>Temperature Zone 7</h5>", unsafe_allow_html=True)
 
                 with st.container(horizontal=True):
-                # col_3_19, col_3_20 = st.columns([1, 1])
-                # with col_3_19:
                     set_temperature_zone_7 = st.number_input("Set Point", value=None, placeholder="SET", key="set_temperature_zone_7", format="%d", step=1)
-                # with col_3_20 :
                     actual_temperature_zone_7 = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_temperature_zone_7", format="%d", step=1)
                     
             with st.container(border=True):
                 st.markdown(f"<h5 style='text-align: left;'>Temperature Zone 8</h5>", unsafe_allow_html=True)
 
                 with st.container(horizontal=True):
-                # col_3_21, col_3_22 = st.columns([1, 1])
-                # with col_3_21:
                     set_temperature_zone_8 = st.number_input("Set Point", value=None, placeholder="SETT", key="set_temperature_zone_8", format="%d", step=1)
-                # with col_3_22 :
                     actual_temperature_zone_8 = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_temperature_zone_8", format="%d", step=1)
         else:
             pass
@@ -1077,10 +972,7 @@ if st.session_state["page"] == 3:
                 st.markdown(f"<h5 style='text-align: left;'>Temperature Zone 9</h5>", unsafe_allow_html=True)
 
                 with st.container(horizontal=True):
-                # col_3_23, col_3_24 = st.columns([1, 1])
-                # with col_3_23:
                     set_temperature_zone_9 = st.number_input("Set Point", value=None, placeholder="SET", key="set_temperature_zone_9", format="%d", step=1)
-                # with col_3_24 :
                     actual_temperature_zone_9 = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_temperature_zone_9", format="%d", step=1)
         else :
             pass
@@ -1090,10 +982,7 @@ if st.session_state["page"] == 3:
                 st.markdown(f"<h5 style='text-align: left;'>Temperature Zone 10</h5>", unsafe_allow_html=True)
 
                 with st.container(horizontal=True):
-                # col_3_25, col_3_26 = st.columns([1, 1])
-                # with col_3_25:
                     set_temperature_zone_10 = st.number_input("Set Point", value=None, placeholder="SET", key="set_temperature_zone_10", format="%d", step=1)
-                # with col_3_26 :
                     actual_temperature_zone_10 = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_temperature_zone_10", format="%d", step=1)
         else :
             pass
@@ -1103,10 +992,7 @@ if st.session_state["page"] == 3:
                 st.markdown(f"<h5 style='text-align: left;'>Temperature Zone 11</h5>", unsafe_allow_html=True)
 
                 with st.container(horizontal=True):
-                # col_3_27, col_3_28 = st.columns([1, 1])
-                # with col_3_27:
                     set_temperature_zone_11 = st.number_input("Set Point", value=None, placeholder="SET", key="set_temperature_zone_11", format="%d", step=1)
-                # with col_3_28 :
                     actual_temperature_zone_11 = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_temperature_zone_11", format="%d", step=1)
         else :
             pass
@@ -1116,10 +1002,7 @@ if st.session_state["page"] == 3:
                 st.markdown(f"<h5 style='text-align: left;'>Temperature Zone 12</h5>", unsafe_allow_html=True)
 
                 with st.container(horizontal=True):
-                # col_3_29, col_3_30 = st.columns([1, 1])
-                # with col_3_29:
                     set_temperature_zone_12 = st.number_input("Set Point", value=None, placeholder="SET", key="set_temperature_zone_12", format="%d", step=1)
-                # with col_3_30 :
                     actual_temperature_zone_12 = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_temperature_zone_12", format="%d", step=1)
         else :
             pass
@@ -1129,10 +1012,7 @@ if st.session_state["page"] == 3:
                 st.markdown(f"<h5 style='text-align: left;'>Temperature 8.0</h5>", unsafe_allow_html=True)
 
                 with st.container(horizontal=True):
-                # col_3_31, col_3_32 = st.columns([1, 1])
-                # with col_3_31:
                     set_temperature_8 = st.number_input("Set Point", value=None, placeholder="SET", key="set_temperature_8", format="%d", step=1)
-                # with col_3_32 :
                     actual_temperature_8 = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_temperature_8", format="%d", step=1)
         else :
             pass
@@ -1142,10 +1022,7 @@ if st.session_state["page"] == 3:
                 st.markdown(f"<h5 style='text-align: left;'>Temperature Input Screen Changer</h5>", unsafe_allow_html=True)
 
                 with st.container(horizontal=True):
-                # col_3_33, col_3_34 = st.columns([1, 1])
-                # with col_3_33:
                     set_temperature_input_screen_changer = st.number_input("Set Point", value=None, placeholder="SET", key="set_temperature_input_screen_changer", format="%d", step=1)
-                # with col_3_34 :
                     actual_temperature_input_screen_changer = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_temperature_input_screen_changer", format="%d", step=1)
         else :
             pass
@@ -1155,10 +1032,7 @@ if st.session_state["page"] == 3:
                 st.markdown(f"<h5 style='text-align: left;'>Temperature TSW / Screen Changer 1</h5>", unsafe_allow_html=True)
 
                 with st.container(horizontal=True):
-                # col_3_35, col_3_36 = st.columns([1, 1])
-                # with col_3_35:
                     set_temperature_TSW_screen_changer_1 = st.number_input("Set Point", value=None, placeholder="SET", key="set_temperature_TSW_screen_changer_1", format="%d", step=1)
-                # with col_3_36 :
                     actual_temperature_TSW_screen_changer_1 = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_temperature_TSW_screen_changer_1", format="%d", step=1)
         else :
             pass
@@ -1168,10 +1042,7 @@ if st.session_state["page"] == 3:
                 st.markdown(f"<h5 style='text-align: left;'>Temperature Screen Changer 2</h5>", unsafe_allow_html=True)
 
                 with st.container(horizontal=True):
-                # col_3_37, col_3_38 = st.columns([1, 1])
-                # with col_3_37:
                     set_temperature_screen_changer_2 = st.number_input("Set Point", value=None, placeholder="SET", key="set_temperature_screen_changer_2", format="%d", step=1)
-                # with col_3_38 :
                     actual_temperature_screen_changer_2 = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_temperature_screen_changer_2", format="%d", step=1)
         else :
             pass
@@ -1181,14 +1052,11 @@ if st.session_state["page"] == 3:
                 st.markdown(f"<h5 style='text-align: left;'>Cooling Barrel Mesin (Soft Water)</h5>", unsafe_allow_html=True)
 
                 with st.container(horizontal=True):
-                    # col_3_39, col_3_40 = st.columns([1, 1])
                     if df_data_page_1["Mesin"][0] == 'E06':
-                        # with col_3_39:
                         temperature_cooling_barrel_mesin = st.number_input("Temperature Air Cooling Barrel", value=None, placeholder="TEMPERATURE", key="temperature_cooling_barrel_mesin", format="%d", step=1)
                     else :
                         pass
     
-                    # with col_3_40 :
                     pressure_cooling_barrel_mesin = st.number_input("Tekanan Air Cooling Barrel", value=None, placeholder="TEKANAN AIR", key="pressure_cooling_barrel_mesin", format="%d", step=1)
         else:
             pass
@@ -1205,10 +1073,7 @@ if st.session_state["page"] == 3:
                 st.markdown(f"<h5 style='text-align: left;'>Parameter Gearbox Mesin</h5>", unsafe_allow_html=True)
 
                 with st.container(horizontal=True):
-                # col_3_42, col_3_43 = st.columns([1, 1])
-                # with col_3_42:
                     temperature_gearbox_oil = st.number_input("Temperature Oli Gearbox", value=None, placeholder="", key="temperature_gearbox_oil", format="%d", step=1)
-                # with col_3_43:
                     pressure_gearbox_oil = st.number_input("Tekanan Oli Gearbox", value=None, placeholder="", key="pressure_gearbox_oil", format="%0.1f", step=0.1)
         else :
             pass
@@ -1218,246 +1083,197 @@ if st.session_state["page"] == 3:
                 st.markdown(f"<h5 style='text-align: left;'>Parameter Vacuum System</h5>", unsafe_allow_html=True)
 
                 with st.container(horizontal=True):
-                    # col_3_44, col_3_45 = st.columns([1, 1])
-                    # with col_3_44:
                     vacuum_bar_value = st.number_input("Vacuum Bar", value=None, placeholder="", key="vacuum_bar_value", format="%d", step=1)
                     if df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E06':
-                        # with col_3_45:
                         pressure_vacuum_system_water = st.number_input("Tekanan Air Vacuum System", value=None, placeholder="", key="pressure_vacuum_system_water", format="%0.1f", step=0.1)
                     else :
                         pass
         else:
             pass
 
+
+        
         can_submit = True
 
         if foto_mesin is None:
-            st.warning('Ambil foto panel extruder')
             can_submit = False
 
         if df_data_page_1["Mesin"][0] == 'E06':
             if set_output_mesin_extruder is None:
-                st.warning('Isi bagian "Set Point Output Mesin"!')
                 can_submit = False
             if actual_output_mesin_extruder is None:
-                st.warning('Isi bagian "Aktual Output Mesin"!')
                 can_submit = False
         else : 
             pass
 
         if set_ampere_RPM_extruder is None:
-            st.warning('Isi bagian "Set Point Ampere & RPM Extruder"!')
             can_submit = False
         if actual_ampere_RPM_extruder is None:
-            st.warning('Isi bagian "Aktual Ampere & RPM Extruder"!')
             can_submit = False
 
         if df_data_page_1["Mesin"][0] == 'E06':
             if specific_energy_index is None:
-                st.warning('Isi bagian "SEI"!')
                 can_submit = False
         else : 
             pass
 
         if df_data_page_1["Mesin"][0] == 'Lab' or df_data_page_1["Mesin"][0] == 'E01'or df_data_page_1["Mesin"][0] == 'E02'or df_data_page_1["Mesin"][0] == 'E05' or df_data_page_1["Mesin"][0] == 'E06':
             if set_melt_temperature_extruder is None:
-                st.warning('Isi bagian "Melt Temperature Extruder"!')
                 can_submit = False
         else :
             pass
 
         if set_melt_pressure_extruder is None:
-            st.warning('Isi bagian "Melt Pressure Extruder"!')
             can_submit = False
 
         if df_data_page_1["Mesin"][0] == 'E06':
             if valve_condition_options is None:
-                st.warning('Isi bagian "Kondisi Valve Pendingin Barrel Zone 1"!')
                 can_submit = False
         else :
             pass
         
         if df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05':
             if set_temperature_zone_1 is None:
-                st.warning('Isi bagian "Set Point Temperature Zone 1"!')
                 can_submit = False
         else :
             pass
 
         if df_data_page_1["Mesin"][0] == 'Lab' or df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05' or df_data_page_1["Mesin"][0] == 'E06':
             if actual_temperature_zone_1 is None:
-                st.warning('Isi bagian "Aktual Temperature Zone 1"!')
                 can_submit = False
             if set_temperature_zone_2 is None:
-                st.warning('Isi bagian "Set Point Temperature Zone 2"!')
                 can_submit = False
             if actual_temperature_zone_2 is None:
-                st.warning('Isi bagian "Aktual Temperature Zone 2"!')
                 can_submit = False
             if set_temperature_zone_3 is None:
-                st.warning('Isi bagian "Set Point Temperature Zone 3"!')
                 can_submit = False
             if actual_temperature_zone_3 is None:
-                st.warning('Isi bagian "Aktual Temperature Zone 3"!')
                 can_submit = False
             if set_temperature_zone_4 is None:
-                st.warning('Isi bagian "Set Point Temperature Zone 4"!')
                 can_submit = False
             if actual_temperature_zone_4 is None:
-                st.warning('Isi bagian "Aktual Temperature Zone 4"!')
                 can_submit = False
             if set_temperature_zone_5 is None:
-                st.warning('Isi bagian "Set Point Temperature Zone 5"!')
                 can_submit = False
             if actual_temperature_zone_5 is None:
-                st.warning('Isi bagian "Aktual Temperature Zone 5"!')
                 can_submit = False
         else:
             pass
 
         if df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05' or df_data_page_1["Mesin"][0] == 'E06':    
             if set_temperature_zone_6 is None:
-                st.warning('Isi bagian "Set Point Temperature Zone 6"!')
                 can_submit = False
             if actual_temperature_zone_6 is None:
-                st.warning('Isi bagian "Aktual Temperature Zone 6"!')
                 can_submit = False
             if set_temperature_zone_7 is None:
-                st.warning('Isi bagian "Set Point Temperature Zone 7"!')
                 can_submit = False
             if actual_temperature_zone_7 is None:
-                st.warning('Isi bagian "Aktual Temperature Zone 7"!')
                 can_submit = False
             if set_temperature_zone_8 is None:
-                st.warning('Isi bagian "Set Point Temperature Zone 8"!')
                 can_submit = False
             if actual_temperature_zone_8 is None:
-                st.warning('Isi bagian "Aktual Temperature Zone 8"!')
                 can_submit = False
         else:
             pass
 
         if df_data_page_1["Mesin"][0] == 'E01'or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05' or df_data_page_1["Mesin"][0] == 'E06':
             if set_temperature_zone_9 is None:
-                st.warning('Isi bagian "Set Point Temperature Zone 9"!')
                 can_submit = False
             if actual_temperature_zone_9 is None:
-                st.warning('Isi bagian "Aktual Temperature Zone 9"!')
                 can_submit = False
         else :
             pass
 
         if df_data_page_1["Mesin"][0] == 'E01'or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05' or df_data_page_1["Mesin"][0] == 'E06':
             if set_temperature_zone_10 is None:
-                st.warning('Isi bagian "Set Point Temperature Zone 10"!')
                 can_submit = False
             if actual_temperature_zone_10 is None:
-                st.warning('Isi bagian "Aktual Temperature Zone 10"!')
                 can_submit = False
         else : 
             pass
         
         if df_data_page_1["Mesin"][0]=='E03' or df_data_page_1["Mesin"][0]=='E06':
             if set_temperature_zone_11 is None:
-                st.warning('Isi bagian "Aktual Temperature Zone 11"!')
                 can_submit = False
             if actual_temperature_zone_11 is None:
-                st.warning('Isi bagian "Aktual Temperature Zone 11"!')
                 can_submit = False
         else :
             pass
 
         if df_data_page_1["Mesin"][0]=='E03':
             if set_temperature_zone_12 is None:
-                st.warning('Isi bagian "Set Point Temperature Zone 12"!')
                 can_submit = False
             if actual_temperature_zone_12 is None:
-                st.warning('Isi bagian "Aktual Temperature Zone 12"!')
                 can_submit = False
         else :
             pass
 
         if df_data_page_1["Mesin"][0]=='E06':
             if set_temperature_8 is None:
-                st.warning('Isi bagian "Set Point Temperature 8.0"!')
                 can_submit = False
             if actual_temperature_8 is None:
-                st.warning('Isi bagian "Aktual Temperature 8.0"!')
                 can_submit = False
         else :
             pass
 
         if df_data_page_1["Mesin"][0]=='E05':
             if set_temperature_input_screen_changer is None:
-                st.warning('Isi bagian "Set Point Temperature Input Screen Changer"!')
                 can_submit = False
             if actual_temperature_input_screen_changer is None:
-                st.warning('Isi bagian "Aktual Temperature Input Screen Changer"!')
                 can_submit = False
         else :
             pass
 
         if df_data_page_1["Mesin"][0]=='E05' or df_data_page_1["Mesin"][0]=='E06':
             if set_temperature_TSW_screen_changer_1 is None:
-                st.warning('Isi bagian "Set Point Temperature TSW / Screen Changer 1"!')
                 can_submit = False
             if actual_temperature_TSW_screen_changer_1 is None:
-                st.warning('Isi bagian "Aktual Temperature TSW / Screen Changer 1"!')
                 can_submit = False
         else :
             pass
         
         if df_data_page_1["Mesin"][0]=='E05':
             if set_temperature_screen_changer_2 is None:
-                st.warning('Isi bagian "Set Point Temperature Screen Changer 2"!')
                 can_submit = False
             if actual_temperature_screen_changer_2 is None:
-                st.warning('Isi bagian "Aktual Temperature Screen Changer 2"!')
                 can_submit = False
         else :
             pass
     
         if df_data_page_1["Mesin"][0]=='E06':
             if temperature_cooling_barrel_mesin is None:
-                st.warning('Isi bagian "Temperature Air Cooling Barrel Mesin (Soft Water)"!')
                 can_submit = False
         else :
             pass
 
         if df_data_page_1["Mesin"][0]=='E06' or df_data_page_1["Mesin"][0]=='E05':
             if temperature_gearbox_cooling is None:
-                st.warning('Isi bagian "Temperature Air Cooling Gearbox (Cooling Tower)"!')
                 can_submit = False
         else :
             pass
 
         if df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05' or df_data_page_1["Mesin"][0] == 'E06':
             if pressure_cooling_barrel_mesin is None:
-                st.warning('Isi bagian "Tekanan Air Cooling Barrel Mesin"!')
                 can_submit = False
         else:
             pass
 
         if df_data_page_1["Mesin"][0]=='E06':
             if temperature_gearbox_oil is None:
-                st.warning('Isi bagian "Temperature Oli Gearbox"!')
                 can_submit = False
             if pressure_gearbox_oil is None:
-                st.warning('Isi bagian "Tekanan Oli Gearbox"!')
                 can_submit = False
         else :
             pass
 
         if df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05' or df_data_page_1["Mesin"][0] == 'E06':
             if vacuum_bar_value is None:
-                st.warning('Isi bagian "Vacuum Bar"!')
                 can_submit = False
         else:
             pass
 
         if df_data_page_1["Mesin"][0]=='E03' or df_data_page_1["Mesin"][0]=='E06':
             if pressure_vacuum_system_water is None:
-                st.warning('Isi bagian "Tekanan Air Vacuum System"!')
                 can_submit = False
         else :
             pass
@@ -1477,7 +1293,191 @@ if st.session_state["page"] == 3:
 
         if submit_button_3_1:
             if can_submit == False:
+                if foto_mesin is None:
+                    st.toast('Ambil foto panel extruder', icon="⚠️")
+        
+                if df_data_page_1["Mesin"][0] == 'E06':
+                    if set_output_mesin_extruder is None:
+                        st.toast('Isi bagian "Set Point Output Mesin"!', icon="⚠️")
+                    if actual_output_mesin_extruder is None:
+                        st.toast('Isi bagian "Aktual Output Mesin"!', icon="⚠️")
+                else : 
+                    pass
+        
+                if set_ampere_RPM_extruder is None:
+                    st.toast('Isi bagian "Set Point Ampere & RPM Extruder"!', icon="⚠️")
+                if actual_ampere_RPM_extruder is None:
+                    st.toast('Isi bagian "Aktual Ampere & RPM Extruder"!', icon="⚠️")
+        
+                if df_data_page_1["Mesin"][0] == 'E06':
+                    if specific_energy_index is None:
+                        st.toast('Isi bagian "SEI"!, icon="⚠️"')
+                else : 
+                    pass
+        
+                if df_data_page_1["Mesin"][0] == 'Lab' or df_data_page_1["Mesin"][0] == 'E01'or df_data_page_1["Mesin"][0] == 'E02'or df_data_page_1["Mesin"][0] == 'E05' or df_data_page_1["Mesin"][0] == 'E06':
+                    if set_melt_temperature_extruder is None:
+                        st.toast('Isi bagian "Melt Temperature Extruder"!', icon="⚠️")
+                else :
+                    pass
+        
+                if set_melt_pressure_extruder is None:
+                    st.toast('Isi bagian "Melt Pressure Extruder"!', icon="⚠️")
+        
+                if df_data_page_1["Mesin"][0] == 'E06':
+                    if valve_condition_options is None:
+                        st.toast('Isi bagian "Kondisi Valve Pendingin Barrel Zone 1"!', icon="⚠️")
+                else :
+                    pass
+                
+                if df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05':
+                    if set_temperature_zone_1 is None:
+                        st.toast('Isi bagian "Set Point Temperature Zone 1"!', icon="⚠️")
+                else :
+                    pass
+        
+                if df_data_page_1["Mesin"][0] == 'Lab' or df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05' or df_data_page_1["Mesin"][0] == 'E06':
+                    if actual_temperature_zone_1 is None:
+                        st.toast('Isi bagian "Aktual Temperature Zone 1"!', icon="⚠️")
+                    if set_temperature_zone_2 is None:
+                        st.toast('Isi bagian "Set Point Temperature Zone 2"!', icon="⚠️")
+                    if actual_temperature_zone_2 is None:
+                        st.toast('Isi bagian "Aktual Temperature Zone 2"!', icon="⚠️")
+                    if set_temperature_zone_3 is None:
+                        st.toast('Isi bagian "Set Point Temperature Zone 3"!', icon="⚠️")
+                    if actual_temperature_zone_3 is None:
+                        st.toast('Isi bagian "Aktual Temperature Zone 3"!', icon="⚠️")
+                    if set_temperature_zone_4 is None:
+                        st.toast('Isi bagian "Set Point Temperature Zone 4"!', icon="⚠️")
+                    if actual_temperature_zone_4 is None:
+                        st.toast('Isi bagian "Aktual Temperature Zone 4"!', icon="⚠️")
+                    if set_temperature_zone_5 is None:
+                        st.toast('Isi bagian "Set Point Temperature Zone 5"!', icon="⚠️")
+                    if actual_temperature_zone_5 is None:
+                        st.toast('Isi bagian "Aktual Temperature Zone 5"!', icon="⚠️")
+                else:
+                    pass
+        
+                if df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05' or df_data_page_1["Mesin"][0] == 'E06':    
+                    if set_temperature_zone_6 is None:
+                        st.toast('Isi bagian "Set Point Temperature Zone 6"!', icon="⚠️")
+                    if actual_temperature_zone_6 is None:
+                        st.toast('Isi bagian "Aktual Temperature Zone 6"!', icon="⚠️")
+                    if set_temperature_zone_7 is None:
+                        st.toast('Isi bagian "Set Point Temperature Zone 7"!', icon="⚠️")
+                    if actual_temperature_zone_7 is None:
+                        st.toast('Isi bagian "Aktual Temperature Zone 7"!', icon="⚠️")
+                    if set_temperature_zone_8 is None:
+                        st.toast('Isi bagian "Set Point Temperature Zone 8"!', icon="⚠️")
+                    if actual_temperature_zone_8 is None:
+                        st.toast('Isi bagian "Aktual Temperature Zone 8"!', icon="⚠️")
+                else:
+                    pass
+        
+                if df_data_page_1["Mesin"][0] == 'E01'or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05' or df_data_page_1["Mesin"][0] == 'E06':
+                    if set_temperature_zone_9 is None:
+                        st.toast('Isi bagian "Set Point Temperature Zone 9"!', icon="⚠️")
+                    if actual_temperature_zone_9 is None:
+                        st.toast('Isi bagian "Aktual Temperature Zone 9"!', icon="⚠️")
+                else :
+                    pass
+        
+                if df_data_page_1["Mesin"][0] == 'E01'or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05' or df_data_page_1["Mesin"][0] == 'E06':
+                    if set_temperature_zone_10 is None:
+                        st.toast('Isi bagian "Set Point Temperature Zone 10"!', icon="⚠️")
+                    if actual_temperature_zone_10 is None:
+                        st.toast('Isi bagian "Aktual Temperature Zone 10"!', icon="⚠️")
+                else : 
+                    pass
+                
+                if df_data_page_1["Mesin"][0]=='E03' or df_data_page_1["Mesin"][0]=='E06':
+                    if set_temperature_zone_11 is None:
+                        st.toast('Isi bagian "Aktual Temperature Zone 11"!', icon="⚠️")
+                    if actual_temperature_zone_11 is None:
+                        st.toast('Isi bagian "Aktual Temperature Zone 11"!', icon="⚠️")
+                else :
+                    pass
+        
+                if df_data_page_1["Mesin"][0]=='E03':
+                    if set_temperature_zone_12 is None:
+                        st.toast('Isi bagian "Set Point Temperature Zone 12"!', icon="⚠️")
+                    if actual_temperature_zone_12 is None:
+                        st.toast('Isi bagian "Aktual Temperature Zone 12"!', icon="⚠️")
+                else :
+                    pass
+        
+                if df_data_page_1["Mesin"][0]=='E06':
+                    if set_temperature_8 is None:
+                        st.toast('Isi bagian "Set Point Temperature 8.0"!', icon="⚠️")
+                    if actual_temperature_8 is None:
+                        st.toast('Isi bagian "Aktual Temperature 8.0"!', icon="⚠️")
+                else :
+                    pass
+        
+                if df_data_page_1["Mesin"][0]=='E05':
+                    if set_temperature_input_screen_changer is None:
+                        st.toast('Isi bagian "Set Point Temperature Input Screen Changer"!', icon="⚠️")
+                    if actual_temperature_input_screen_changer is None:
+                        st.toast('Isi bagian "Aktual Temperature Input Screen Changer"!', icon="⚠️")
+                else :
+                    pass
+        
+                if df_data_page_1["Mesin"][0]=='E05' or df_data_page_1["Mesin"][0]=='E06':
+                    if set_temperature_TSW_screen_changer_1 is None:
+                        st.toast('Isi bagian "Set Point Temperature TSW / Screen Changer 1"!', icon="⚠️")
+                    if actual_temperature_TSW_screen_changer_1 is None:
+                        st.toast('Isi bagian "Aktual Temperature TSW / Screen Changer 1"!', icon="⚠️")
+                else :
+                    pass
+                
+                if df_data_page_1["Mesin"][0]=='E05':
+                    if set_temperature_screen_changer_2 is None:
+                        st.toast('Isi bagian "Set Point Temperature Screen Changer 2"!', icon="⚠️")
+                    if actual_temperature_screen_changer_2 is None:
+                        st.toast('Isi bagian "Aktual Temperature Screen Changer 2"!', icon="⚠️")
+                else :
+                    pass
+            
+                if df_data_page_1["Mesin"][0]=='E06':
+                    if temperature_cooling_barrel_mesin is None:
+                        st.toast('Isi bagian "Temperature Air Cooling Barrel Mesin (Soft Water)"!', icon="⚠️")
+                else :
+                    pass
+        
+                if df_data_page_1["Mesin"][0]=='E06' or df_data_page_1["Mesin"][0]=='E05':
+                    if temperature_gearbox_cooling is None:
+                        st.toast('Isi bagian "Temperature Air Cooling Gearbox (Cooling Tower)"!', icon="⚠️")
+                else :
+                    pass
+        
+                if df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05' or df_data_page_1["Mesin"][0] == 'E06':
+                    if pressure_cooling_barrel_mesin is None:
+                        st.toast('Isi bagian "Tekanan Air Cooling Barrel Mesin"!', icon="⚠️")
+                else:
+                    pass
+        
+                if df_data_page_1["Mesin"][0]=='E06':
+                    if temperature_gearbox_oil is None:
+                        st.toast('Isi bagian "Temperature Oli Gearbox"!', icon="⚠️")
+                    if pressure_gearbox_oil is None:
+                        st.toast('Isi bagian "Tekanan Oli Gearbox"!', icon="⚠️")
+                else :
+                    pass
+        
+                if df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E03' or df_data_page_1["Mesin"][0] == 'E05' or df_data_page_1["Mesin"][0] == 'E06':
+                    if vacuum_bar_value is None:
+                        st.toast('Isi bagian "Vacuum Bar"!', icon="⚠️")
+                else:
+                    pass
+        
+                if df_data_page_1["Mesin"][0]=='E03' or df_data_page_1["Mesin"][0]=='E06':
+                    if pressure_vacuum_system_water is None:
+                        st.toast('Isi bagian "Tekanan Air Vacuum System"!', icon="⚠️")
+                else :
+                    pass
+                    
                 st.error(f"Lengkapi seluruh kolom sebelum menekan tombol Submit!")
+                
             else:
                 nama_kolom_page_3 = {
                     "Dokumentasi Panel Mesin Extruder":[],
@@ -1625,8 +1625,7 @@ if st.session_state["page"] == 4:
     
     df_data_page_1 = st.session_state.df_data_page_1
     st.markdown(f"<h3 style='text-align: left;'><br>HALAMAN 5/6 : UWP-PELLETIZER</h3>", unsafe_allow_html=True)
-    # st.markdown(f"<h3 style='text-align: center;'>EXTRUDER<br></h3>", unsafe_allow_html=True)
-    # st.write(df_all_data)
+
 
     with st.form(key='form_page_4', clear_on_submit=False):
 
@@ -1663,8 +1662,6 @@ if st.session_state["page"] == 4:
             st.markdown(f"<h5 style='text-align: left;'>📷 Dokumentasi Panel Underwater Pelletizer</h5>", unsafe_allow_html=True)
             foto_uwp = st.camera_input("Ambil foto panel UWP", key="foto_uwp")
             if foto_uwp is not None:
-                # konversi ke base64 agar bisa disimpan ke DataFrame
-                # foto_uwp_base64 = base64.b64encode(foto_uwp.getvalue()).decode("utf-8")
                 path_to_save_uwp, file_name_uwp = collect_image(nama_layar = 'UWP')
                 foto_uwp_path = str(os.path.join(path_to_save_uwp, file_name_uwp))
 
@@ -1676,10 +1673,7 @@ if st.session_state["page"] == 4:
                 st.markdown(f"<h5 style='text-align: left;'>Temperature Adapter</h5>", unsafe_allow_html=True)
 
                 with st.container(horizontal=True):
-                # col_4_1, col_4_2 = st.columns([1, 1])
-                # with col_4_1:
                     set_temperature_adapter = st.number_input("Set Point", value=None, placeholder="SET", key="set_temperature_adapter", format="%d", step=1)
-                # with col_4_2 :
                     actual_temperature_adapter = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_temperature_adapter", format="%d", step=1)
         else:
             pass
@@ -1689,10 +1683,7 @@ if st.session_state["page"] == 4:
                 st.markdown(f"<h5 style='text-align: left;'>Temperature PoDV</h5>", unsafe_allow_html=True)
 
                 with st.container(horizontal=True):
-                # col_4_3, col_4_4 = st.columns([1, 1])
-                # with col_4_3:
                     set_temperature_podv = st.number_input("Set Point", value=None, placeholder="SET", key="set_temperature_podv", format="%d", step=1)
-                # with col_4_4 :
                     actual_temperature_podv = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_temperature_podv", format="%d", step=1)
         else:
             pass
@@ -1701,10 +1692,7 @@ if st.session_state["page"] == 4:
             st.markdown(f"<h5 style='text-align: left;'>Temperature Die Plate</h5>", unsafe_allow_html=True)
 
             with st.container(horizontal=True):
-            # col_4_5, col_4_6 = st.columns([1, 1])
-            # with col_4_5:
                 set_temperature_die_plate = st.number_input("Set Point", value=None, placeholder="SET", key="set_temperature_die_plate", format="%d", step=1)
-            # with col_4_6 :
                 actual_temperature_die_plate = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_temperature_die_plate", format="%d", step=1)
 
         if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
@@ -1712,10 +1700,7 @@ if st.session_state["page"] == 4:
                 st.markdown(f"<h5 style='text-align: left;'>Temperature Water Tank</h5>", unsafe_allow_html=True)
 
                 with st.container(horizontal=True):
-                # col_4_7, col_4_8 = st.columns([1, 1])
-                # with col_4_7:
                     set_temperature_water_tank = st.number_input("Set Point", value=None, placeholder="SET", key="set_temperature_water_tank", format="%d", step=1)
-                # with col_4_8 :
                     actual_temperature_water_tank = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_temperature_water_tank", format="%d", step=1)
         else:
             pass
@@ -1725,10 +1710,7 @@ if st.session_state["page"] == 4:
                 st.markdown(f"<h5 style='text-align: left;'>Melt Parameter pada UWP</h5>", unsafe_allow_html=True)
 
                 with st.container(horizontal=True):
-                # col_4_9, col_4_10 = st.columns([1, 1])
-                # with col_4_9:
                     melt_pressure_uwp = st.number_input("Melt Pressure", value=None, placeholder="", key="melt_pressure_uwp", format="%d", step=1)
-                # with col_4_10:
                     melt_temperature_uwp = st.number_input("Melt Temperature", value=None, placeholder="", key="melt_temperature_uwp", format="%d", step=1)
         else:
             pass
@@ -1743,22 +1725,17 @@ if st.session_state["page"] == 4:
         with st.container(border=True):
             st.markdown(f"<h5 style='text-align: left;'>Cutter</h5>", unsafe_allow_html=True)
             with st.container(horizontal=True):
-            # col_4_11, col_4_12, col_4_13, col_4_14 = st.columns([1, 1, 1, 1])
                 if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
-                    # with col_4_11:
                     ampere_cutter = st.number_input("Ampere/Torsi Cutter", value=None, placeholder="", key="ampere_cutter", format="%0.1f", step=0.1)
                 else:
                     pass
     
-                # with col_4_12:
                 rpm_cutter = st.number_input("RPM Cutter", value=None, placeholder="", key="rpm_cutter", format="%d", step=1)
 
             
             if df_data_page_1["Mesin"][0] == 'E06':
                 with st.container(horizontal=True):
-                # with col_4_13:
                     setting_cutter = st.number_input("Setting Maju Cutter", value=None, placeholder="", key="setting_cutter", format="%d", step=1)
-                # with col_4_14:
                     percentage_cutter = st.number_input("% Panjang Cutter", value=None, placeholder="", key="percentage_cutter", format="%d", step=1)
             else:
                 pass
@@ -1767,14 +1744,11 @@ if st.session_state["page"] == 4:
             with st.container(border=True):
                 st.markdown(f"<h5 style='text-align: left;'>Air Proses UWP</h5>", unsafe_allow_html=True)
                 with st.container(horizontal=True):
-                    # col_4_15, col_4_16 = st.columns([1, 1])
                     if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
-                        # with col_4_15:
                         uwp_water_pressure = st.number_input("Tekanan Air Proses UWP", value=None, placeholder="", key="uwp_water_pressure", format="%0.1f", step=0.1)
                     else:
                         pass
                     if df_data_page_1["Mesin"][0] == 'E06':
-                        # with col_4_16:
                         uwp_water_flow = st.number_input("Flow/Debit Air Proses UWP", value=None, placeholder="", key="uwp_water_flow", format="%d", step=1)
                     else:
                         pass
@@ -1800,10 +1774,7 @@ if st.session_state["page"] == 4:
                 st.markdown(f"<h5 style='text-align: left;'>Air Proses UWP</h5>", unsafe_allow_html=True)
 
                 with st.container(horizontal=True):
-                # col_4_17, col_4_18 = st.columns([1, 1])
-                # with col_4_17:
                     temperature_in_proses = st.number_input("Temperature In Air Proses", value=None, placeholder="", key="temperature_in_proses", format="%d", step=1)
-                # with col_4_18:
                     temperature_out_proses = st.number_input("Temperature Out Air Proses", value=None, placeholder="", key="temperature_out_proses", format="%d", step=1)
         else:
             pass
@@ -1813,10 +1784,7 @@ if st.session_state["page"] == 4:
                 st.markdown(f"<h5 style='text-align: left;'>Air Cooling Tower - HE UWP</h5>", unsafe_allow_html=True)
 
                 with st.container(horizontal=True):
-                # col_4_19, col_4_20 = st.columns([1, 1])
-                # with col_4_19:
                     temperature_in_cooling_water = st.number_input("Temperature In Air Cooling Water", value=None, placeholder="", key="temperature_in_cooling_water", format="%d", step=1)
-                # with col_4_20:
                     temperature_out_cooling_water = st.number_input("Temperaure Out Air Cooling Water", value=None, placeholder="", key="temperature_out_cooling_water", format="%d", step=1)
         else:
             pass
@@ -1825,10 +1793,7 @@ if st.session_state["page"] == 4:
             st.markdown(f"<h5 style='text-align: left;'>Parameter Produk FG</h5>", unsafe_allow_html=True)
 
             with st.container(horizontal=True):
-            # col_4_21, col_4_22 = st.columns([1, 1])
-            # with col_4_21:
                 actual_output_finished_good = st.number_input("Output Aktual FG", value=None, placeholder="", key="actual_output_finished_good", format="%d", step=1)
-            # with col_4_22 :
                 granule_number = st.number_input("Jumlah Granule/Gram", value=None, placeholder="", key="granule_number", format="%d", step=1)
 
         if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
@@ -1838,139 +1803,113 @@ if st.session_state["page"] == 4:
         else:
             pass
 
+            
         can_submit = True
 
         if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
             if foto_uwp is None:
-                st.warning('Ambil Foto Panel UWP !')
                 can_submit = False
         else:
             pass
 
         if df_data_page_1["Mesin"][0] == 'E06':
             if set_temperature_adapter is None:
-                st.warning('Isi bagian "Set Point Temperature Adapter"!')
                 can_submit = False
             if actual_temperature_adapter is None:
-                st.warning('Isi bagian "Aktual Temperature Adapter"!')
                 can_submit = False
         else:
             pass
 
         if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
             if set_temperature_podv is None:
-                st.warning('Isi bagian "Set Point Temperature PoDV"!')
                 can_submit = False
             if actual_temperature_podv is None:
-                st.warning('Isi bagian "Aktual Temperature PoDV"!')
                 can_submit = False
         else:
             pass
 
         if set_temperature_die_plate is None:
-            st.warning('Isi bagian "Set Point Temperature Die Plate"!')
             can_submit = False
         if actual_temperature_die_plate is None:
-            st.warning('Isi bagian "Aktual Temperature Die Plate"!')
             can_submit = False
 
         if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
             if set_temperature_water_tank is None:
-                st.warning('Isi bagian "Set Point Temperature Water Tank"!')
                 can_submit = False
             if actual_temperature_water_tank is None:
-                st.warning('Isi bagian "Aktual Temperature Water Tank"!')
                 can_submit = False
         else:
             pass
 
         if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
             if melt_pressure_uwp is None:
-                st.warning('Isi bagian "Melt Pressure UWP"!')
                 can_submit = False
             if melt_temperature_uwp is None:
-                st.warning('Isi bagian "Melt Temperature UWP"!')
                 can_submit = False
         else:
             pass
 
         if die_plate_options is None:
-            st.warning('Isi bagian "Jenis Die Plate"!')
             can_submit = False
 
         if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
             if ampere_cutter is None:
-                st.warning('Isi bagian "Ampere/Torsi Cutter"!')
                 can_submit = False
         else:
             pass
 
         if rpm_cutter is None:
-            st.warning('Isi bagian "RPM Cutter"!')
             can_submit = False
 
         if df_data_page_1["Mesin"][0] == 'E06':
             if setting_cutter is None:
-                st.warning('Isi bagian "Setting Maju Cutter"!')
                 can_submit = False
             if percentage_cutter is None:
-                st.warning('Isi bagian "% Panjang Cutter"!')
                 can_submit = False
         else:
             pass
 
         if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
             if uwp_water_pressure is None:
-                st.warning('Isi bagian "Tekanan Air Proses UWP"!')
                 can_submit = False
         else:
             pass
 
         if df_data_page_1["Mesin"][0] == 'E06':
             if uwp_water_flow is None:
-                st.warning('Isi bagian "Flow Air Proses UWP"!')
                 can_submit = False
         else:
             pass
 
         if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
             if cutter_hub_options is None:
-                st.warning('Isi bagian "Jenis Cutter Hub"!')
                 can_submit = False
         else:
             pass
 
         if mesh_screen_options is None:
-            st.warning('Isi bagian "Mesh Screen"!')
             can_submit = False
 
         if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
             if temperature_in_proses is None:
-                st.warning('Isi bagian "Temperature In Air Proses"!')
                 can_submit = False
             if temperature_out_proses is None:
-                st.warning('Isi bagian "Temperature Out Air Proses"!')
                 can_submit = False
             if temperature_in_cooling_water is None:
-                st.warning('Isi bagian "Temperature In Air Cooling Tower"!')
                 can_submit = False
             if temperature_out_cooling_water is None:
-                st.warning('Isi bagian "Temperature Out Air Cooling Tower"!')
                 can_submit = False
         else:
             pass
 
         if actual_output_finished_good is None:
-            st.warning('Isi bagian "Output Aktual FG"!')
             can_submit = False
 
         if granule_number is None:
-            st.warning('Isi bagian "Jumlah Granule per Gram"!')
             can_submit = False
 
         if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
             if die_hole_open_calc is None:
-                st.warning('Isi bagian "Perhitungan Jumlah Die Hole Terbuka"!')
                 can_submit = False
         else:
             pass
@@ -1991,6 +1930,114 @@ if st.session_state["page"] == 4:
         if submit_button_4_1:
 
             if can_submit == False:
+                if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
+                    if foto_uwp is None:
+                        st.toast('Ambil Foto Panel UWP !', icon="⚠️")
+                else:
+                    pass
+        
+                if df_data_page_1["Mesin"][0] == 'E06':
+                    if set_temperature_adapter is None:
+                        st.toast('Isi bagian "Set Point Temperature Adapter"!', icon="⚠️")
+                    if actual_temperature_adapter is None:
+                        st.toast('Isi bagian "Aktual Temperature Adapter"!', icon="⚠️")
+                else:
+                    pass
+        
+                if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
+                    if set_temperature_podv is None:
+                        st.toast('Isi bagian "Set Point Temperature PoDV"!', icon="⚠️")
+                    if actual_temperature_podv is None:
+                        st.toast('Isi bagian "Aktual Temperature PoDV"!', icon="⚠️")
+                else:
+                    pass
+        
+                if set_temperature_die_plate is None:
+                    st.toast('Isi bagian "Set Point Temperature Die Plate"!', icon="⚠️")
+                if actual_temperature_die_plate is None:
+                    st.toast('Isi bagian "Aktual Temperature Die Plate"!', icon="⚠️")
+        
+                if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
+                    if set_temperature_water_tank is None:
+                        st.toast('Isi bagian "Set Point Temperature Water Tank"!', icon="⚠️")
+                    if actual_temperature_water_tank is None:
+                        st.toast('Isi bagian "Aktual Temperature Water Tank"!', icon="⚠️")
+                else:
+                    pass
+        
+                if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
+                    if melt_pressure_uwp is None:
+                        st.toast('Isi bagian "Melt Pressure UWP"!', icon="⚠️")
+                    if melt_temperature_uwp is None:
+                        st.toast('Isi bagian "Melt Temperature UWP"!', icon="⚠️")
+                else:
+                    pass
+        
+                if die_plate_options is None:
+                    st.toast('Isi bagian "Jenis Die Plate"!', icon="⚠️")
+        
+                if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
+                    if ampere_cutter is None:
+                        st.toast('Isi bagian "Ampere/Torsi Cutter"!', icon="⚠️")
+                else:
+                    pass
+        
+                if rpm_cutter is None:
+                    st.toast('Isi bagian "RPM Cutter"!', icon="⚠️")
+        
+                if df_data_page_1["Mesin"][0] == 'E06':
+                    if setting_cutter is None:
+                        st.toast('Isi bagian "Setting Maju Cutter"!', icon="⚠️")
+                    if percentage_cutter is None:
+                        st.toast('Isi bagian "% Panjang Cutter"!', icon="⚠️")
+                else:
+                    pass
+        
+                if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
+                    if uwp_water_pressure is None:
+                        st.toast('Isi bagian "Tekanan Air Proses UWP"!', icon="⚠️")
+                else:
+                    pass
+        
+                if df_data_page_1["Mesin"][0] == 'E06':
+                    if uwp_water_flow is None:
+                        st.toast('Isi bagian "Flow Air Proses UWP"!', icon="⚠️")
+                else:
+                    pass
+        
+                if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
+                    if cutter_hub_options is None:
+                        st.toast('Isi bagian "Jenis Cutter Hub"!', icon="⚠️")
+                else:
+                    pass
+        
+                if mesh_screen_options is None:
+                    st.toast('Isi bagian "Mesh Screen"!', icon="⚠️")
+        
+                if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
+                    if temperature_in_proses is None:
+                        st.toast('Isi bagian "Temperature In Air Proses"!', icon="⚠️")
+                    if temperature_out_proses is None:
+                        st.toast('Isi bagian "Temperature Out Air Proses"!', icon="⚠️")
+                    if temperature_in_cooling_water is None:
+                        st.toast('Isi bagian "Temperature In Air Cooling Tower"!', icon="⚠️")
+                    if temperature_out_cooling_water is None:
+                        st.toast('Isi bagian "Temperature Out Air Cooling Tower"!', icon="⚠️")
+                else:
+                    pass
+        
+                if actual_output_finished_good is None:
+                    st.toast('Isi bagian "Output Aktual FG"!', icon="⚠️")
+        
+                if granule_number is None:
+                    st.toast('Isi bagian "Jumlah Granule per Gram"!', icon="⚠️")
+        
+                if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
+                    if die_hole_open_calc is None:
+                        st.toast('Isi bagian "Perhitungan Jumlah Die Hole Terbuka"!', icon="⚠️")
+                else:
+                    pass
+                
                 st.error(f"Lengkapi seluruh kolom sebelum menekan tombol Submit!")
                 
             else:
@@ -2255,35 +2302,27 @@ if st.session_state["page"] == 5:
         can_submit = True
 
         if tailing_rework is None:
-            st.warning('Isi bagian "Quantity Rework Tailing"!')
             can_submit = False
         
         if gandeng_rework is None:
-            st.warning('Isi bagian "Quantity Rework Gandeng/Dempet"!')
             can_submit = False
 
         if hazy_rework is None:
-            st.warning('Isi bagian "Quantity Rework Hazy"!')
             can_submit = False
 
         if disperse_rework is None:
-            st.warning('Isi bagian "Quantity Rework Disperse"!')
             can_submit = False
 
         if gramasi_rework is None:
-            st.warning('Isi bagian "Quantity Rework Gramasi"!')
             can_submit = False
 
         if homogen_rework is None:
-            st.warning('Isi bagian "Quantity Rework Homogen"!')
             can_submit = False
 
         if phorous_rework is None:
-            st.warning('Isi bagian "Quantity Rework Phorous"!')
             can_submit = False
 
         if rekondisi_rework is None:
-            st.warning('Isi bagian "Quantity Rework Rekondisi"!')
             can_submit = False
 
         with stylable_container(
@@ -2302,6 +2341,30 @@ if st.session_state["page"] == 5:
         if submit_button_5_1:
 
             if can_submit == False:
+                if tailing_rework is None:
+                    st.toast('Isi bagian "Quantity Rework Tailing"!', icon="⚠️")
+                
+                if gandeng_rework is None:
+                    st.toast('Isi bagian "Quantity Rework Gandeng/Dempet"!', icon="⚠️")
+        
+                if hazy_rework is None:
+                    st.toast('Isi bagian "Quantity Rework Hazy"!', icon="⚠️")
+        
+                if disperse_rework is None:
+                    st.toast('Isi bagian "Quantity Rework Disperse"!', icon="⚠️")
+        
+                if gramasi_rework is None:
+                    st.toast('Isi bagian "Quantity Rework Gramasi"!', icon="⚠️")
+        
+                if homogen_rework is None:
+                    st.toast('Isi bagian "Quantity Rework Homogen"!', icon="⚠️")
+        
+                if phorous_rework is None:
+                    st.toast('Isi bagian "Quantity Rework Phorous"!', icon="⚠️")
+        
+                if rekondisi_rework is None:
+                    st.toast('Isi bagian "Quantity Rework Rekondisi"!', icon="⚠️")
+                    
                 st.error(f"Lengkapi seluruh kolom sebelum menekan tombol Submit!")
                 
             else:
