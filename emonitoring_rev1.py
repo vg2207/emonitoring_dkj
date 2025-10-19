@@ -230,7 +230,17 @@ if st.session_state["page"] == 1:
             button {
                 background-color: #00FF00;
                 color: black;
-            }""",
+            }
+
+            button:hover {
+                background-color: #00CC00 !important;  /* darker green on hover */
+            }
+    
+            button:active {
+                background-color: #009900 !important;  /* even darker green when pressed */
+            }
+            
+            """,
         ):
             submit_button_1_2 = st.button(label='Next Page ➔', width="stretch")
                 
