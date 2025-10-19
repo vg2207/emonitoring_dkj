@@ -189,7 +189,7 @@ if st.session_state["page"] == 1:
                     color: white;
                 }""",
             ):
-            submit_button_1_1 = st.form_submit_button(label='Submit', width = "stretch", type = "secondary)
+            submit_button_1_1 = st.form_submit_button(label='Submit', width = "stretch", type = "secondary")
                 
         if submit_button_1_1:
             if can_submit == False:
