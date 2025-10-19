@@ -113,7 +113,18 @@ if st.session_state["page"] == 0 :
     
     left_0, middle_0, right_0 = st.columns(3)
     with middle_0:
-        tombol_mulai = st.button(type="primary", label='Mulai', width="stretch")
+        with stylable_container(
+            "dark blue",
+            css_styles="""
+            button {
+                background-color: #283281 !important;
+                color: white !important;
+                border: none !important;
+                transition: background-color 0.3s ease;
+                margin-bottom: 20px !important;  /* Add space after button */
+            }""",
+        ):
+            tombol_mulai = st.button(type="primary", label='Mulai', width="stretch")
     if tombol_mulai:
         st.session_state.page = 1
         st.session_state.scroll_to_top = True
