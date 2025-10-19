@@ -232,7 +232,7 @@ if st.session_state["page"] == 1:
                 color: black;
             }""",
         ):
-            submit_button_1_2 = st.button(type="secondary", label='Next Page ➔', width="stretch")
+            submit_button_1_2 = st.button(label='Next Page ➔', width="stretch")
                 
     if submit_button_1_2:
         if "df_data_page_1" not in st.session_state:
