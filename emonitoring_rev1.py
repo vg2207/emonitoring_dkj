@@ -271,7 +271,7 @@ if st.session_state["page"] == 1:
         if "df_data_page_1" not in st.session_state:
             # st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit" sebelum menekan tombol "Next Page"!')
             st.toast(f'Tekan tombol "Submit" sebelum menekan tombol "Next Page"!', icon="❌")
-            time.sleep(3)
+            time.sleep(2)
         else:
             if st.session_state.df_data_page_1["Kondisi Mesin"][0] == "Stop":
                 st.session_state.page = 5   # langsung lompat ke halaman 5
@@ -359,7 +359,7 @@ if st.session_state["page"] == 1.5:
         if "df_data_page_1_5" not in st.session_state:
             # st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit" sebelum menekan tombol "Next Page"!')
             st.toast(f'Tekan tombol "Submit" sebelum menekan tombol "Next Page"!', icon="❌")
-            time.sleep(3)
+            time.sleep(2)
         else:
             st.session_state.page = 2   # kalau Running, lanjut normal ke halaman 2
         
@@ -753,7 +753,7 @@ if st.session_state["page"] == 2:
         if "df_data_page_2" not in st.session_state:
             # st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit" sebelum menekan tombol "Next Page"!')
             st.toast(f'Tekan tombol "Submit" sebelum menekan tombol "Next Page"!', icon="❌")
-            time.sleep(3)
+            time.sleep(2)
         else:
             st.session_state.page = 3
             st.session_state.scroll_to_top = True
@@ -1506,7 +1506,7 @@ if st.session_state["page"] == 3:
         if "df_data_page_3" not in st.session_state:
             # st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit" sebelum menekan tombol "Next Page"!')
             st.toast(f'Tekan tombol "Submit" sebelum menekan tombol "Next Page"!', icon="❌")
-            time.sleep(3)
+            time.sleep(2)
         else:
             foto_mesin, path_to_save_extruder, file_name_extruder = save_image(image = foto_mesin, path_to_save = path_to_save_extruder, file_name = file_name_extruder)
             st.session_state.page = 4
@@ -1973,7 +1973,7 @@ if st.session_state["page"] == 4:
         if "df_data_page_4" not in st.session_state:
             # st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit"sebelum menekan tombol "Next Page"!')
             st.toast(f'Tekan tombol "Submit" sebelum menekan tombol "Next Page"!', icon="❌")
-            time.sleep(3)
+            time.sleep(2)
         else:
             if foto_uwp is not None:
                 foto_uwp, path_to_save_uwp, file_name_uwp = save_image(image = foto_uwp, path_to_save = path_to_save_uwp, file_name = file_name_uwp)
@@ -2251,7 +2251,7 @@ if st.session_state["page"] == 5:
         if "df_data_page_5" not in st.session_state:
             # st.error(f'Lengkapi seluruh kolom dan tekan tombol "Submit" sebelum menekan tombol "Next Page"!')
             st.toast(f'Tekan tombol "Submit" sebelum menekan tombol "Next Page"!', icon="❌")
-            time.sleep(3)
+            time.sleep(2)
         else:
             st.session_state.page = 6
             st.session_state.scroll_to_top = True
