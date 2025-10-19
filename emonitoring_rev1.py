@@ -189,8 +189,8 @@ if st.session_state["page"] == 1:
                 background-color: green !important;
                 color: white !important;
                 border: none !important;
-                border-radius: 5px;
                 transition: background-color 0.3s ease;
+                margin-bottom: 30px !important;  /* Add space after button */
             }""",
         ):
             submit_button_1_1 = st.form_submit_button(label='Submit', width = "stretch")
