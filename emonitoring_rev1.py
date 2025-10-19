@@ -148,7 +148,8 @@ if st.session_state["page"] == 1:
             date_input = st.date_input("Tanggal Pengisian")
         # with col_5 :
             time_input = st.time_input("Jam Pengisian",step=3600)
-        nama_produk = st.text_input("Nama Produk (Tuliskan angka belakang dan huruf lengkap dibelakang angka saja, CONTOH : Untuk produk ASITHYLEN P White 9440 A, cukup tuliskan : 9440 A)", key="nama_produk")
+        nama_produk = st.text_input("Nama Produk", key="nama_produk")
+        # (Tuliskan angka belakang dan huruf lengkap dibelakang angka saja, CONTOH : Untuk produk ASITHYLEN P White 9440 A, cukup tuliskan : 9440 A)
         kondisi_mesin_options = ["Running", "Stop"]
         kondisi_mesin_selected_options = st.pills('Kondisi Mesin', options=kondisi_mesin_options, key="kondisi_mesin_selected_options")
 
