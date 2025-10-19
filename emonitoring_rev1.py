@@ -791,12 +791,12 @@ if st.session_state["page"] == 3:
                 # col_3_5, col_3_6 = st.columns([1, 1])
                 if df_data_page_1["Mesin"][0] == 'Lab' or df_data_page_1["Mesin"][0] == 'E01' or df_data_page_1["Mesin"][0] == 'E02' or df_data_page_1["Mesin"][0] == 'E05' or df_data_page_1["Mesin"][0] == 'E06':
                     # with col_3_5:
-                    set_melt_temperature_extruder = st.number_input("Set Melt Temperature", value=None, placeholder="MELT TEMPERATURE", key="set_melt_temperature_extruder", format="%d", step=1)
+                    set_melt_temperature_extruder = st.number_input("Set Melt Temperature", value=None, placeholder="", key="set_melt_temperature_extruder", format="%d", step=1)
                 else : 
                     pass
     
                 # with col_3_6 :
-                set_melt_pressure_extruder = st.number_input("Set Melt Pressure", value=None, placeholder="MELT PRESSURE", key="set_melt_pressure_extruder", format="%d", step=1)
+                set_melt_pressure_extruder = st.number_input("Set Melt Pressure", value=None, placeholder="", key="set_melt_pressure_extruder", format="%d", step=1)
    
         if df_data_page_1["Mesin"][0] == 'E06':
             with st.container(border=True):
@@ -826,7 +826,7 @@ if st.session_state["page"] == 3:
             with st.container(horizontal=True):
             # col_3_9, col_3_10 = st.columns([1, 1])
             # with col_3_9:
-                set_temperature_zone_2 = st.number_input("Set Point", value=None, placeholder="SET POINT", key="set_temperature_zone_2", format="%d", step=1)
+                set_temperature_zone_2 = st.number_input("Set Point", value=None, placeholder="SET", key="set_temperature_zone_2", format="%d", step=1)
             # with col_3_10 :
                 actual_temperature_zone_2 = st.number_input("Aktual", value=None, placeholder="AKTUAL", key="actual_temperature_zone_2", format="%d", step=1)
         
@@ -1633,7 +1633,7 @@ if st.session_state["page"] == 4:
             # with col_4_21:
                 actual_output_finished_good = st.number_input("Output Aktual FG", value=None, placeholder="", key="actual_output_finished_good", format="%d", step=1)
             # with col_4_22 :
-                granule_number = st.number_input("Jumlah Granule per Gram", value=None, placeholder="", key="granule_number", format="%d", step=1)
+                granule_number = st.number_input("Jumlah Granule/Gram", value=None, placeholder="", key="granule_number", format="%d", step=1)
 
         if df_data_page_1["Mesin"][0] == 'E06' or df_data_page_1["Mesin"][0] == 'E05':
             with st.container(border=True):
