@@ -77,6 +77,8 @@ def scroll_to_top():
 st.cache_data.clear()
 if "initialized" not in st.session_state:
     st.session_state.clear()  # Clears everything
+    for key in list(st.session_state.keys()):
+        del st.session_state[key]
     st.session_state.initialized = True  # Set a flag to prevent repeated clearing
 
 
