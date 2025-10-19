@@ -370,6 +370,9 @@ if st.session_state["page"] == 1.5:
     
     with left_1_5:
         if st.button("◀️ Balik"):
+            if 'df_data_page_1_5' in st.session_state:
+                del st.session_state['df_data_page_1_5']
+            del st.session_state['df_data_page_1']
             st.session_state.page = 1
             st.session_state.scroll_to_top = True
             st.rerun()
@@ -762,6 +765,9 @@ if st.session_state["page"] == 2:
     with left_2:
         back_button_2 = st.button("◀️ Balik")
     if back_button_2:
+        if 'df_data_page_2' in st.session_state:
+            del st.session_state['df_data_page_2']
+        del st.session_state['df_data_page_1_5']
         st.session_state.page = 1.5  # kembali ke halaman 1.5
         st.session_state.scroll_to_top = True
         st.rerun()
@@ -1512,6 +1518,9 @@ if st.session_state["page"] == 3:
     with left_3:
         back_button_3 = st.button("◀️ Balik")
     if back_button_3:
+        if 'df_data_page_3' in st.session_state:
+            del st.session_state['df_data_page_3']
+        del st.session_state['df_data_page_2']
         st.session_state.page = 2  # kembali ke halaman 1
         st.session_state.scroll_to_top = True
         st.rerun()
@@ -1979,6 +1988,9 @@ if st.session_state["page"] == 4:
     with left_4:
         back_button_4 = st.button("◀️ Balik")
     if back_button_4:
+        if 'df_data_page_4' in st.session_state:
+            del st.session_state['df_data_page_4']
+        del st.session_state['df_data_page_3']
         st.session_state.page = 3
         st.session_state.scroll_to_top = True
         st.rerun()
@@ -2250,6 +2262,9 @@ if st.session_state["page"] == 5:
     with left_5:
         back_button_5 = st.button("◀️ Balik")
     if back_button_5:
+        if 'df_data_page_5' in st.session_state:
+            del st.session_state['df_data_page_5']
+        del st.session_state['df_data_page_4']
         st.session_state.page = 4 
         st.session_state.scroll_to_top = True
         st.rerun()
@@ -2258,6 +2273,14 @@ if st.session_state["page"] == 5:
 
     back_button_5_to_1 = st.button("⏪ Balik ke Halaman 1 (ubah kondisi mesin)")
     if back_button_5_to_1:
+        if 'df_data_page_6' in st.session_state:
+            del st.session_state['df_data_page_6']
+        del st.session_state['df_data_page_5']
+        del st.session_state['df_data_page_4']
+        del st.session_state['df_data_page_3']
+        del st.session_state['df_data_page_2']
+        del st.session_state['df_data_page_1_5']
+        del st.session_state['df_data_page_1']
         st.session_state.page = 1
         st.session_state.scroll_to_top = True
         st.rerun()
