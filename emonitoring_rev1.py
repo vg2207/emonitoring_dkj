@@ -170,28 +170,35 @@ if st.session_state["page"] == 1:
 
         if not nama_operator:
             # st.warning('Isi bagian "Nama Operator"!')
-            st.toast('Isi bagian "Nama Operator"!', icon="⚠️")
+            # st.toast('Isi bagian "Nama Operator"!', icon="⚠️")
             can_submit = False
         if not machine_selected_options:
-            st.warning('Isi bagian "Mesin"!')
+            # st.warning('Isi bagian "Mesin"!')
+            # st.toast('Isi bagian "Mesin"!', icon="⚠️")
             can_submit = False
         if not shift_selected_options:
-            st.warning('Isi bagian "Shift"!')
+            # st.warning('Isi bagian "Shift"!')
+            # st.toast('Isi bagian "Shift"!', icon="⚠️")
             can_submit = False
         if not group_selected_options:
-            st.warning('Isi bagian "Grup"!')
+            # st.warning('Isi bagian "Grup"!')
+            # st.toast('Isi bagian "Grup"!', icon="⚠️")
             can_submit = False
         if not date_input:
-            st.warning('Isi bagian "Tanggal Pengisian"!')
+            # st.warning('Isi bagian "Tanggal Pengisian"!')
+            # st.toast('Isi bagian "Tanggal Pengisian"!', icon="⚠️")
             can_submit = False
         if not time_input:
-            st.warning('Isi bagian "Jam Pengisian"!')
+            # st.warning('Isi bagian "Jam Pengisian"!')
+            # st.toast('Isi bagian "Jam Pengisian"!', icon="⚠️")
             can_submit = False
         if not nama_produk:
-            st.warning('Isi bagian "Nama Produk"!')
+            # st.warning('Isi bagian "Nama Produk"!')
+            # st.toast('Isi bagian "Nama Produk"!', icon="⚠️")
             can_submit = False
         if not kondisi_mesin_selected_options:
-            st.warning('Isi bagian "Kondisi Mesin"!')
+            # st.warning('Isi bagian "Kondisi Mesin"!')
+            # st.toast('Isi bagian "Kondisi Mesin"!', icon="⚠️")
             can_submit = False
 
         with stylable_container(
@@ -209,6 +216,23 @@ if st.session_state["page"] == 1:
                 
         if submit_button_1_1:
             if can_submit == False:
+                if not nama_operator:
+                    st.toast('Isi bagian "Nama Operator"!', icon="⚠️")
+                if not machine_selected_options:
+                    st.toast('Isi bagian "Mesin"!', icon="⚠️")
+                if not shift_selected_options:
+                    st.toast('Isi bagian "Shift"!', icon="⚠️")
+                if not group_selected_options:
+                    st.toast('Isi bagian "Grup"!', icon="⚠️")
+                if not date_input:
+                    st.toast('Isi bagian "Tanggal Pengisian"!', icon="⚠️")
+                if not time_input:
+                    st.toast('Isi bagian "Jam Pengisian"!', icon="⚠️")
+                if not nama_produk:
+                    st.toast('Isi bagian "Nama Produk"!', icon="⚠️")
+                if not kondisi_mesin_selected_options:
+                    st.toast('Isi bagian "Kondisi Mesin"!', icon="⚠️")
+
                 st.error(f"Lengkapi seluruh kolom sebelum menekan tombol Submit!")   
                 
             else:
