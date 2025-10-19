@@ -182,8 +182,17 @@ if st.session_state["page"] == 1:
             st.warning('Isi bagian "Kondisi Mesin"!')
             can_submit = False
 
-        
-        submit_button_1_1 = st.form_submit_button(label='Submit', width = "stretch", type = "primary")
+        with stylable_container(
+            "green",
+            css_styles="""
+            button {
+                background-color: green !important;
+                color: white !important;
+                border: none !important;
+                transition: background-color 0.3s ease;
+            }""",
+        ):
+            submit_button_1_1 = st.form_submit_button(label='Submit', width = "stretch")
                 
         if submit_button_1_1:
             if can_submit == False:
@@ -217,17 +226,17 @@ if st.session_state["page"] == 1:
 
     left_1, middle_1, right_1 = st.columns([1,3,1])
     with right_1:
-        with stylable_container(
-            "green",
-            css_styles="""
-            button {
-                background-color: green !important;
-                color: white !important;
-                border: none !important;
-                transition: background-color 0.3s ease;
-            }""",
-        ):
-            submit_button_1_2 = st.button(label='Next Page ➔', width="stretch")
+        # with stylable_container(
+        #     "green",
+        #     css_styles="""
+        #     button {
+        #         background-color: green !important;
+        #         color: white !important;
+        #         border: none !important;
+        #         transition: background-color 0.3s ease;
+        #     }""",
+        # ):
+        submit_button_1_2 = st.button(label='Next Page ➔', width="stretch")
                 
     if submit_button_1_2:
         if "df_data_page_1" not in st.session_state:
