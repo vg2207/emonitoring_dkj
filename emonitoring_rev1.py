@@ -189,6 +189,7 @@ if st.session_state["page"] == 1:
                 background-color: green !important;
                 color: white !important;
                 border: none !important;
+                border-radius: 5px;
                 transition: background-color 0.3s ease;
             }""",
         ):
