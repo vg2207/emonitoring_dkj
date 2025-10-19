@@ -213,6 +213,14 @@ if st.session_state["page"] == 1:
 
     left_1, middle_1, right_1 = st.columns([1,3,1])
     with right_1:
+        with stylable_container(
+                "green",
+                css_styles="""
+                button {
+                    background-color: #283281;
+                    color: white;
+                }""",
+            ):
         submit_button_1_2 = st.button(type="primary", label='Next Page ➔', width="stretch")
     if submit_button_1_2:
         if "df_data_page_1" not in st.session_state:
