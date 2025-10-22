@@ -363,6 +363,10 @@ if st.session_state["page"] == 1.5:
                     st.session_state.page = 1
                     st.session_state.scroll_to_top = True
                     st.rerun()
+
+                if button_no_1_5:
+                    pass
+                    
         if st.button("◀️ Kembali"):
             backpage()
             
