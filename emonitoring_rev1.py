@@ -365,7 +365,7 @@ if st.session_state["page"] == 1.5:
                     st.rerun()
 
                 if button_no_1_5:
-                    pass
+                    st.rerun()
                     
         if st.button("◀️ Kembali"):
             backpage()
