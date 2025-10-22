@@ -2507,7 +2507,7 @@ if st.session_state["page"] == 5:
 
     back_button_5_to_1 = st.button("⏪ Kembali ke Halaman 1")
 
-    @st.dialog("Apakah Anda yakin akan kembali ke halaman sebelumnya?")
+    @st.dialog("Apakah Anda yakin akan kembali ke halaman awal?")
     def backpage_5_to_1():
         with st.container(horizontal=True):
             button_no_5_to_1 = st.button(label='Tidak', width="stretch", type="secondary")
