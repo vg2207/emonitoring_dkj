@@ -351,18 +351,18 @@ if st.session_state["page"] == 1.5:
     
     with left_1_5:
         if st.button("◀️ Kembali"):
-            @st.dialog("Apakah Anda yakin akan kembali ke halaman sebelumnya?")
-            with st.container(horizontal=True):
-                button_no_1_5 : st.button(label='Tidak', width="stretch", type="secondary")
-                button_yes_1_5 : st.button(label='Ya', width="stretch", type="primary")
-
-                if button_yes_1_5:
-                    if 'df_data_page_1_5' in st.session_state:
-                        del st.session_state['df_data_page_1_5']
-                    del st.session_state['df_data_page_1']
-                    st.session_state.page = 1
-                    st.session_state.scroll_to_top = True
-                    st.rerun()
+            with st.popover("Apakah Anda yakin akan kembali ke halaman sebelumnya?"):
+                with st.container(horizontal=True):
+                    button_no_1_5 : st.button(label='Tidak', width="stretch", type="secondary")
+                    button_yes_1_5 : st.button(label='Ya', width="stretch", type="primary")
+    
+                    if button_yes_1_5:
+                        if 'df_data_page_1_5' in st.session_state:
+                            del st.session_state['df_data_page_1_5']
+                        del st.session_state['df_data_page_1']
+                        st.session_state.page = 1
+                        st.session_state.scroll_to_top = True
+                        st.rerun()
             
 
 
