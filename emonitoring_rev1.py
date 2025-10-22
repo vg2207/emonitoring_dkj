@@ -350,7 +350,7 @@ if st.session_state["page"] == 1.5:
 
     
     with left_1_5:
-        @st.dialog("Apakah Anda yakin akan kembali ke halaman sebelumnya?"):
+        @st.dialog("Apakah Anda yakin akan kembali ke halaman sebelumnya?")
             def backpage():
                 with st.container(horizontal=True):
                     button_no_1_5 : st.button(label='Tidak', width="stretch", type="secondary")
