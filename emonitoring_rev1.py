@@ -350,8 +350,8 @@ if st.session_state["page"] == 1.5:
 
     
     with left_1_5:
-        if st.button("◀️ Kembali"):
-            with st.popover("Apakah Anda yakin akan kembali ke halaman sebelumnya?"):
+        @st.dialog("Apakah Anda yakin akan kembali ke halaman sebelumnya?"):
+            def backpage():
                 with st.container(horizontal=True):
                     button_no_1_5 : st.button(label='Tidak', width="stretch", type="secondary")
                     button_yes_1_5 : st.button(label='Ya', width="stretch", type="primary")
@@ -363,6 +363,9 @@ if st.session_state["page"] == 1.5:
                         st.session_state.page = 1
                         st.session_state.scroll_to_top = True
                         st.rerun()
+        if st.button("◀️ Kembali"):
+            backpage()
+            
             
 
 
