@@ -353,8 +353,8 @@ if st.session_state["page"] == 1.5:
         @st.dialog("Apakah Anda yakin akan kembali ke halaman sebelumnya?")
         def backpage():
             with st.container(horizontal=True):
-                button_no_1_5 : st.button(label='Tidak', width="stretch", type="secondary")
-                button_yes_1_5 : st.button(label='Ya', width="stretch", type="primary")
+                button_no_1_5 = st.button(label='Tidak', width="stretch", type="secondary")
+                button_yes_1_5 = st.button(label='Ya', width="stretch", type="primary")
 
                 if button_yes_1_5:
                     if 'df_data_page_1_5' in st.session_state:
