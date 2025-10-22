@@ -350,26 +350,29 @@ if st.session_state["page"] == 1.5:
 
     
     with left_1_5:
-        @st.dialog("Apakah Anda yakin akan kembali ke halaman sebelumnya?")
-        def backpage():
-            with st.container(horizontal=True):
-                button_no_1_5 = st.button(label='Tidak', width="stretch", type="secondary")
-                button_yes_1_5 = st.button(label='Ya', width="stretch", type="primary")
+        back_button_1_5 = st.button("◀️ Kembali")
+        
+    @st.dialog("Apakah Anda yakin akan kembali ke halaman sebelumnya?")
+    def backpage_1_5():
+        with st.container(horizontal=True):
+            button_no_1_5 = st.button(label='Tidak', width="stretch", type="secondary")
+            button_yes_1_5 = st.button(label='Ya', width="stretch", type="primary")
 
-                if button_yes_1_5:
-                    if 'df_data_page_1_5' in st.session_state:
-                        del st.session_state['df_data_page_1_5']
-                    del st.session_state['df_data_page_1']
-                    st.session_state.page = 1
-                    st.session_state.scroll_to_top = True
-                    st.rerun()
+            if button_yes_1_5:
+                if 'df_data_page_1_5' in st.session_state:
+                    del st.session_state['df_data_page_1_5']
+                del st.session_state['df_data_page_1']
+                st.session_state.page = 1
+                st.session_state.scroll_to_top = True
+                st.rerun()
 
-                if button_no_1_5:
-                    st.rerun()
-                    
-        if st.button("◀️ Kembali"):
-            backpage()
-            
+            if button_no_1_5:
+                st.rerun()
+
+        
+    if back_button_1_5:
+        backpage_1_5()
+        
             
 
 
@@ -798,13 +801,30 @@ if st.session_state["page"] == 2:
 
     with left_2:
         back_button_2 = st.button("◀️ Kembali")
+        
+    @st.dialog("Apakah Anda yakin akan kembali ke halaman sebelumnya?")
+    def backpage_2():
+        with st.container(horizontal=True):
+            button_no_2 = st.button(label='Tidak', width="stretch", type="secondary")
+            button_yes_2 = st.button(label='Ya', width="stretch", type="primary")
+
+            if button_yes_2:
+                if 'df_data_page_2' in st.session_state:
+                    del st.session_state['df_data_page_2']
+                del st.session_state['df_data_page_1_5']
+                st.session_state.page = 1.5  # kembali ke halaman 1.5
+                st.session_state.scroll_to_top = True
+                st.rerun()
+
+            if button_no_2:
+                st.rerun()
+
+        
     if back_button_2:
-        if 'df_data_page_2' in st.session_state:
-            del st.session_state['df_data_page_2']
-        del st.session_state['df_data_page_1_5']
-        st.session_state.page = 1.5  # kembali ke halaman 1.5
-        st.session_state.scroll_to_top = True
-        st.rerun()
+        backpage_2()
+        
+            
+                
         
         
 
