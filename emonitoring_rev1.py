@@ -334,8 +334,9 @@ if st.session_state["page"] == 1.5:
 
 
     with st.container(horizontal=True):
-        submit_button_1_2_5 = st.button(type="primary", label='Next Page ➔', width="stretch")
         back_button_1_5 = st.button("◀️ Kembali", width="stretch")
+        submit_button_1_2_5 = st.button(type="primary", label='Next Page ➔', width="stretch")
+        
         
     if submit_button_1_2_5:
         if "df_data_page_1_5" not in st.session_state:
@@ -784,8 +785,9 @@ if st.session_state["page"] == 2:
                 
 
     with st.container(horizontal=True):
-        submit_button_2_2 = st.button(type="primary", label='Next Page ➔', width="stretch")
         back_button_2 = st.button("◀️ Kembali", width="stretch")
+        submit_button_2_2 = st.button(type="primary", label='Next Page ➔', width="stretch")
+        
                 
     if submit_button_2_2:
         if "df_data_page_2" not in st.session_state:
@@ -1619,8 +1621,9 @@ if st.session_state["page"] == 3:
             
 
     with st.container(horizontal=True) :
-        submit_button_3_2 = st.button(type="primary", label='Next Page ➔', width="stretch")
         back_button_3 = st.button("◀️ Kembali", width="stretch")
+        submit_button_3_2 = st.button(type="primary", label='Next Page ➔', width="stretch")
+        
                 
     if submit_button_3_2:
         if "df_data_page_3" not in st.session_state:
@@ -2146,8 +2149,9 @@ if st.session_state["page"] == 4:
     
 
     with st.container(horizontal=True):
-        submit_button_2_4 = st.button(type="primary", label='Next Page ➔', width="stretch")
         back_button_4 = st.button("◀️ Kembali", width="stretch")
+        submit_button_2_4 = st.button(type="primary", label='Next Page ➔', width="stretch")
+        
                 
     if submit_button_2_4:
         if "df_data_page_4" not in st.session_state:
@@ -2454,8 +2458,9 @@ if st.session_state["page"] == 5:
     
 
     with st.container(horizontal=True):
-        submit_button_2_5 = st.button(type="primary", label='Next Page ➔', width="stretch")
         back_button_5 = st.button("◀️ Kembali", width="stretch")
+        submit_button_2_5 = st.button(type="primary", label='Next Page ➔', width="stretch")
+        
                 
     if submit_button_2_5:
         if "df_data_page_5" not in st.session_state:
