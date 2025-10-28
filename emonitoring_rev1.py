@@ -333,9 +333,9 @@ if st.session_state["page"] == 1.5:
 
 
 
-    left_1_5, middle_1_5, right_1_5 = st.columns([0.2,0.6,0.2])
-    with right_1_5:
+    with st.container(horizontal=True):
         submit_button_1_2_5 = st.button(type="primary", label='Next Page ➔', width="stretch")
+        back_button_1_5 = st.button("◀️ Kembali", width="stretch")
         
     if submit_button_1_2_5:
         if "df_data_page_1_5" not in st.session_state:
@@ -349,8 +349,7 @@ if st.session_state["page"] == 1.5:
 
 
     
-    with left_1_5:
-        back_button_1_5 = st.button("◀️ Kembali")
+    
         
     @st.dialog("Apakah Anda yakin akan kembali ke halaman sebelumnya?")
     def backpage_1_5():
@@ -784,9 +783,9 @@ if st.session_state["page"] == 2:
                 st.session_state.df_data_page_2 = df_data_page_2
                 
 
-    left_2, middle_2, right_2 = st.columns([1,3,1])
-    with right_2:
+    with st.container(horizontal=True):
         submit_button_2_2 = st.button(type="primary", label='Next Page ➔', width="stretch")
+        back_button_2 = st.button("◀️ Kembali", width="stretch")
                 
     if submit_button_2_2:
         if "df_data_page_2" not in st.session_state:
@@ -796,11 +795,7 @@ if st.session_state["page"] == 2:
             st.session_state.scroll_to_top = True
             st.rerun()
             
-
-            
-
-    with left_2:
-        back_button_2 = st.button("◀️ Kembali")
+        
         
     @st.dialog("Apakah Anda yakin akan kembali ke halaman sebelumnya?")
     def backpage_2():
@@ -1622,9 +1617,10 @@ if st.session_state["page"] == 3:
                 st.session_state.df_data_page_3 = df_data_page_3
                 
             
-    left_3, middle_3, right_3 = st.columns([1,3,1])
-    with right_3 :
+
+    with st.container(horizontal=True) :
         submit_button_3_2 = st.button(type="primary", label='Next Page ➔', width="stretch")
+        back_button_3 = st.button("◀️ Kembali", width="stretch")
                 
     if submit_button_3_2:
         if "df_data_page_3" not in st.session_state:
@@ -1637,10 +1633,7 @@ if st.session_state["page"] == 3:
             st.session_state.scroll_to_top = True
             st.rerun()
             
-            
-
-    with left_3:
-        back_button_3 = st.button("◀️ Kembali")
+        
         
     @st.dialog("Apakah Anda yakin akan kembali ke halaman sebelumnya?")
     def backpage_3():
@@ -2151,9 +2144,10 @@ if st.session_state["page"] == 4:
                 st.write(df_data_page_4.dropna(axis=1, inplace=False))
                 st.session_state.df_data_page_4 = df_data_page_4
     
-    left_4, middle_4, right_4 = st.columns([1,3,1])
-    with right_4:
+
+    with st.container(horizontal=True):
         submit_button_2_4 = st.button(type="primary", label='Next Page ➔', width="stretch")
+        back_button_4 = st.button("◀️ Kembali", width="stretch")
                 
     if submit_button_2_4:
         if "df_data_page_4" not in st.session_state:
@@ -2169,10 +2163,8 @@ if st.session_state["page"] == 4:
             st.session_state.scroll_to_top = True
             st.rerun()
             
-            
-
-    with left_4:
-        back_button_4 = st.button("◀️ Kembali")
+ 
+        
 
     @st.dialog("Apakah Anda yakin akan kembali ke halaman sebelumnya?")
     def backpage_4():
@@ -2460,9 +2452,10 @@ if st.session_state["page"] == 5:
                 st.write(df_data_page_5.dropna(axis=1, inplace=False))
                 st.session_state.df_data_page_5 = df_data_page_5
     
-    left_5, middle_5, right_5 = st.columns([1,3,1])
-    with right_5:
+
+    with st.container(horizontal=True):
         submit_button_2_5 = st.button(type="primary", label='Next Page ➔', width="stretch")
+        back_button_5 = st.button("◀️ Kembali", width="stretch")
                 
     if submit_button_2_5:
         if "df_data_page_5" not in st.session_state:
@@ -2474,10 +2467,8 @@ if st.session_state["page"] == 5:
             st.session_state.scroll_to_top = True
             st.rerun()
             
-            
 
-    with left_5:
-        back_button_5 = st.button("◀️ Kembali")
+        
 
     @st.dialog("Apakah Anda yakin akan kembali ke halaman sebelumnya?")
     def backpage_5():
