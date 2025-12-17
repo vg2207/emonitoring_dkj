@@ -2594,7 +2594,7 @@ import pandas as pd
 import numpy as np
 import os
 import xlsxwriter
-# import base64
+import base64
 from datetime import datetime
 import cv2
 from PIL import Image
