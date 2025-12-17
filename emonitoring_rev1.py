@@ -2692,7 +2692,9 @@ text-align: left;
 }
 </style>
 <div class="footer">
-<p>  e-monitoring produksi DKJ ver 1.0 <a style='display: block; 
+<body style="background-color: #edf2fa;">
+        <p>  e-monitoring produksi DKJ ver 1.0 <a style='display: block; 
+</body>
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
