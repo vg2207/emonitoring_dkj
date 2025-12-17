@@ -2679,30 +2679,20 @@ logo = Image.open('assets_logo/Logo Dunia Kimia Jaya.png')
 st.logo(logo, size="large")
 
 footer="""<style>
-a:link , a:visited{
-color: blue;
-background-color: transparent;
-text-decoration: underline;
-}
 
-a:hover,  a:active {
-color: red;
-background-color: transparent;
-text-decoration: underline;
-}
 
 .footer {
 position: fixed;
 left: 0;
 bottom: 0;
 width: 100%;
-background-color: white;
+background-color: grey;
 color: black;
-text-align: right;
+text-align: left;
 }
 </style>
 <div class="footer">
-<p>Developed with ❤ by <a style='display: block; text-align: center;' href="https://www.heflin.dev/" target="_blank">Heflin Stephen Raj S</a></p>
+<p>e-monitoring produksi DKJ ver 1.0 <a style='display: block; 
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
