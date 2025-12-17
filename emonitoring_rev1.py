@@ -2691,7 +2691,7 @@ color: black;
 text-align: left;
 }
 </style>
-<div class="footer" style="overflow:hidden;">
+<div class="footer">
 <p style="margin-left: 15px">e-monitoring produksi DKJ Cibitung ver 1.0 <img src="assets_logo/Logo Dunia Kimia Jaya.png" width="auto" height="auto"></p>
 </div>
 """
