@@ -2691,9 +2691,14 @@ color: black;
 text-align: left;
 }
 </style>
+body {
+  background-color: rgba(75, 192, 200, 1); /* A solid, opaque teal color */
+}
+<body>
 <div class="footer">
 <p style="margin-left: 15px">e-monitoring produksi DKJ Cibitung ver 1.0</p>
 </div>
+</body>
 """
 st.markdown(footer,unsafe_allow_html=True)
 
