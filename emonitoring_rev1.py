@@ -2686,7 +2686,7 @@ position: fixed;
 left: 0;
 bottom: 0;
 width: 100%;
-background-color: #1a62d6;
+background-color: #edf2fa;
 color: black;
 text-align: left;
 }
