@@ -2683,16 +2683,16 @@ footer="""<style>
 
 .footer {
 position: fixed;
-left: 1%;
+left: 0;
 bottom: 0;
 width: 100%;
-background-color: black;
-color: white;
+background-color: #edf2fa;
+color: black;
 text-align: left;
 }
 </style>
 <div class="footer">
-<p>e-monitoring produksi DKJ ver 1.0 <a style='display: block; 
+<p>  e-monitoring produksi DKJ ver 1.0 <a style='display: block; 
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
