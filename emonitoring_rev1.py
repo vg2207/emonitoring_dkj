@@ -2958,7 +2958,7 @@ if st.session_state["page"] == 1.5:
     
     
         
-    @st.dialog("Apakah Anda yakin akan kembali ke halaman sebelumnya?")
+    @st.dialog("Apakah Anda yakin akan kembali ke halaman sebelumnya? Data pada halaman ini akan hilang.")
     def backpage_1_5():
         with st.container(horizontal=True):
             button_no_1_5 = st.button(label='Tidak', width="stretch", type="secondary")
@@ -3405,7 +3405,7 @@ if st.session_state["page"] == 2:
             
         
         
-    @st.dialog("Apakah Anda yakin akan kembali ke halaman sebelumnya?")
+    @st.dialog("Apakah Anda yakin akan kembali ke halaman sebelumnya? Data pada halaman ini akan hilang.")
     def backpage_2():
         with st.container(horizontal=True):
             button_no_2 = st.button(label='Tidak', width="stretch", type="secondary")
@@ -4244,7 +4244,7 @@ if st.session_state["page"] == 3:
             
         
         
-    @st.dialog("Apakah Anda yakin akan kembali ke halaman sebelumnya?")
+    @st.dialog("Apakah Anda yakin akan kembali ke halaman sebelumnya? Data pada halaman ini akan hilang.")
     def backpage_3():
         with st.container(horizontal=True):
             button_no_3 = st.button(label='Tidak', width="stretch", type="secondary")
@@ -4776,7 +4776,7 @@ if st.session_state["page"] == 4:
  
         
 
-    @st.dialog("Apakah Anda yakin akan kembali ke halaman sebelumnya?")
+    @st.dialog("Apakah Anda yakin akan kembali ke halaman sebelumnya? Data pada halaman ini akan hilang.")
     def backpage_4():
         with st.container(horizontal=True):
             button_no_4 = st.button(label='Tidak', width="stretch", type="secondary")
@@ -5081,7 +5081,7 @@ if st.session_state["page"] == 5:
 
         
 
-    @st.dialog("Apakah Anda yakin akan kembali ke halaman sebelumnya?")
+    @st.dialog("Apakah Anda yakin akan kembali ke halaman sebelumnya? Data pada halaman ini akan hilang.")
     def backpage_5():
         with st.container(horizontal=True):
             button_no_5 = st.button(label='Tidak', width="stretch", type="secondary")
@@ -5109,7 +5109,7 @@ if st.session_state["page"] == 5:
 
     back_button_5_to_1 = st.button("⏪ Kembali ke Halaman 1")
 
-    @st.dialog("Apakah Anda yakin akan kembali ke halaman awal?")
+    @st.dialog("Apakah Anda yakin akan kembali ke halaman awal? Data pada halaman ini akan hilang.")
     def backpage_5_to_1():
         with st.container(horizontal=True):
             button_no_5_to_1 = st.button(label='Tidak', width="stretch", type="secondary")
