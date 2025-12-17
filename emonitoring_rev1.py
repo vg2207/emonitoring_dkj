@@ -2686,19 +2686,15 @@ position: fixed;
 left: 0;
 bottom: 0;
 width: 100%;
-background-color: rgba(237, 242, 250, 1);
+background-color: #1a62d6;
 color: black;
 text-align: left;
 }
 </style>
-body {
-  background-color: rgba(75, 192, 200, 1); /* A solid, opaque teal color */
-}
-<body>
+
 <div class="footer">
 <p style="margin-left: 15px">e-monitoring produksi DKJ Cibitung ver 1.0</p>
 </div>
-</body>
 """
 st.markdown(footer,unsafe_allow_html=True)
 
