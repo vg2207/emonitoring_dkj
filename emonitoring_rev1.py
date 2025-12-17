@@ -2686,10 +2686,9 @@ position: fixed;
 left: 0;
 bottom: 0;
 width: 100%;
-background-color: #edf2fa;
+background-color: rgb(237, 242, 250);
 color: black;
 text-align: left;
-opacity: 1;
 }
 </style>
 <div class="footer">
