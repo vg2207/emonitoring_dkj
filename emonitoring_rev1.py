@@ -2678,6 +2678,21 @@ logo = Image.open('assets_logo/Logo Dunia Kimia Jaya.png')
 
 st.logo(logo, size="large")
 
+# Function to convert a local file to a data URI string
+def img_to_bytes(img_path):
+    """Convert local image file to a base64 byte string."""
+    try:
+        with open(img_path, "rb") as f:
+            img_bytes = f.read()
+            encoded = base64.b64encode(img_bytes).decode()
+        return encoded
+    except FileNotFoundError:
+        st.error(f"Image not found at path: {img_path}")
+        return None
+
+img_base64 = img_to_bytes("assets_logo/Logo Dunia Kimia Jaya.png")
+
+
 footer="""<style>
 .footer {
 position: fixed;
@@ -2690,7 +2705,7 @@ text-align: left;
 }
 </style>
 <div class="footer">
-<p style="margin-left: 15px">e-monitoring produksi DKJ Cibitung ver 1.0 <img src="assets_logo/Logo Dunia Kimia Jaya.png" alt="Logo"></p>
+<p style="margin-left: 15px">e-monitoring produksi DKJ Cibitung ver 1.0 <img src=data:image/png;base64,{img_base64}"></p>
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
