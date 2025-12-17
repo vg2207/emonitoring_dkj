@@ -2705,7 +2705,7 @@ text-align: left;
 }
 </style>
 <div class="footer">
-<p style="margin-left: 15px">e-monitoring produksi DKJ Cibitung ver 1.0 <img src=data:image/png;base64,{img_base64}"></p>
+<p style="margin-left: 15px">e-monitoring produksi DKJ Cibitung ver 1.0 <img src=data:image/png;base64,{img_base64}" height="auto"></p>
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
