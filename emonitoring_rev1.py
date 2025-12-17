@@ -2762,7 +2762,8 @@ if st.session_state["page"] == 1:
         with st.container(horizontal=True):
             date_input = st.date_input("Tanggal Pengisian")
             time_input = st.time_input("Jam Pengisian",step=3600)
-            
+
+        # list_produk =    
         nama_produk = st.text_input("Nama Produk", key="nama_produk")
         # (Tuliskan angka belakang dan huruf lengkap dibelakang angka saja, CONTOH : Untuk produk ASITHYLEN P White 9440 A, cukup tuliskan : 9440 A)
         
