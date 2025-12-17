@@ -2683,10 +2683,10 @@ footer="""<style>
 
 .footer {
 position: fixed;
-left: 0;
+left: 5%;
 bottom: 0;
 width: 100%;
-background-color: grey;
+background-color: light grey;
 color: black;
 text-align: left;
 }
