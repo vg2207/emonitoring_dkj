@@ -2765,8 +2765,9 @@ if st.session_state["page"] == 1:
 
         list_produk = pd.read_excel('assets/Database Class Masterbatch.xlsx').copy()
         list_options = list_produk["MATERIAL DESCRIPTION"].values.tolist()
-        st.write(list_options)
-        nama_produk = st.text_input("Nama Produk", key="nama_produk")
+
+        nama_produk = st.selectbox("Nama Produk", list_options, key="nama_produk")
+        # nama_produk = st.text_input("Nama Produk", key="nama_produk")
         # (Tuliskan angka belakang dan huruf lengkap dibelakang angka saja, CONTOH : Untuk produk ASITHYLEN P White 9440 A, cukup tuliskan : 9440 A)
         
         kondisi_mesin_options = ["Running", "Stop"]
