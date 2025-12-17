@@ -2690,7 +2690,7 @@ text-align: left;
 }
 </style>
 <div class="footer">
-<p style="margin-left: 15px">e-monitoring produksi DKJ ver 1.0 </p>
+<p style="margin-left: 15px">e-monitoring produksi DKJ Cibitung ver 1.0 <img src="assets_logo/Logo Dunia Kimia Jaya.png"></p>
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
