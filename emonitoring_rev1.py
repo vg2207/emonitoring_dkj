@@ -2698,7 +2698,7 @@ bottom: 0;
 width: 100%;
 background-color: white;
 color: black;
-text-align: center;
+text-align: right;
 }
 </style>
 <div class="footer">
