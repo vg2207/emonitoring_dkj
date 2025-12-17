@@ -2679,8 +2679,6 @@ logo = Image.open('assets_logo/Logo Dunia Kimia Jaya.png')
 st.logo(logo, size="large")
 
 footer="""<style>
-
-
 .footer {
 position: fixed;
 left: 0;
@@ -2692,9 +2690,7 @@ text-align: left;
 }
 </style>
 <div class="footer">
-<body style="background-color: #edf2fa;">
-        <p>  e-monitoring produksi DKJ ver 1.0 <a style='display: block; 
-</body>
+<p>  e-monitoring produksi DKJ ver 1.0 <a style='display: inline; 
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
