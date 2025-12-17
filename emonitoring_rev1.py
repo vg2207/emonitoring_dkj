@@ -2690,7 +2690,7 @@ text-align: left;
 }
 </style>
 <div class="footer">
-<p style="padding: 15px">e-monitoring produksi DKJ ver 1.0 </p>
+<p style="margin left: 15px">e-monitoring produksi DKJ ver 1.0 </p>
 </div>
 """
 st.markdown(footer,unsafe_allow_html=True)
